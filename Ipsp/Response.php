@@ -37,6 +37,7 @@ class Ipsp_Response {
     }
 
     public function redirectTo($prop=''){
+        print_r($this->$prop);
         if($this->$prop){
             header(sprintf('Location: %s',$this->$prop));
         }

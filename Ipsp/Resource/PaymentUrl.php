@@ -35,7 +35,12 @@ class Ipsp_Resource_PaymentUrl extends Ipsp_Resource{
     );
 
     public function redirectToCheckout(){
+
+        print_r($this->getResponse()->checkout_url);
+
         $this->getResponse()->redirectTo('checkout_url');
+
+
     }
 
 }

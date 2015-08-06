@@ -3,7 +3,7 @@
 /**
  * Class Ipsp_Resource_Refund
  */
-class Ipsp_Resource_Refund extends Ipsp_Resource{
+class Ipsp_Resource_Reverse extends Ipsp_Resource{
     protected $path   = '/reverse/order_id';
     protected $fields = array(
         'merchant_id'=>array(

@@ -8,7 +8,7 @@ class Ipsp_Resource_Reports extends Ipsp_Resource{
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',
-            'required'=>TRUE
+            'required'=> TRUE
         ),
         'date_from'=>array(
             'type'     => 'string',
@@ -17,8 +17,8 @@ class Ipsp_Resource_Reports extends Ipsp_Resource{
         ),
         'date_to' => array(
             'type'    => 'string',
-            'format'  =>'',
-            'required'=>TRUE
+            'format'  => '' ,
+            'required'=> TRUE
         ),
         'signature' => array(
             'type' => 'string',

@@ -4,7 +4,6 @@
  * Class Ipsp_Curl
  */
 class Ipsp_Curl {
-    protected $_ci;                 // CodeIgniter instance
     protected $response = '';       // Contains the cURL response for debug
     protected $session;             // Contains the cURL handler for a session
     protected $url;                 // URL of the session
@@ -133,7 +132,7 @@ class Ipsp_Curl {
     {
         if ( ! isset($this->options[CURLOPT_TIMEOUT]))
         {
-            $this->options[CURLOPT_TIMEOUT] = 30;
+            $this->options[CURLOPT_TIMEOUT] = 60;
         }
         if ( ! isset($this->options[CURLOPT_RETURNTRANSFER]))
         {

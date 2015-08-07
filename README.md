@@ -25,15 +25,14 @@ $ipsp   = new Ipsp_Api( $client );
 ```php
  
 <?php
-
 $order_id = 'testproduct10002';
-$ipsp->setParam('order_id',$order_id);
-$ipsp->setParam('order_desc','Test Product');
-$ipsp->setParam('currency',$ipsp::USD);
-$ipsp->setParam('response_url',sprintf('http://shop.example.com/checkout/%s',$order_id));
-$ipsp->setParam('amount',2000);
-
-$data = $ipsp->call('Checkout')->getResponse();
+$data = $ipsp->call('Checkout',array(
+ 'order_id'    => $order_id,
+ 'order_desc'  => 'Short Order Description',
+ 'currency'    => $ipsp::USD ,
+ 'amount'      => 2000, // 20 USD
+ 'response_url'=> sprintf('http://shop.example.com/checkout/%s',$order_id)
+))->getResponse();
 // redirect to checkoutpage
 header(sprintf('Location: %s',$data->checkout_url));
 

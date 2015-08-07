@@ -4,8 +4,16 @@
  * Class Ipsp_Api
  */
 class Ipsp_Api {
+
     private $client;
     private $params = array();
+    /**
+     * Supported currencies
+     */
+    const UAH = 'UAH';
+    const USD = 'USD';
+    const EUR = 'EUR';
+    const RUB = 'RUB';
     /**
      * @param Ipsp_Client $client
      */

@@ -3,10 +3,12 @@
 /**
  * Class Ipsp_Resource_Refund
  */
-class Ipsp_Resource_Reverse extends Ipsp_Resource{
-
-    protected $path   = '/reverse/order_id';
-
+class Ipsp_Resource_Verification extends Ipsp_Resource{
+    protected $path   = '/checkout/url';
+    protected $defaultParams = array(
+        'verification'=>'y',
+        'verification_type'=>'code'
+    );
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',
@@ -24,6 +26,15 @@ class Ipsp_Resource_Reverse extends Ipsp_Resource{
             'type' => 'integer',
             'required'=>TRUE
         ),
+        'verification'=>array(
+            'type' => 'string',
+            'equal'=> 'y'
+        ),
+        'verification_type'=>array(
+            'type' => 'string',
+            'equal'=> 'y',
+            'required'=>TRUE
+        ),
         'signature' => array(
             'type' => 'string',
             'required'=>TRUE
@@ -33,5 +44,4 @@ class Ipsp_Resource_Reverse extends Ipsp_Resource{
             'required'=>FALSE
         )
     );
-
 }

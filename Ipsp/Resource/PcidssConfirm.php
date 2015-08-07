@@ -3,7 +3,7 @@
 /**
  * Class Ipsp_Resource_PaymentPcidss
  */
-class Ipsp_Resource_PaymentPcidssConfirm extends Ipsp_Resource
+class Ipsp_Resource_PcidssConfirm extends Ipsp_Resource
 {
     protected $path = '/3dsecure_step2';
     protected $fields = array(

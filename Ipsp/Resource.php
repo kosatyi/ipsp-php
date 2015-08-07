@@ -9,6 +9,7 @@ class Ipsp_Resource {
     protected $format = 'json';
     protected $path;
     protected $fields = array();
+    protected $defaultParams = array();
     protected $request;
     protected $response;
     protected $formatter	= array(
@@ -22,8 +23,10 @@ class Ipsp_Resource {
         'form' => 'parseForm'
     );
 
-    private $params;
     private $client;
+    private $params = array();
+
+
 
     /**
      * @param array $params
@@ -122,6 +125,8 @@ class Ipsp_Resource {
     }
     public function __construct(){
         $this->request  = new Ipsp_Request();
+        if(!empty($this->defaultParams))
+            $this->params = $this->defaultParams;
     }
     /**
      * @param Ipsp_Client $client
@@ -152,7 +157,7 @@ class Ipsp_Resource {
      */
     public function setParams(Array $params){
         if( $this->isValid($params) ){
-            $this->params = $params;
+            $this->params = array_merge($this->params,$params);
         }
         return $this;
     }
@@ -189,8 +194,8 @@ class Ipsp_Resource {
      * @return $this
      * @throws Exception
      */
-    public function call($params=array()){
-        $this->setParams($params);
+    public function call( $params=array() ){
+        $this->setParams( $params );
         $this->request->setFormat($this->format);
         $data = $this->request->doPost($this->getUrl(),$this->buildParams($this->getParams()));
         $data = $this->parseRespose($data);

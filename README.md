@@ -39,4 +39,5 @@ header(sprintf('Location: %s',$data->checkout_url));
 ```
 
 ## Examples
-Checkout ipsp examples project https://github.com/kosatyi/ipsp-php-examples.git
+
+Checkout ipsp examples https://github.com/kosatyi/ipsp-php-examples.git

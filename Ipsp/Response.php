@@ -4,9 +4,7 @@
  * Class Ipsp_Response
  */
 class Ipsp_Response {
-
     private $data = array();
-
     public function __construct($data=array()){
         $this->data = $data;
     }
@@ -35,12 +33,9 @@ class Ipsp_Response {
     public function isFailure(){
         return $this->response_status=='failure';
     }
-
     public function redirectTo($prop=''){
-        print_r($this->$prop);
         if($this->$prop){
             header(sprintf('Location: %s',$this->$prop));
         }
     }
-
 }

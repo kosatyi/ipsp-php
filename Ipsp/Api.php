@@ -27,7 +27,7 @@ class Ipsp_Api {
      * @return bool
      */
     public function initResource($name){
-        $class    = implode('_',array('Ipsp','Resource',$name));
+        $class    = implode('_',array('Ipsp','Resource',ucfirst($name)));
         if(!class_exists($class)) new \Exception(sprintf('ipsp resource "%s" not found',$class));
         $resource = new $class;
         return $resource;

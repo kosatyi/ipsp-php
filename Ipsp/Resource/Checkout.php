@@ -33,9 +33,7 @@ class Ipsp_Resource_Checkout extends Ipsp_Resource{
             'required'=>TRUE
         )
     );
-
     public function redirectToCheckout(){
         $this->getResponse()->redirectTo('checkout_url');
     }
-
 }

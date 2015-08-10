@@ -196,7 +196,7 @@ class Ipsp_Resource {
      */
     public function call( $params=array() ){
         $this->setParams( $params );
-        $this->request->setFormat($this->format);
+        $this->request->setFormat( $this->format );
         $data = $this->request->doPost($this->getUrl(),$this->buildParams($this->getParams()));
         $data = $this->parseRespose($data);
         $this->setResponse($data);

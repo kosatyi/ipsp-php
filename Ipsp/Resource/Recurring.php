@@ -5,6 +5,9 @@
  */
 class Ipsp_Resource_Recurring extends Ipsp_Resource{
     protected $path   = '/recurring';
+    protected $defaultParams = array(
+
+    );
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',

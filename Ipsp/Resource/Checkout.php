@@ -4,9 +4,7 @@
  * Class Ipsp_Resource_PaymentUrl
  */
 class Ipsp_Resource_Checkout extends Ipsp_Resource{
-
     protected $path   = '/checkout/url';
-
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',

@@ -36,7 +36,7 @@ $data = $ipsp->call('checkout',array(
 header(sprintf('Location: %s',$data->checkout_url));
 ```
 
-## Api Methods
+## API Methods
 ### Accept purchase (hosted payment page)
 ```php
 $data = $ipsp->call('checkout',array());

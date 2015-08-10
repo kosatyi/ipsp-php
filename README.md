@@ -65,6 +65,10 @@ $data = $ipsp->call('status',array());
 ```php
 $data = $ipsp->call('verification',array());
 ```
+### Order capture
+```php
+$data = $ipsp->call('capture',array());
+```
 ### P2P card credit
 ```php
 $data = $ipsp->call('p2pcredit',array());

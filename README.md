@@ -23,10 +23,9 @@ $ipsp   = new Ipsp_Api( $client );
 ## Generate Checkout
 
 ```php
- 
 <?php
 $order_id = 'testproduct10002';
-$data = $ipsp->call('Checkout',array(
+$data = $ipsp->call('checkout',array(
  'order_id'    => $order_id,
  'order_desc'  => 'Short Order Description',
  'currency'    => $ipsp::USD ,
@@ -35,7 +34,44 @@ $data = $ipsp->call('Checkout',array(
 ))->getResponse();
 // redirect to checkoutpage
 header(sprintf('Location: %s',$data->checkout_url));
+```
 
+## API Methods
+### Accept purchase (hosted payment page)
+```php
+$data = $ipsp->call('checkout',array());
+```
+### Accept purchase (merchant payment page)
+```php
+$data = $ipsp->call('pcidss',array());
+```
+### Purchase using card token
+```php
+$data = $ipsp->call('recurring',array());
+```
+### Payment report
+```php
+$data = $ipsp->call('reports',array());
+```
+### Order Refund
+```php
+$data = $ipsp->call('reverse',array());
+```
+### Check payment status
+```php
+$data = $ipsp->call('status',array());
+```
+### Card verification
+```php
+$data = $ipsp->call('verification',array());
+```
+### Order capture
+```php
+$data = $ipsp->call('capture',array());
+```
+### P2P card credit
+```php
+$data = $ipsp->call('p2pcredit',array());
 ```
 
 ## Examples

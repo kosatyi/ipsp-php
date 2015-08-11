@@ -12,6 +12,11 @@ class Ipsp_Resource {
     protected $defaultParams = array();
     protected $request;
     protected $response;
+
+    protected $types    = array(
+
+    );
+
     protected $formatter	= array(
         'json' => 'jsonParams',
         'xml'  => 'xmlParams',
@@ -22,12 +27,8 @@ class Ipsp_Resource {
         'xml'  => 'parseXml',
         'form' => 'parseForm'
     );
-
     private $client;
     private $params = array();
-
-
-
     /**
      * @param array $params
      * @return string
@@ -39,7 +40,6 @@ class Ipsp_Resource {
         $params = join('|',$params);
         return(sha1($params));
     }
-
     /**
      * @param string $json
      * @return mixed
@@ -72,7 +72,7 @@ class Ipsp_Resource {
      * @return mixed
      * @throws Exception
      */
-    private function parseRespose($data){
+    protected function parseRespose($data){
         $callback = $this->parser[$this->format];
         if( method_exists($this,$callback) ) {
             return call_user_func(array($this,$callback),$data);
@@ -81,8 +81,6 @@ class Ipsp_Resource {
             throw new \Exception(sprintf('parser %s not supported',$this->format));
         }
     }
-
-
     /**
      * @param array $params
      * @return string
@@ -99,7 +97,6 @@ class Ipsp_Resource {
     private function formParams($params=array()){
         return http_build_query($params);
     }
-
     /**
      * @param array $params
      * @return mixed
@@ -114,7 +111,7 @@ class Ipsp_Resource {
      * @return mixed
      * @throws Exception
      */
-    private function buildParams($params){
+    protected function buildParams($params){
         $callback = $this->formatter[$this->format];
         if( method_exists($this,$callback) ) {
             return call_user_func(array($this,$callback),$params);
@@ -142,7 +139,6 @@ class Ipsp_Resource {
         $fields = $this->fields;
         return TRUE;
     }
-
     /**
      * @param $key
      * @param $value

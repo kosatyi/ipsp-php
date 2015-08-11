@@ -5,6 +5,7 @@
  */
 class Ipsp_Request {
     private $curl;
+    private $format;
     private $contentType = array(
         'json' => 'application/json',
         'xml'  => 'application/xml',
@@ -32,6 +33,12 @@ class Ipsp_Request {
         return  sprintf('Content-Type: %s',$type);
     }
     /**
+     * @return array
+     */
+    public function getContentTypes(){
+        return $this->contentType;
+    }
+    /**
      * @param string $str
      * @return string
      */
@@ -44,12 +51,12 @@ class Ipsp_Request {
      * @param array $params
      * @return bool|mixed
      */
-    public function doPost( $url = '' , $params=array() , $format='json' ){
+    public function doPost( $url = '' , $params=array()){
         $this->curl->create($url);
         $this->curl->ssl();
         $this->curl->post($params);
-        $this->curl->http_header($this->getContentType( $format ));
-        $this->curl->http_header($this->getContentLength( $params ));
+        $this->curl->http_header( $this->getContentType( $this->format ));
+        $this->curl->http_header( $this->getContentLength( $params ));
         return $this->curl->execute();
     }
 
@@ -59,10 +66,10 @@ class Ipsp_Request {
      * @param string $format
      * @return bool|mixed
      */
-    public function doGet( $url='', $params=array(), $format='json' ){
+    public function doGet( $url='', $params=array()){
         $this->create($url.(empty($params) ? '' : '?'.http_build_query($params, NULL, '&')));
         $this->curl->ssl();
-        $this->curl->http_header($this->getContentType( $format ));
+        $this->curl->http_header($this->getContentType( $this->format ));
         $this->curl->http_header($this->getContentLength( $params ));
         return $this->curl->execute();
     }

@@ -23,6 +23,8 @@ class Ipsp_Resource_Result extends Ipsp_Resource{
            $this->format = $types[$type];
            $data = $this->parseRespose($body);
            $this->setResponse($data);
+       } else{
+           error_log(sprintf('type %s is undefined',$type));
        }
        return $this;
     }

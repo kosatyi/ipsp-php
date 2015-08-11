@@ -24,9 +24,7 @@ class Ipsp_Resource_Result extends Ipsp_Resource{
            $data = $this->parseRespose($body);
            $this->setResponse($data);
        } else{
-            throw new Exception(sprintf('type=>%s is undefined',$type));
+           error_log(sprintf('type %s is undefined',$type));
        }
-
-
     }
 }

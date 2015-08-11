@@ -5,7 +5,7 @@
  */
 class Ipsp_Resource_Result extends Ipsp_Resource{
     public function call( $data = NULL ){
-        if( empty($data) )
+        if( empty( $data ) )
         {
             $this->parseResponseData();
         } else{
@@ -23,7 +23,10 @@ class Ipsp_Resource_Result extends Ipsp_Resource{
            $this->format = $types[$type];
            $data = $this->parseRespose($body);
            $this->setResponse($data);
+       } else{
+            throw new Exception(sprintf('type=>%s is undefined',$type));
        }
-       return $this;
+
+
     }
 }

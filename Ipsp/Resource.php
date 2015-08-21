@@ -5,6 +5,7 @@
 class Ipsp_Resource {
 
     protected $url    = 'https://api.oplata.com/api';
+
     protected $method = 'POST';
     protected $format = 'json';
     protected $path;
@@ -12,7 +13,6 @@ class Ipsp_Resource {
     protected $defaultParams = array();
     protected $request;
     protected $response;
-
     protected $types    = array(
 
     );

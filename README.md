@@ -11,22 +11,18 @@ https://www.oplata.com/info/api
 ## Quick Start
 
 ```php
- 
 <?php
 require_once 'ipsp-php/autoload.php';
 define('MERCHANT_ID' , '1000');
 define('MERCHANT_PASSWORD' , 'test');
 $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD);
 $ipsp   = new Ipsp_Api( $client );
-
 ```
 
 ## Generate Signature
 
 ```php
- 
 <?php
-
 function getSignature( $merchant_id , $password , $params = array() ){
  $params['merchant_id'] = $merchant_id;
  ksort($params);
@@ -35,7 +31,6 @@ function getSignature( $merchant_id , $password , $params = array() ){
  $params = join('|',$params);
  return(sha1($params));
 }
-
 ```
 
 ## Generate Checkout

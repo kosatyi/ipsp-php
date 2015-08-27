@@ -20,6 +20,24 @@ $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD);
 $ipsp   = new Ipsp_Api( $client );
 
 ```
+
+## Generate Signature
+
+```php
+ 
+<?php
+
+function getSignature( $merchant_id , $password , $params = array() ){
+ $params['merchant_id'] = $merchant_id;
+ ksort($params);
+ $params = array_values($params);
+ array_unshift( $params , $password );
+ $params = join('|',$params);
+ return(sha1($params));
+}
+
+```
+
 ## Generate Checkout
 
 ```php

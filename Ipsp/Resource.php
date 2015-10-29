@@ -3,8 +3,6 @@
  * Class Ipsp_Resource
  */
 class Ipsp_Resource {
-
-    protected static $url;
     protected $method = 'POST';
     protected $format = 'json';
     protected $path;
@@ -15,7 +13,6 @@ class Ipsp_Resource {
     protected $types    = array(
 
     );
-
     protected $formatter	= array(
         'json' => 'jsonParams',
         'xml'  => 'xmlParams',
@@ -28,9 +25,6 @@ class Ipsp_Resource {
     );
     private $client;
     private $params = array();
-    public static function gateway($domain){
-        self::$url = sprintf('https://%s/api',$domain);
-    }
     /**
      * @param array $params
      * @return string
@@ -42,9 +36,6 @@ class Ipsp_Resource {
         $params = join('|',$params);
         return(sha1($params));
     }
-
-
-
     /**
      * @param string $json
      * @return mixed
@@ -189,7 +180,7 @@ class Ipsp_Resource {
      * @return string
      */
     public function getUrl(){
-        return sprintf('%s%s',$this->url,$this->path);
+        return sprintf('%s%s',$this->client->getUrl(),$this->path);
     }
     /**
      * @return $this

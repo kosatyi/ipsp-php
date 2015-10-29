@@ -5,11 +5,14 @@
 class Ipsp_Client {
     private $id;
     private $password;
-    public function __construct($id,$password){
+    private $url;
+    public function __construct($id,$password,$domain){
         if(empty($id)) throw new \Exception('auth id not set');
         if(empty($password)) throw new \Exception('auth password not set');
+        if(empty($domain)) throw new \Exception('auth password not set');
         $this->id = $id;
         $this->password = $password;
+        $this->url = sprintf('https://%s/api',$domain);
     }
     /**
      * @return int
@@ -22,5 +25,11 @@ class Ipsp_Client {
      */
     public function getPassword(){
         return $this->password;
+    }
+    /**
+     * @return String
+     */
+    public function getUrl(){
+        return $this->url;
     }
 }

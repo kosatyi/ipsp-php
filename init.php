@@ -2,8 +2,6 @@
 
 require_once 'autoload.php';
 
-Ipsp_Resource::gateway('api.oplata.com');
-
-$client = new Ipsp_Client( 1000 ,'test' );
+$client = new Ipsp_Client( 1000 ,'test' , 'api.oplata.com' );
 
 $ipsp   = new Ipsp_Api( $client );

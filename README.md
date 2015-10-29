@@ -13,7 +13,7 @@ https://www.oplata.com/info/api
 ```php
 <?php
 require_once 'ipsp-php/autoload.php';
-define('MERCHANT_ID' , '1000');
+define('MERCHANT_ID' , 'your_merchant_id');
 define('MERCHANT_PASSWORD' , 'test');
 $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD);
 $ipsp   = new Ipsp_Api( $client );

@@ -4,8 +4,7 @@
  */
 class Ipsp_Resource {
 
-    protected $url    = 'https://api.oplata.com/api';
-
+    protected static $url;
     protected $method = 'POST';
     protected $format = 'json';
     protected $path;
@@ -29,6 +28,9 @@ class Ipsp_Resource {
     );
     private $client;
     private $params = array();
+    public static function gateway($domain){
+        self::$url = sprintf('https://%s/api',$domain);
+    }
     /**
      * @param array $params
      * @return string
@@ -40,6 +42,9 @@ class Ipsp_Resource {
         $params = join('|',$params);
         return(sha1($params));
     }
+
+
+
     /**
      * @param string $json
      * @return mixed

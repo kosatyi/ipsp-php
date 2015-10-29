@@ -11,7 +11,8 @@ A payment service provider (PSP) offers shops online services for accepting elec
 require_once 'ipsp-php/autoload.php';
 define('MERCHANT_ID' , 'your_merchant_id');
 define('MERCHANT_PASSWORD' , 'test');
-$client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD);
+define('IPSP_GATEWAY' , 'your_ipsp_gateway');
+$client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD, IPSP_GATEWAY );
 $ipsp   = new Ipsp_Api( $client );
 ```
 

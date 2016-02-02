@@ -5,9 +5,9 @@ A payment service provider (PSP) offers shops online services for accepting elec
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
 ## Installation
-
+```cmd
 git clone git@github.com:kosatyi/ipsp-php.git
-
+```
 ## Quick Start
 
 ```php

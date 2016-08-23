@@ -14,6 +14,7 @@ class Ipsp_Api {
     const USD = 'USD';
     const EUR = 'EUR';
     const RUB = 'RUB';
+    const GBP = 'GBP';    
     /**
      * @param Ipsp_Client $client
      */

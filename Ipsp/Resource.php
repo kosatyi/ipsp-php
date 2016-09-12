@@ -30,7 +30,7 @@ class Ipsp_Resource {
      * @return string
      */
     private function getSignature(Array $params){
-        $params = array_filter($params);
+        $params = array_filter($params,'strlen');
         ksort($params);
         $params = array_values($params);
         array_unshift( $params , $this->client->getPassword() );

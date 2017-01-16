@@ -26,7 +26,7 @@ $ipsp   = new Ipsp_Api( $client );
 <?php
 function getSignature( $merchant_id , $password , $params = array() ){
  $params['merchant_id'] = $merchant_id;
- $params = array_filter($params);
+ $params = array_filter($params,'strlen');
  ksort($params);
  $params = array_values($params);
  array_unshift( $params , $password );

@@ -1,4 +1,3 @@
-theme: jekyll-theme-cayman
 # Setup
 title:        Project or Site name
 tagline:      A responsive theme for your project on GitHub Pages
@@ -8,4 +7,11 @@ paginate:     1
 # About/contact
 author:
   name:       Author name
-  url:        http://yourhomepage.com
+  url:        http://yourhomepage.com 
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown

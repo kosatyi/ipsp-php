@@ -61,6 +61,7 @@ header(sprintf('Location: %s',$data->checkout_url));
 ## API Methods
 ### Accept purchase (hosted payment page)
 ```php
+<?php
 $data = $ipsp->call('checkout',array(
   'order_id'    => 'orderid-111222333',
   'order_desc'  => 'Simple checkout page',
@@ -71,6 +72,7 @@ $data = $ipsp->call('checkout',array(
 ```
 ### Accept purchase (merchant payment page)
 ```php
+<?php
 $data = $ipsp->call('pcidss',array(
   'order_id'    => 'orderid-222333444',
   'order_desc'  => 'PCIDSS Secure checkout page',
@@ -84,6 +86,7 @@ $data = $ipsp->call('pcidss',array(
 ```
 ### Purchase using card token
 ```php
+<?php
 $data = $ipsp->call('recurring',array(
   'order_id'    => 'orderid-111222333',
   'order_desc'  => 'Simple checkout page',
@@ -96,8 +99,8 @@ $data = $ipsp->call('recurring',array(
 header(sprintf('Location: %s',$data->checkout_url));
 ```
 ```php
+<?php
 // On result page save rectoken POST param
-
 $data = $ipsp->call('recurring',array(
   'order_id'    => 'orderid-111222333',
   'order_desc'  => 'Simple checkout page',
@@ -112,6 +115,7 @@ $result = $data->getResponse();
 ```
 ### Payment report
 ```php
+<?php
 // Get report for 2 past days
 $date_from = new DateTime('-2 days');
 $date_to = new DateTime('now');
@@ -123,6 +127,7 @@ $result = $data->getResponse();
 ```
 ### Order Refund
 ```php
+<?php
 $data = $ipsp->call('reverse',array(
   'order_id'    => 'orderid-111222333',
   'amount'      => 2000 ,
@@ -132,12 +137,14 @@ $result = $data->getResponse();
 ```
 ### Check payment status
 ```php
+<?php
 $data = $ipsp->call('status',array(
   'order_id'    => 'orderid-111222333',
 ));
 ```
 ### Card verification
 ```php
+<?php
 $data = $ipsp->call('verification',array(
   'order_id'    => 'orderid-111222333',
   'order_desc'  => 'Simple checkout page',
@@ -148,12 +155,14 @@ $data = $ipsp->call('verification',array(
 ```
 ### Order capture
 ```php
+<?php
 $data = $ipsp->call('capture',array(
 
 ));
 ```
 ### P2P card credit
 ```php
+<?php
 $data = $ipsp->call('p2pcredit',array(
 
 ));

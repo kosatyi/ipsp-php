@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # IPSP (PHP) SDK
 
 ## Payment service provider

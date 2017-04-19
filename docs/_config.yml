@@ -1,6 +1,6 @@
 # Setup
 title:        IPSP PHP SDK
-tagline:      Payment service provider SDK Accept purchase
+tagline:      Accept epayments on your website
 baseurl:      ""
 paginate:     1
 layout : default

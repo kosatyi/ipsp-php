@@ -1,14 +1,21 @@
----
-layout: default
----
+# IPSP (PHP) SDK
 
 ## Payment service provider
 A payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods including credit card, bank-based payments such as direct debit, bank transfer, and real-time bank transfer based on online banking. Typically, they use a software as a service model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
 ## Installation
+
+Clone from GitHub:
+
 ```cmd
 git clone git@github.com:kosatyi/ipsp-php.git
+```
+
+If you’re using Composer, you can run the following command:
+
+```cmd
+composer require kosatyi/ipsp-php
 ```
 ## Quick Start
 
@@ -43,11 +50,11 @@ function getSignature( $merchant_id , $password , $params = array() ){
 <?php
 $order_id = 'testproduct10002';
 $data = $ipsp->call('checkout',array(
- 'order_id'    => $order_id,
- 'order_desc'  => 'Short Order Description',
- 'currency'    => $ipsp::USD ,
- 'amount'      => 2000, // 20 USD
- 'response_url'=> sprintf('http://shop.example.com/checkout/%s',$order_id)
+  'order_id'    => 'orderid-111222333',
+  'order_desc'  => 'Simple checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/result')
 ))->getResponse();
 // redirect to checkoutpage
 header(sprintf('Location: %s',$data->checkout_url));
@@ -56,39 +63,102 @@ header(sprintf('Location: %s',$data->checkout_url));
 ## API Methods
 ### Accept purchase (hosted payment page)
 ```php
-$data = $ipsp->call('checkout',array());
+$data = $ipsp->call('checkout',array(
+  'order_id'    => 'orderid-111222333',
+  'order_desc'  => 'Simple checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/result')
+));
 ```
 ### Accept purchase (merchant payment page)
 ```php
-$data = $ipsp->call('pcidss',array());
+$data = $ipsp->call('pcidss',array(
+  'order_id'    => 'orderid-222333444',
+  'order_desc'  => 'PCIDSS Secure checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/result'),
+  'card_number' => 4444555566661111, // 16-19 digits card number
+  'expiry_date' => '1240', // date (MMYY) format
+  'cvv2'        => 111
+));
 ```
 ### Purchase using card token
 ```php
-$data = $ipsp->call('recurring',array());
+$data = $ipsp->call('recurring',array(
+  'order_id'    => 'orderid-111222333',
+  'order_desc'  => 'Simple checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/result')
+  'required_rectoken'=>'y'
+));
+
+header(sprintf('Location: %s',$data->checkout_url));
+```
+```php
+// On result page save rectoken POST param
+
+$data = $ipsp->call('recurring',array(
+  'order_id'    => 'orderid-111222333',
+  'order_desc'  => 'Simple checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/recurring'),
+  'rectoken'    => RECTOKEN
+));
+
+$result = $data->getResponse();
+
 ```
 ### Payment report
 ```php
-$data = $ipsp->call('reports',array());
+// Get report for 2 past days
+$date_from = new DateTime('-2 days');
+$date_to = new DateTime('now');
+$data = $ipsp->call('reports',array(
+  'date_from'=>$date_from->format('d.m.Y'),
+  'date_to'  =>$date_to->format('d.m.Y')
+));
+$result = $data->getResponse();
 ```
 ### Order Refund
 ```php
-$data = $ipsp->call('reverse',array());
+$data = $ipsp->call('reverse',array(
+  'order_id'    => 'orderid-111222333',
+  'amount'      => 2000 ,
+  'currency'    => $ipsp::USD
+));
+$result = $data->getResponse();
 ```
 ### Check payment status
 ```php
-$data = $ipsp->call('status',array());
+$data = $ipsp->call('status',array(
+  'order_id'    => 'orderid-111222333',
+));
 ```
 ### Card verification
 ```php
-$data = $ipsp->call('verification',array());
+$data = $ipsp->call('verification',array(
+  'order_id'    => 'orderid-111222333',
+  'order_desc'  => 'Simple checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 100, // 1 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/recurring'),
+));
 ```
 ### Order capture
 ```php
-$data = $ipsp->call('capture',array());
+$data = $ipsp->call('capture',array(
+
+));
 ```
 ### P2P card credit
 ```php
-$data = $ipsp->call('p2pcredit',array());
+$data = $ipsp->call('p2pcredit',array(
+
+));
 ```
 
 ## Examples

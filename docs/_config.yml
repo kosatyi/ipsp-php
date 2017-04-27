@@ -1,7 +1,6 @@
 # Gems
 gems:
   - jekyll-paginate
-  - jekyll-sitemap
 
 #Others
 markdown: kramdown

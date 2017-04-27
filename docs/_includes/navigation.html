@@ -15,7 +15,7 @@
 {% assign filename = node.url | split: '/' | last %}
 {% if node_url_length == current_lvl_url_length and node.url contains lvl_base_url %}
 <li>
-    <a href='{{ node.url }}'>{{ node.title }} </a>
+    <a href='{{site.baseurl}}{{ node.url }}'>{{ node.title }} </a>
     {% if include.max_depth > current_lvl_url_length | plus: 1 %}
         {% assign lvl_base_url = node.url | replace: '.html' %}
         {% include navigation.html %}

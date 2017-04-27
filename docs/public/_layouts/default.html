@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<aside class="page-sidebar">
+{% include navigation.html max_depth=5 %}
+</aside>
+<section class="page-header">
+<h1 class="project-name"><a href="/">{{ site.title }}</a></h1>
+<h2 class="project-tagline">{{ site.tagline }}</h2>
+<a href="{{ site.url.github }}" class="btn">View on GitHub</a>
+<a href="{{ site.url.zip }}" class="btn">Download .zip</a>
+<a href="{{ site.url.tar }}" class="btn">Download .tar.gz</a>
+</section>
+<section class="main-content">
+{{ content }}
+</section>
+</body>
+</html>

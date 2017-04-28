@@ -9,28 +9,24 @@
 </head>
 <body>
 <aside class="page-sidebar">
+    <a href="javascript:void(0)" class="page-sidebar-toggle" onclick="document.body.classList.toggle('sidebar-show')">
+        {% include menu.svg %}
+    </a>
     <nav class="page-menu">
         <ul>
             <li><a href="{{site.baseurl}}/" data-rel="^{{site.baseurl}}$">Home</a></li>
         </ul>
         {% include navigation.html max_depth=5 %}
-        <ul>
-            <li class="separator"></li>
-            <li><a href="">Feedback</a></li>
-        </ul>
     </nav>
 </aside>
 <main class="page-wrapper">
     <header class="page-header">
         <div class="container">
-            <a href="javascript:void(0)" class="page-sidebar-toggle" onclick="document.body.classList.toggle('sidebar-show')">
-                {% include menu.svg %}
-            </a>
             <h1 class="project-name"><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
             <h2 class="project-tagline">{{ site.tagline }}</h2>
-            <a href="{{ site.url.github }}" class="btn">View on GitHub</a>
-            <a href="{{ site.url.zip }}" class="btn">Download .zip</a>
-            <a href="{{ site.url.tar }}" class="btn">Download .tar.gz</a>
+            <a href="{{ site.buttons.github }}" class="btn">View on GitHub</a>
+            <a href="{{ site.buttons.zip }}" class="btn">Download .zip</a>
+            <a href="{{ site.buttons.tar }}" class="btn">Download .tar.gz</a>
         </div>
     </header>
     <section class="page-content">

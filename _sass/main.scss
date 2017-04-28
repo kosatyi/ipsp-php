@@ -2,7 +2,6 @@
 @import 'source/normalize';
 @import 'source/highlight';
 
-
 $font-weight-bold: 700;
 $font-weight-normal: 400;
 $grid-gutter-width: 1rem;
@@ -83,18 +82,25 @@ a {
   transition: left 218ms cubic-bezier(0.4, 0, 0.2, 1);
   left: -250px;
   &-toggle{
-    display:none;
+    display:block;
+    position:absolute;
+    left:100%;
+    top:0;
+    line-height:0;
+    margin:10px;
+    padding:10px;
+    border-radius:100%;
+    transition: all 218ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color:rgba(0,0,0,0.2);
+    #lines{
+      fill:#fff;
+    }
   }
   @media screen and (min-width: 64em) {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     left: 0px;
-  }
-  @media screen and (max-width: 64em) {
     &-toggle{
-      display:block;
-      #lines{
-        fill:#fff;
-      }
+      display:none;
     }
   }
 }
@@ -104,7 +110,7 @@ a {
     padding: 0;
     margin: 0;
     ul{
-      //display:none;
+      display:none;
     }
   }
   li {
@@ -130,6 +136,9 @@ a {
           bottom: 0;
           left: 0;
         }
+        + ul {
+          display:block;
+        }
       }
     }
     &.separator {
@@ -141,11 +150,6 @@ a {
       position: relative;
       z-index: 2;
       box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.02);
-    }
-    &.active {
-      > ul {
-        display: block;
-      }
     }
     ul {
       a {
@@ -181,6 +185,14 @@ a {
   .page-sidebar{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     left: 0;
+    &-toggle{
+      z-index:0;
+      background-color:#fff;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      #lines{
+        fill:$brand-primary;
+      }
+    }
   }
   .page-wrapper{
     @media screen and (min-width: 64em) {

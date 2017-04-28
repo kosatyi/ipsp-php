@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 </head>
 <body>
+<aside class="page-sidebar">
+    <a href="#" class="page-sidebar-toggle">
+        {% include menu.svg %}
+    </a>
+    <nav class="page-menu">
+        <ul>
+            <li><a href="{{site.baseurl}}/" data-rel="^{{site.baseurl}}$">Home</a></li>
+        </ul>
+        {% include navigation.html max_depth=5 %}
+    </nav>
+</aside>
 <main class="page-wrapper">
     <header class="page-header">
         <div class="container">
@@ -24,17 +35,6 @@
         </div>
     </section>
 </main>
-<aside class="page-sidebar">
-    <a href="#" class="page-sidebar-toggle">
-        {% include menu.svg %}
-    </a>
-    <nav class="page-menu">
-        <ul>
-            <li><a href="{{site.baseurl}}/" data-rel="^{{site.baseurl}}$">Home</a></li>
-        </ul>
-        {% include navigation.html max_depth=5 %}
-    </nav>
-</aside>
 <script async="true" src="{{site.baseurl}}/assets/js/main.js"></script>
 </body>
 </html>

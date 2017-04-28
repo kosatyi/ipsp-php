@@ -1,6 +1,6 @@
-# Documentation
+# Api Methods
 
-{% include navigation.html base_url="/docs/" max_depth=1 %}
+{% include navigation.html base_url="/docs/api-methods/" max_depth=1 %}
 
 Clone from GitHub:
 
@@ -13,4 +13,3 @@ If you’re using Composer, you can run the following command:
 ```cmd
 composer require kosatyi/ipsp-php
 ```
-

@@ -2,24 +2,42 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>{{ site.title }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 </head>
 <body>
 <aside class="page-sidebar">
-{% include navigation.html max_depth=5 %}
+    <nav class="page-menu">
+        <ul>
+            <li><a href="{{site.baseurl}}/">Home</a></li>
+        </ul>
+        {% include navigation.html max_depth=5 %}
+        <ul>
+            <li class="separator"></li>
+            <li><a href="">ashdjahsd</a></li>
+        </ul>
+    </nav>
 </aside>
-<section class="page-header">
-<h1 class="project-name"><a href="/">{{ site.title }}</a></h1>
-<h2 class="project-tagline">{{ site.tagline }}</h2>
-<a href="{{ site.url.github }}" class="btn">View on GitHub</a>
-<a href="{{ site.url.zip }}" class="btn">Download .zip</a>
-<a href="{{ site.url.tar }}" class="btn">Download .tar.gz</a>
-</section>
-<section class="main-content">
-{{ content }}
-</section>
+<main class="page-wrapper">
+    <header class="page-header">
+        <div class="container">
+            <a href="javascript:void(0)" class="page-sidebar-toggle" onclick="document.body.classList.toggle('sidebar-show')">
+                {% include menu.svg %}
+            </a>
+            <h1 class="project-name"><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
+            <h2 class="project-tagline">{{ site.tagline }}</h2>
+            <a href="{{ site.url.github }}" class="btn">View on GitHub</a>
+            <a href="{{ site.url.zip }}" class="btn">Download .zip</a>
+            <a href="{{ site.url.tar }}" class="btn">Download .tar.gz</a>
+        </div>
+    </header>
+    <section class="page-content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </section>
+</main>
 </body>
 </html>

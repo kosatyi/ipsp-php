@@ -1,7 +1,5 @@
 (function(){
-
     this.noopElement = document.createElement('span');
-
     this.toArray = function(value){
         return Array.prototype.slice.call(value);
     };
@@ -12,16 +10,17 @@
         return document.querySelector(String(selector)) || noopElement;
     };
 })();
-
-
 (function(){
+    var wrapper = find('html');
     find('.page-sidebar-toggle').addEventListener('click',function(ev){
         ev.preventDefault();
-        document.body.classList.toggle('sidebar-show');
+        wrapper.classList.toggle('sidebar-show');
+    });
+    find('.page-sidebar-shadow').addEventListener('click',function(ev){
+        ev.preventDefault();
+        wrapper.classList.remove('sidebar-show');
     });
 })();
-
-
 (function(){
     var href = location.href;
     findAll('[href],[data-rel]').filter(function(el,expr){

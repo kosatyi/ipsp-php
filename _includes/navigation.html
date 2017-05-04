@@ -15,11 +15,11 @@
 {% assign filename = node.url | split: '/' | last %}
 {% if node_url_length == current_lvl_url_length and node.url contains lvl_base_url %}
 <li>
-    <a href='{{site.baseurl}}{{ node.url }}'>{{ node.title }} </a>
+    <a href='{{site.baseurl}}{{ node.url }}'>{{ node.title }}</a>
     {% if include.max_depth > current_lvl_url_length | plus: 1 %}
         {% assign lvl_base_url = node.url | replace: '.html' %}
         {% include navigation.html %}
-        {% assign current_lvl_url_length = current_lvl_url_length | minus: 1%}
+        {% assign current_lvl_url_length = current_lvl_url_length | minus: 1 %}
         {% assign directory_to_remove = lvl_base_url | split: '/' | last  %}
         {% assign lvl_base_url = lvl_base_url | replace: directory_to_remove | replace: '//', '/'  %}
     {% endif %}

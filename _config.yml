@@ -1,11 +1,11 @@
 destination:  _site/
 
-plugins_dir:  jekyll/_plugins
-layouts_dir:  jekyll/_layouts
-includes_dir: jekyll/_includes
-data_dir:     jekyll/_data
+plugins_dir:  _jekyll/_plugins
+layouts_dir:  _jekyll/_layouts
+includes_dir: _jekyll/_includes
+data_dir:     _jekyll/_data
 
-exclude: [ "jekyll" ]
+exclude: [ "_jekyll" ]
 
 collections:
   assets:

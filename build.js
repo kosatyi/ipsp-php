@@ -1,4 +1,5 @@
 var fs = require('fs');
+
 function move(oldPath, newPath, callback) {
     fs.rename(oldPath, newPath, function (err) {
         if (err) {
@@ -23,9 +24,10 @@ function move(oldPath, newPath, callback) {
     }
 }
 
+//git submodule update --recursive --force --remote
+
 move('_jekyll/_data','_data',function(){});
 move('_jekyll/_plugins','_plugins',function(){});
 move('_jekyll/_layouts','_layouts',function(){});
 move('_jekyll/_includes','_includes',function(){});
-move('_jekyll/_assets','_assets',function(){});
-move('_jekyll/_saas','_saas',function(){});
+move('_jekyll/assets','assets',function(){});

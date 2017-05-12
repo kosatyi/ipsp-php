@@ -7,6 +7,10 @@ data_dir:     jekyll/_data
 
 exclude: [ "jekyll" ]
 
+collections:
+  assets:
+    output: true
+
 #Others
 markdown: kramdown
 # Setup

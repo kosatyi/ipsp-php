@@ -1,6 +1,12 @@
+destination:  _site/
+plugins_dir:  sjt/_plugins/
+layouts_dir:  sjt/_layouts/
+includes_dir: sjt/_includes/
+exclude:
+  - sjt/
+
 #Others
 markdown: kramdown
-theme: sjt
 # Setup
 title:        IPSP PHP SDK
 tagline:      Accept epayments on your website

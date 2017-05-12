@@ -1,9 +1,13 @@
 destination:  _site/
-plugins_dir:  sjt/_plugins/
-layouts_dir:  sjt/_layouts/
-includes_dir: sjt/_includes/
-exclude:
-  - sjt/
+plugins_dir:  jekyll/_plugins
+layouts_dir:  jekyll/_layouts
+includes_dir: jekyll/_includes
+data_dir:     jekyll/_data
+
+include: ["jekyll/assets/css/main.css","jekyll/assets/js/main.js"]
+#exclude:
+#  - jekyll/
+
 
 #Others
 markdown: kramdown

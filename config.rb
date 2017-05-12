@@ -2,10 +2,10 @@ require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 # Set this to the root of your project when deployed:
 http_path = '/'
-sass_dir = '_sass'
-css_dir = 'assets/css'
-images_dir = 'assets/images'
-javascripts_dir = 'assets/js'
+sass_dir = 'jekyll/_sass'
+css_dir = 'jekyll/assets/css'
+images_dir = 'jekyll/assets/images'
+javascripts_dir = 'jekyll/assets/js'
 
 # output_style = :compressed
 

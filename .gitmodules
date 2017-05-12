@@ -1,4 +1,3 @@
 [submodule "jekyll"]
 	path = jekyll
 	url = https://github.com/kosatyi/sjt.git
-	branch = master

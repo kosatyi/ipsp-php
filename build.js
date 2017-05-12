@@ -36,8 +36,6 @@ function moveDir(oldPath, newPath, callback) {
     }
 }
 
-//git submodule update --recursive --force --remote
-
 execCommand('git submodule update --recursive --force --remote',function(message){
     console.log(message);
     moveDir('_jekyll/_data','_data',function(){});

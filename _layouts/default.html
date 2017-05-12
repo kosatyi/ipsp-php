@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
 </head>
 <body>
-{% include sidebar.html %}
 <main class="page-wrapper">
-    {% include header.html %}
-    <section class="page-content">
-        <div class="container">
-            {{ content }}
-        </div>
-    </section>
+{% include toolbar.html %}
+{% include header.html %}
+<section class="page-content">
+<div class="container">
+{{ content }}
+</div>
+</section>
 </main>
 <script async="true" src="{{site.baseurl}}/assets/js/main.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 </body>
 </html>

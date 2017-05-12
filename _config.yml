@@ -1,14 +1,10 @@
-# Gems
-gems:
-  - jekyll-paginate
-
 #Others
 markdown: kramdown
-
+theme: sjt
 # Setup
 title:        IPSP PHP SDK
 tagline:      Accept epayments on your website
-baseurl:      "/ipsp-php"
+baseurl:      /ipsp-php
 paginate:     1
 
 author:

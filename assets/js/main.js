@@ -10,17 +10,19 @@
         return document.querySelector(String(selector)) || noopElement;
     };
 })();
+
 (function(){
-    var wrapper = find('html');
-    find('.page-sidebar-toggle').addEventListener('click',function(ev){
-        ev.preventDefault();
-        wrapper.classList.toggle('sidebar-show');
-    });
-    find('.page-sidebar-shadow').addEventListener('click',function(ev){
-        ev.preventDefault();
-        wrapper.classList.remove('sidebar-show');
+    var wrapper = find('body');
+    var toolbar = find('.page-toolbar');
+    window.addEventListener('scroll',function(ev){
+        if( wrapper.scrollTop>0) {
+            toolbar.classList.add('scrolled');
+        } else {
+            toolbar.classList.remove('scrolled');
+        }
     });
 })();
+
 (function(){
     var href = location.href;
     findAll('[href],[data-rel]').filter(function(el,expr){

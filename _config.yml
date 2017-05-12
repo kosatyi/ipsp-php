@@ -1,16 +1,3 @@
-destination:  _site/
-
-plugins_dir:  _jekyll/_plugins
-layouts_dir:  _jekyll/_layouts
-includes_dir: _jekyll/_includes
-data_dir:     _jekyll/_data
-
-exclude: [ "_jekyll" ]
-
-collections:
-  assets:
-    output: true
-
 #Others
 markdown: kramdown
 # Setup

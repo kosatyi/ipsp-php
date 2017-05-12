@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us" class="{{ page.template | default: 'docs' }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+</head>
+<body>
+<main class="page-wrapper">
+{% include toolbar.html %}
+{% include header.html %}
+<section class="page-content">
+<div class="container">
+{{ content }}
+</div>
+</section>
+</main>
+<script async="true" src="{{site.baseurl}}/assets/js/main.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+</body>
+</html>

@@ -23,4 +23,9 @@ function move(oldPath, newPath, callback) {
     }
 }
 
-move('jekyll/_assets','_assets',function(){});
+move('_jekyll/_data','_data',function(){});
+move('_jekyll/_plugins','_plugins',function(){});
+move('_jekyll/_layouts','_layouts',function(){});
+move('_jekyll/_includes','_includes',function(){});
+move('_jekyll/_assets','_assets',function(){});
+move('_jekyll/_saas','_saas',function(){});

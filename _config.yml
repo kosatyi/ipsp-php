@@ -1,13 +1,11 @@
 destination:  _site/
+
 plugins_dir:  jekyll/_plugins
 layouts_dir:  jekyll/_layouts
 includes_dir: jekyll/_includes
 data_dir:     jekyll/_data
 
-include: ["jekyll/assets/css/main.css","jekyll/assets/js/main.js"]
-#exclude:
-#  - jekyll/
-
+exclude: [ "jekyll" ]
 
 #Others
 markdown: kramdown
@@ -15,7 +13,6 @@ markdown: kramdown
 title:        IPSP PHP SDK
 tagline:      Accept epayments on your website
 baseurl:      /ipsp-php
-paginate:     1
 
 author:
   name:       Stepan Kosatyi

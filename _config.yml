@@ -20,19 +20,19 @@ defaults:
         path: "docs"
         type: "pages"
     values:
-        headline: "project"
-        description: "asdasdasdas"
+        headline: "SDK Docs"
+        description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"
   -
     scope:
         path: "examples"
         type: "pages"
     values:
-        headline: "project"
-        description: "asdasdasd"
+        headline: "Showcase"
+        description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"
   -
     scope:
         path: "modules"
         type: "pages"
     values:
-        headline: "project"
-        description: "asdasdasd"
+        headline: "Components & Helpers"
+        description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"

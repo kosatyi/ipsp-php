@@ -1,19 +1,15 @@
-const fs = require('fs-extra')
-const exec = require('child_process').exec;
+var fs = require('fs-extra')
+var exec = require('child_process').exec;
 
 function execCommand(command,callback){
     exec(command,function (error, stdout, stderr){
-        if(error) console.error(stderr);
+        if(error) {
+            console.error(stderr);
+        }
         else {
             callback(stdout)
         }
     });
-}
-
-
-function moveDir(oldPath, newPath, callback) {
-    console.log(fs);
-    fs.copy(oldPath,newPath,callback);
 }
 
 function logArgs(){
@@ -22,11 +18,11 @@ function logArgs(){
 
 execCommand('git submodule update --recursive --force --remote',function(message){
     console.log(message);
-    moveDir('_jekyll/_data','_data',logArgs);
-    moveDir('_jekyll/_plugins','_plugins',logArgs);
-    moveDir('_jekyll/_layouts','_layouts',logArgs);
-    moveDir('_jekyll/_includes','_includes',logArgs);
-    moveDir('_jekyll/assets','assets',logArgs);
+    fs.copy('_jekyll/_data','_data',logArgs);
+    fs.copy('_jekyll/_plugins','_plugins',logArgs);
+    fs.copy('_jekyll/_layouts','_layouts',logArgs);
+    fs.copy('_jekyll/_includes','_includes',logArgs);
+    fs.copy('_jekyll/assets','assets',logArgs);
 })
 
 

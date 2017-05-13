@@ -12,6 +12,14 @@
 })();
 
 (function(){
+    find('[data-toggle]').addEventListener('click',function(ev){
+        ev.preventDefault();
+        this.classList.toggle('show');
+    });
+})();
+
+
+(function(){
     var wrapper = find('body');
     var toolbar = find('.page-toolbar');
     window.addEventListener('scroll',function(ev){

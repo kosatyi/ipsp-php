@@ -1,3 +1,5 @@
+gems:
+  - jekyll-seo-tag
 #Others
 markdown: kramdown
 # Setup
@@ -7,7 +9,7 @@ baseurl:      /ipsp-php
 
 author:
   name:       Stepan Kosatyi
-  url:        http://www.kosatyi.com
+  url:        http://www.kosatyi.com/
 
 buttons:
   github: https://github.com/kosatyi/ipsp-php

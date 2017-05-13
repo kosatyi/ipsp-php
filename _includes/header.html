@@ -1,5 +1,11 @@
 <header class="page-header">
+    {% if page.headline %}
     <div class="page-overview container">
+        <h1 class="project-name">{{ page.headline }}</h1>
+        <h2 class="project-tagline">{{ page.description }}</h2>
+    </div>
+    {% else %}
+    <div class="page-banner container">
         <h1 class="project-name"><a href="{{site.baseurl}}/">{{ site.title }}</a></h1>
         <h2 class="project-tagline">{{ site.tagline }}</h2>
         <div class="project-buttons">
@@ -9,4 +15,5 @@
         </div>
     </div>
     <div class="arrow"></div>
+    {% endif %}
 </header>

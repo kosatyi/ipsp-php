@@ -13,3 +13,26 @@ buttons:
   github: https://github.com/kosatyi/ipsp-php
   zip: http://github.com/kosatyi/ipsp-php/archive/master.zip
   tar: http://github.com/kosatyi/ipsp-php/archive/master.tar.gz
+
+defaults:
+  -
+    scope:
+        path: "docs"
+        type: "pages"
+    values:
+        headline: "project"
+        description: "asdasdasdas"
+  -
+    scope:
+        path: "examples"
+        type: "pages"
+    values:
+        headline: "project"
+        description: "asdasdasd"
+  -
+    scope:
+        path: "modules"
+        type: "pages"
+    values:
+        headline: "project"
+        description: "asdasdasd"

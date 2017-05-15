@@ -23,7 +23,7 @@ defaults:
         type: "pages"
     values:
         headline: "SDK Docs"
-        description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"
+        description: "Ipsp Developer Documentation"
   -
     scope:
         path: "examples"

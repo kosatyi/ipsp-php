@@ -1,0 +1,13 @@
+table.details {
+  font-size: 1rem;
+}
+table.details tr td {
+  border-width: 0 0 1px 0;
+  vertical-align: top;
+}
+table.details tr th {
+  border-width: 0 0 1px 0;
+  color: #159957;
+  border-color: #1bc671;
+  text-align: left;
+}

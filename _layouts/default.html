@@ -5,7 +5,12 @@
 <title>{{ page.title }} - {{ site.title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#157878">
-<link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+{% for style in site.styles %}
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{style}}">
+{% endfor %}
+{% for script in site.javascript %}
+<script src="{{site.baseurl}}/assets/js/{{script}}"></script>
+{% endfor %}
 {% seo %}</head>
 <body>
 <main class="page-wrapper">

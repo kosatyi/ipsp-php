@@ -7,6 +7,12 @@ title:        IPSP PHP SDK
 tagline:      Accept epayments on your website
 baseurl:      /ipsp-php
 
+styles:
+  - main.css
+  - ipsp.css
+javascript:
+  - main.js
+
 author:
   name:       Stepan Kosatyi
   url:        http://www.kosatyi.com/

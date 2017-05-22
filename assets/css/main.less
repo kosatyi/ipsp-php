@@ -10,7 +10,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #606c71;
+  color: @base-color;
   overflow-y:scroll;
 }
 
@@ -21,6 +21,7 @@ a {
     text-decoration: underline;
   }
 }
+
 
 .arrow{
   position: relative;
@@ -101,7 +102,11 @@ a {
   }
 }
 
-
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+}
 
 .page-toolbar{
   position: fixed;
@@ -221,6 +226,26 @@ a {
   }
 }
 
+.page-footer{
+  a{
+    color:@base-color;
+  }
+  .container {
+    box-shadow: inset 0 7px 9px -10px rgba(0,0,0,0.2);
+    border-top:1px solid #dfdfdf;
+    padding: 2rem;
+    @media screen and (min-width: 64em) {
+      padding: 2rem;
+    }
+    @media screen and (min-width: 42em) and (max-width: 64em) {
+      padding: 2rem;
+    }
+    @media screen and (max-width: 42em) {
+      padding: 1rem;
+    }
+  }
+}
+
 
 .page-banner{
   text-align: center;
@@ -287,6 +312,7 @@ a {
 .page-content {
   margin-top:-1rem;
   word-wrap: break-word;
+  flex:1;
   .container{
     overflow:hidden;
     padding: 1rem 2rem;

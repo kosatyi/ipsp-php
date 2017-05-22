@@ -8,9 +8,6 @@
 {% for style in site.styles %}
 <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{style}}">
 {% endfor %}
-{% for script in site.javascript %}
-<script src="{{site.baseurl}}/assets/js/{{script}}"></script>
-{% endfor %}
 {% seo %}</head>
 <body>
 <main class="page-wrapper">
@@ -23,7 +20,8 @@
 </div>
 </section>
 </main>
-<script async="true" src="{{site.baseurl}}/assets/js/main.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+{% for script in site.javascript %}
+<script src="{{site.baseurl}}/assets/js/{{script}}"></script>
+{% endfor %}
 </body>
 </html>

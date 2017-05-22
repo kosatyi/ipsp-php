@@ -12,6 +12,7 @@ styles:
   - ipsp.css
 javascript:
   - main.js
+  - ipsp.js
 
 author:
   name:       Stepan Kosatyi

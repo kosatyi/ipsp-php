@@ -83,13 +83,13 @@ version:
 
 response_url:
   type: string(2048)
-  descr: Merchant site URL, where customer will be redirected after payment completion
+  descr: Merchant site URL, where customer will be redirected after payment completion.
   default: https://api.fondy.eu/checkout/responsepage
   sample: http://example.com/response
 
 server_callback_url:
   type: string(2048)
-  descr: Merchant site URL, where customer will be redirected after payment completion
+  descr: Merchant site URL, where host-to-host callback will be send after payment completion.
   sample: http://example.com/callback
 
 payment_systems:
@@ -120,6 +120,7 @@ preauth:
   descr: Parameter supported only for Visa/MasterCard payment method
          N — amount is debited from the customer's card immediately and settled to the merchant account, in accordance with the rules of settlements.
          Y — amount holded on the customer card and not charged until the merchant sends a 'capture' request to confirm
+
   default: N
   sample: Y
 

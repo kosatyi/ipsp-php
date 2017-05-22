@@ -1,8 +1,36 @@
 @import 'source/variables';
 
+.page-content{
+  code{
+    line-height:1.7;
+    font-size: 0.8rem;
+    padding:0.1rem 0.5rem;
+    display:inline-block;
+    vertical-align: top;
+    background-color: #639999;
+    color:rgba(255,255,255,0.9);
+  }
+  ol,ul{
+    li{
+      margin-bottom:0.5rem;
+    }
+  }
+}
+
 table.details {
   font-size:1rem;
+  line-height:1.5;
   tr{
+    td,th{
+      padding: 0.5rem;
+      line-height:1.5;
+      &:first-child{
+        padding-left:0;
+      }
+      &:last-child{
+        padding-right:0;
+      }
+    }
     td{
       border-width:0 0 1px 0;
       vertical-align: top;
@@ -14,4 +42,19 @@ table.details {
       text-align:left;
     }
   }
+
+  .break-all{
+
+  }
+
+  .param{
+    line-height:1.7;
+    font-size: 0.8rem;
+    padding:0.1rem 0.5rem;
+    display:inline-block;
+    background-color:lighten(@brand-success,10%);
+    color:rgba(255,255,255,0.9);
+    vertical-align: top;
+  }
+
 }

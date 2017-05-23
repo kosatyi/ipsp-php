@@ -1,3 +1,3 @@
 # Add financial details
 
-FillObject your bank account details for settlements.
+Enter your e-mail or choose social network account.

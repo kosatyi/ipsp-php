@@ -21,10 +21,17 @@ author:
   name:       Stepan Kosatyi
   url:        http://www.kosatyi.com/
 
+
 buttons:
-  github: https://github.com/kosatyi/ipsp-php
-  zip: http://github.com/kosatyi/ipsp-php/archive/master.zip
-  tar: http://github.com/kosatyi/ipsp-php/archive/master.tar.gz
+  -
+    name: View on GitHub
+    link: https://github.com/kosatyi/ipsp-php
+  -
+    name: Download .zip
+    link: http://github.com/kosatyi/ipsp-php/archive/master.zip
+  -
+    name: Download .tar.gz
+    link: http://github.com/kosatyi/ipsp-php/archive/master.tar.gz
 
 defaults:
   -

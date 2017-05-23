@@ -11,6 +11,9 @@ styles:
   - main.css
   - ipsp.css
 javascript:
+  - jquery.js
+  - jquery.ejs.js
+  - jquery.connector.js
   - main.js
   - ipsp.js
 
@@ -45,3 +48,10 @@ defaults:
     values:
         headline: "Components & Helpers"
         description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"
+  -
+    scope:
+        path: "activation"
+        type: "pages"
+    values:
+        headline: "Accept payments"
+        description: "Accept VISA and MasterCard securely, quickly and easily on your website"

@@ -10,9 +10,32 @@
     background-color: #639999;
     color:rgba(255,255,255,0.9);
   }
+  form{
+    margin:1rem 0;
+  }
   ol,ul{
     li{
       margin-bottom:0.5rem;
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+  }
+  ol.page-breadcrumbs{
+    li{
+      margin-bottom:0;
+    }
+  }
+  .cards {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    ul {
+      li {
+        margin-bottom: 1rem;
+        &:last-child{
+          margin-bottom:0;
+        }
+      }
     }
   }
 }
@@ -42,11 +65,9 @@ table.details {
       text-align:left;
     }
   }
-
   .break-all{
 
   }
-
   .param{
     line-height:1.7;
     font-size: 0.8rem;
@@ -56,5 +77,4 @@ table.details {
     color:rgba(255,255,255,0.9);
     vertical-align: top;
   }
-
 }

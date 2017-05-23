@@ -1,3 +1,3 @@
 # Confirm your e-mail address
 
-Page is under construction
+Check your mailbox, go by the link and set up password.

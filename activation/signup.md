@@ -1,3 +1,8 @@
-# Registration
+# Signup
 
-Page is under construction
+asdfjhakjsd hflajhsdflkjahsldkjfh ajsdh flkjasdlkf
+asdfasdfhasdljf haljsdhfljahsdfkj
+
+<form>
+    <input type="text" name="email" placeholder="E-mail" class="field">
+</form>

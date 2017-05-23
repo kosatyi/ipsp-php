@@ -1,3 +1,3 @@
 # Add financial details
 
-Page is under construction
+FillObject your bank account details for settlements.

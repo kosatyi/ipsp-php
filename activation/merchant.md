@@ -1,3 +1,3 @@
 # Create a merchant account
 
-Page is under construction
+Add basic info about your merchant.

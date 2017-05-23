@@ -71,6 +71,41 @@ a {
   + .btn {
     margin-left: 1rem;
   }
+  @media screen and (max-width: 42em) {
+    + .btn{
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
+}
+
+.btn.primary {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
+  &:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.field {
+  color: rgba(0, 0, 0, 0.7);
+  border:1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
+  display:block;
+  width:100%;
+  border-radius: 0.3rem;
+  &:focus{
+    outline:0;
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+
+.btn,.field {
   @media screen and (min-width: 64em) {
     padding: 0.75rem 1rem;
   }
@@ -89,6 +124,7 @@ a {
     }
   }
 }
+
 
 
 

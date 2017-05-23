@@ -7,9 +7,29 @@
   background-color: #639999;
   color: rgba(255, 255, 255, 0.9);
 }
+.page-content form {
+  margin: 1rem 0;
+}
 .page-content ol li,
 .page-content ul li {
   margin-bottom: 0.5rem;
+}
+.page-content ol li:last-child,
+.page-content ul li:last-child {
+  margin-bottom: 0;
+}
+.page-content ol.page-breadcrumbs li {
+  margin-bottom: 0;
+}
+.page-content .cards {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.page-content .cards ul li {
+  margin-bottom: 1rem;
+}
+.page-content .cards ul li:last-child {
+  margin-bottom: 0;
 }
 table.details {
   font-size: 1rem;

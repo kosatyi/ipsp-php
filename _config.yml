@@ -5,7 +5,7 @@ markdown: kramdown
 # Setup
 title:        IPSP PHP SDK
 tagline:      Accept epayments on your website
-baseurl:      /ipsp-php
+baseurl:
 
 styles:
   - main.css

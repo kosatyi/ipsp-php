@@ -64,18 +64,10 @@
                 console.log('success',data);
             });
             this.request('api.merchant','payments',{}).done(function(data){
-                var content = $.ejs('/payments').render({
-                    payments: data
-                });
-                console.log(content);
-            });
-        }).fail(function(){
-            this.request('api.account','login',{
-                email:'stepan@kosatyi.com',
-                password:'s5640416'
-            }).done(function(){
 
             });
+        }).fail(function(){
+
         });
     });
 })(jQuery);

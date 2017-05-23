@@ -53,7 +53,7 @@
 })(jQuery);
 
 (function($){
-    $.ejs.basePath = '/ipsp-php/assets/ejs';
+    $.ejs.basePath = '/assets/ejs';
 })(jQuery);
 
 (function($){

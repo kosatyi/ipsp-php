@@ -71,14 +71,14 @@ defaults:
         type: "pages"
     values:
         headline: "Showcase"
-        description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"
+        description: "Browse the showcase to see some of our favorite implementations"
   -
     scope:
         path: "modules"
         type: "pages"
     values:
         headline: "Components & Helpers"
-        description: "ahdsgfahgs dfkjh gaks dhfgadfskjh"
+        description: "Useful components for checkout development"
   -
     scope:
         path: "activation"

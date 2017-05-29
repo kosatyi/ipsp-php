@@ -1,4 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="105" height="101">                                    <title>my vector image</title>                                    <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->                                    <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="#FFFFFF" stroke="none" class=""/>                                <g class="currentLayer"><title>Layer 1</title><path fill="#159957" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" stroke-dashoffset="" fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_1" d="M4.99999810009291,50.44682478218465 L14.041214991473908,22.35927192887965 L37.711294835297736,5.000003071284226 L66.96957357483888,5.000003071284226 L90.6397995703536,22.35927192887965 L99.68086713283344,50.44682478218465 L90.6397995703536,78.53437763548567 L66.96957357483888,95.89364331587063 L37.711294835297736,95.89364331587063 L14.041214991473908,78.53437763548567 L4.99999810009291,50.44682478218465 z" style="color: rgb(0, 0, 0);" class="" fill-opacity="1" filter="" stroke-opacity="1"/><path fill="#155799" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" stroke-dashoffset="" fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_9" d="M12.180858611596648,36.653304986887065 L42.86025932080179,36.653304986887065 L52.34043021353932,7.508002608149525 L61.82060649682711,36.653304986887065 L92.50000181548296,36.653304986887065 L67.67989068882332,54.66588627310682 L77.16055212129527,83.81118865184271 L52.34043021353932,65.7981168258907 L27.52031369633238,83.81118865184271 L37.00097782407795,54.66588627310682 L12.180858611596648,36.653304986887065 z" style="color: rgb(0, 0, 0);" class="" fill-opacity="1" stroke-opacity="1"/></g><defs><filter id="f094" inkscape:label="Glow" inkscape:menu="Shadows and Glows" inkscape:menu-tooltip="Glow of object's own color at the edges" color-interpolation-filters="sRGB">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com"
+     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="105" height="101">
+    <title>my vector image</title>
+    <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" stroke="none" class=""/>
+    <g class="currentLayer">
+        <title>Layer 1</title>
+        <path fill="#159957" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" stroke-dashoffset=""
+              fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_1"
+              d="M4.99999810009291,50.44682478218465 L14.041214991473908,22.35927192887965 L37.711294835297736,5.000003071284226 L66.96957357483888,5.000003071284226 L90.6397995703536,22.35927192887965 L99.68086713283344,50.44682478218465 L90.6397995703536,78.53437763548567 L66.96957357483888,95.89364331587063 L37.711294835297736,95.89364331587063 L14.041214991473908,78.53437763548567 L4.99999810009291,50.44682478218465 z"
+              style="color: rgb(0, 0, 0);" class="" fill-opacity="1" filter="" stroke-opacity="1"/>
+        <path fill="#155799" stroke="#ffffff" stroke-width="10" stroke-linejoin="round" stroke-dashoffset=""
+              fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_9"
+              d="M12.180858611596648,36.653304986887065 L42.86025932080179,36.653304986887065 L52.34043021353932,7.508002608149525 L61.82060649682711,36.653304986887065 L92.50000181548296,36.653304986887065 L67.67989068882332,54.66588627310682 L77.16055212129527,83.81118865184271 L52.34043021353932,65.7981168258907 L27.52031369633238,83.81118865184271 L37.00097782407795,54.66588627310682 L12.180858611596648,36.653304986887065 z"
+              style="color: rgb(0, 0, 0);" class="" fill-opacity="1" stroke-opacity="1"/>
+    </g>
+    <defs>
+        <filter id="f094" inkscape:label="Glow" inkscape:menu="Shadows and Glows"
+                inkscape:menu-tooltip="Glow of object's own color at the edges" color-interpolation-filters="sRGB">
             <feGaussianBlur stdDeviation="5" result="result91"/>
             <feComposite in="SourceGraphic" operator="over" in2="result91"/>
-        </filter></defs></svg>
+        </filter>
+    </defs>
+</svg>

@@ -24,15 +24,27 @@
 </ol>
 <% } else { %>
 <h2>Merchant portal sections</h2>
+<nav class="cards section">
+<ul>
+    <li><a href="<%=$.api.url('portal','/#/')%>">Dashboard</a></li>
+    <li><a href="<%=$.api.url('portal','/#/payments')%>">Payments</a></li>
+    <li><a href="<%=$.api.url('portal','/#/invoices')%>">Invoices</a></li>
 
+</ul>
+</nav>
 
-<% each('milestone.data',function(){ %>
+<h2>Merchants</h2>
+<nav class="cards section">
+<ul>
+    <% each('merchants',function(item){ %>
+    <li>
+        <a href="<%=$.api.url('portal','/#/merchant/'.concat(item.id).concat('/payments'))%>">
+            <span class="pull-right"><%=item.id%></span>
+            <%=item.name%>
+        </a>
+    </li>
+    <% }) %>
+</ul>
+</nav>
 
-<% }) %>
-
-<ol>
-    <li><a href="<%=$.api%>"></a></li>
-    <li><a href=""></a></li>
-    <li><a href=""></a></li>
-</ol>
 <% } %>

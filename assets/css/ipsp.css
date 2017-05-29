@@ -1,3 +1,6 @@
+.pull-right {
+  float: right;
+}
 .page-content code {
   line-height: 1.7;
   font-size: 0.8rem;
@@ -38,6 +41,9 @@
 }
 .page-content .cards ul li:last-child {
   margin-bottom: 0;
+}
+.page-content .cards.section ul li > a:before {
+  display: none;
 }
 table.details {
   font-size: 1rem;

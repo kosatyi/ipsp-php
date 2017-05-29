@@ -1,5 +1,9 @@
 @import 'source/variables';
 
+.pull-right{
+  float:right;
+}
+
 .page-content{
   code{
     line-height:1.7;
@@ -44,6 +48,17 @@
         margin-bottom: 1rem;
         &:last-child{
           margin-bottom:0;
+        }
+      }
+    }
+  }
+  .cards.section {
+    ul {
+      li {
+        > a {
+          &:before {
+            display:none;
+          }
         }
       }
     }

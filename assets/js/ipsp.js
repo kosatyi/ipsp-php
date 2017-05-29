@@ -56,6 +56,17 @@
             },this));
             return defer;
         },
+        batch:function(list){
+            var prop,request = [];
+            for(prop in list){
+                if(list.hasOwnProperty(prop)){
+
+                }
+            }
+            list.forEach(function(item){
+
+            })
+        },
         session:function(){
             return this.request('api.account','check');
         }
@@ -110,45 +121,37 @@
     };
 
     $.addControl('signup',function(element){
-
-        var template = $.ejs('/signup');
-
-        var render   = function(data){
-            element.html(template.render(data));
+        var render   = function(template,data){
+            element.html($.ejs(template).render(data));
         };
-
+        var success  = function(){
+            $.when(
+                this.request('api.account.milestone','get',{}),
+                this.request('api.merchant','list',{})
+            ).done(function(milestone,merchants){
+                render('/account',{
+                    milestone:milestone,
+                    merchants:merchants
+                });
+            });
+        };
         var submit   = function(ev,form){
             ev.preventDefault();
             form = new FormData(this);
             $.api.account(form.get('email'),form.get('password')).fail(function(data){
-                render({
+                render('/signup',{
                     login: true ,
                     email: form.get('email'),
                     error: data.error
                 });
-            }).done(function(){
-                this.request('api.account.milestone','get',{}).done(function(data){
-                    element.html($.ejs('/account').render({
-                        milestone:data
-                    }));
-                });
-            });
+            }).done(success);
         };
-
         element.on('submit','form',submit);
-
         $.api.scope(function(){
             this.session().fail(function(){
-                render({login:false});
-            }).done(function(){
-                this.request('api.account.milestone','get',{}).done(function(data){
-                    element.html($.ejs('/account').render({
-                        milestone:data
-                    }));
-                });
-            });
+                render('/signup',{login:false});
+            }).done(success);
         });
-
     });
 
 })(jQuery);

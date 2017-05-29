@@ -6,12 +6,13 @@ transfer, and real-time bank transfer based on online banking. Typically, they u
 model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
+<div control="signup"></div>
+
 ## Project Index
 
-<nav class="cards">
+<nav class="cards section">
 {% include navigation.html base_url="/" max_depth=1 %}
 </nav>
 
-<div control="signup"></div>
 
 

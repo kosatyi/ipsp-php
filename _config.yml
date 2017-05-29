@@ -55,7 +55,7 @@ defaults:
       path: ""
     values:
       image:
-        path:  /assets/images/default-card.png
+        path:  /assets/images/icon.svg
         height: 100
         width: 100
   -

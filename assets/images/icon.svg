@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com"
+     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="105" height="101">
+    <title>my vector image
+    </title>                                    <!-- Created with Vector Paint - http://www.vectorpaint.yaks.com/ https://chrome.google.com/webstore/detail/hnbpdiengicdefcjecjbnjnoifekhgdo -->
+    <rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="#FFFFFF" stroke="none" class=""/>
+    <g class="currentLayer">
+        <title>Layer 1</title>
+        <path fill="#0bd50b" stroke="#222222" stroke-width="10" stroke-linejoin="round" stroke-dashoffset=""
+              fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_1"
+              d="M5.000007636836074,50.44682096748738 L14.041224528217072,22.359268114182385 L37.7113043720409,4.99999925658696 L66.96958311158204,4.99999925658696 L90.63980910709677,22.359268114182385 L99.6808766695766,50.44682096748738 L90.63980910709677,78.5343738207884 L66.96958311158204,95.89363950117337 L37.7113043720409,95.89363950117337 L14.041224528217072,78.5343738207884 L5.000007636836074,50.44682096748738 z"
+              style="color: rgb(0, 0, 0);" class="" fill-opacity="1"/>
+        <path fill="#ffffff" stroke="#222222" stroke-width="10" stroke-linejoin="round" stroke-dashoffset=""
+              fill-rule="nonzero" marker-start="" marker-mid="" marker-end="" id="svg_9"
+              d="M12.180868148339812,36.6533011721898 L42.86026885754495,36.6533011721898 L52.340439750282485,7.507998793452259 L61.820616033570275,36.6533011721898 L92.50001135222612,36.6533011721898 L67.67990022556648,54.665882458409556 L77.16056165803843,83.81118483714545 L52.340439750282485,65.79811301119344 L27.520323233075544,83.81118483714545 L37.000987360821114,54.665882458409556 L12.180868148339812,36.6533011721898 z"
+              style="color: rgb(0, 0, 0);" class="" fill-opacity="1"/>
+    </g>
+</svg>

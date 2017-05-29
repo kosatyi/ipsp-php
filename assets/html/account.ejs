@@ -1,0 +1,38 @@
+<% if(attr('milestone.show')) { %>
+<h2>Account activation in 5 steps</h2>
+<ol>
+   <li>
+       <a href="/activation/signup.html"><strong>Registration</strong></a>
+       <p>Enter your e-mail or choose social network account.</p>
+   </li>
+    <li>
+        <a href="/activation/email.html"><strong>Confirm your e-mail address</strong></a>
+        <p>Check your mailbox, go by the link and set up password.</p>
+    </li>
+    <li>
+        <a href="/activation/merchant.html"><strong>Create a merchant account</strong></a>
+        <p>Add basic info about your merchant.</p>
+    </li>
+    <li>
+        <a href="/activation/settings.html"><strong>Add financial details</strong></a>
+        <p>Enter your e-mail or choose social network account.</p>
+    </li>
+    <li>
+        <a href="/activation/documents.html"><strong>Upload your documents</strong></a>
+        <p>Send the required documents to the [support@fondy.eu](mailto:support@fondy.eu).</p>
+    </li>
+</ol>
+<% } else { %>
+<h2>Merchant portal sections</h2>
+
+
+<% each('milestone.data',function(){ %>
+
+<% }) %>
+
+<ol>
+    <li><a href="<%=$.api%>"></a></li>
+    <li><a href=""></a></li>
+    <li><a href=""></a></li>
+</ol>
+<% } %>

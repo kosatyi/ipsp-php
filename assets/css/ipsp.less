@@ -24,6 +24,16 @@
   ol.page-breadcrumbs{
     li{
       margin-bottom:0;
+      a{
+        color:@base-color;
+      }
+      &:last-child{
+        a{
+          color:lighten(@base-color,35%);
+          cursor: text;
+          text-decoration: none;
+        }
+      }
     }
   }
   .cards {
@@ -76,5 +86,34 @@ table.details {
     background-color:lighten(@brand-success,10%);
     color:rgba(255,255,255,0.9);
     vertical-align: top;
+  }
+}
+
+.page-header{
+  .arrow{
+    display:none;
+  }
+}
+
+.page-footer {
+  box-shadow: inset 0 7px 9px -10px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #dfdfdf;
+  background-color:rgba(0,0,0,0.02);
+  a {
+    color: @base-color;
+  }
+  .container {
+    border-top:none;
+    box-shadow:none;
+    padding: 2rem;
+  }
+}
+form.form{
+  margin: 1rem 0;
+  .form-group{
+    margin-top:1rem;
+    .btn{
+      margin:0;
+    }
   }
 }

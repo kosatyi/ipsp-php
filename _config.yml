@@ -1,5 +1,6 @@
 gems:
   - jekyll-seo-tag
+  - jekyll-sitemap
 #Others
 markdown: kramdown
 # Setup
@@ -10,6 +11,7 @@ baseurl:
 styles:
   - main.css
   - ipsp.css
+
 javascript:
   - jquery.js
   - jquery.ejs.js
@@ -17,11 +19,27 @@ javascript:
   - main.js
   - ipsp.js
 
-author:
-  name:       Stepan Kosatyi
-  url:        http://www.kosatyi.com/
+# Seo
+social:
+  name: Stepan Kosatyi
+  links:
+    - https://twitter.com/kosatyi
+    - https://www.facebook.com/Stepan.Kosatyi
+    - https://www.linkedin.com/in/StepanKosatyi
+    - https://plus.google.com/+StepanKosatyi
+    - https://github.com/kosatyi
 
 
+google_site_verification: ytqWppv3WHbrMA_P7TOtYHvti5LbegWZnv4s5JOaLBE
+
+webmaster_verifications:
+  bing: 1234
+  alexa: 1234
+  yandex: 1234
+
+author: kosatyi
+
+# Site variables
 buttons:
   -
     name: View on GitHub
@@ -34,6 +52,13 @@ buttons:
     link: http://github.com/kosatyi/ipsp-php/archive/master.tar.gz
 
 defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+        path:  /assets/images/default-card.png
+        height: 100
+        width: 100
   -
     scope:
         path: "docs"

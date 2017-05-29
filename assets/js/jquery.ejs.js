@@ -76,20 +76,23 @@
         return template;
     };
 
-    var output = function(){
-
+    var output = function(data){
+        this.data = data || {};
     };
 
     output.prototype = {
         extend: function (data) {
-            return $.extend(false, {}, this, data || {}, output.helpers );
+            return $.extend( false , {} , this.data , data || {} );
         },
-        include: function (url, data) {
-            return $.ejs(url).render(this.extend(data));
+        instance:function(data){
+            return new output( this.extend( data ) );
+        },
+        include: function ( url , data ) {
+            return $.ejs(url).render(this.instance(data));
         },
         attr:function(name,value){
             var i = 0,
-                data = this,
+                data = this.data,
                 name = (name || '').split('.'),
                 prop = name.pop(),
                 len = arguments.length;
@@ -113,10 +116,7 @@
                 data[prop] = value;
             }
             return this;
-        }
-    };
-
-    output.helpers = {
+        },
         or: function (bool, success, failure) {
             return bool ? success : failure;
         },
@@ -126,19 +126,18 @@
         def: function (value, defaults) {
             return value || defaults;
         },
-        eachContext:function(prop){
-            prop.attr = this.attr;
-            return prop;
-        },
         each: function (object, callback) {
-            var prop,object = typeof(object)=='string' ? (this.attr(object) || object) : object;
-            for(prop in object) {
+            var prop, object = typeof(object) == 'string' ? (this.attr(object) || object) : object;
+            for( prop in object ) {
                 if(object.hasOwnProperty(prop)){
-                   callback(object[prop],prop);
+                    this.attr('loop.key',prop);
+                    this.attr('loop.value',object[prop]);
+                    callback.call(this,object[prop],prop);
                 }
             }
         }
     };
+
     var ejs = function(url){
         this.config.url      = url;
         this.template = new output();
@@ -162,7 +161,7 @@
             this.template.output = template(this.template.source);
         },
         render: function (data) {
-            data = this.template.extend(data);
+            data = this.template.instance(data);
             return this.template.output.call(data, data);
         }
     };
@@ -174,6 +173,6 @@
     };
     $.ejs.basePath  = '';
     $.ejs.addHelper = function(name,callback){
-        output.helpers[name] = callback;
+        output.prototype[name] = callback;
     };
 })(jQuery);

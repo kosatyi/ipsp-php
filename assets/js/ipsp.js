@@ -3,7 +3,6 @@
         this.init();
     };
     $.PortalApi.prototype = {
-        //origin:'https://mpapi.dev.fondy.eu',
         origin:'https://portal.fondy.eu',
         endpoint:{
             portal  : '/mportal',
@@ -111,10 +110,13 @@
     };
 
     $.addControl('signup',function(element){
+
         var template = $.ejs('/signup');
+
         var render   = function(data){
             element.html(template.render(data));
         };
+
         var submit   = function(ev,form){
             ev.preventDefault();
             form = new FormData(this);
@@ -132,7 +134,9 @@
                 });
             });
         };
+
         element.on('submit','form',submit);
+
         $.api.scope(function(){
             this.session().fail(function(){
                 render({login:false});
@@ -144,6 +148,7 @@
                 });
             });
         });
+
     });
 
 })(jQuery);

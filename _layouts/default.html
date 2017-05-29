@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us" class="{{ page.template | default: 'docs' }}">
 <head>
-<meta charset="UTF-8">
-<title>{{ page.title }} - {{ site.title }}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#157878">
-{% for style in site.styles %}
-<link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{style}}">
-{% endfor %}
-{% seo %}</head>
+{% include resources.html %}
+</head>
 <body>
 <main class="page-wrapper">
 {% include toolbar.html %}

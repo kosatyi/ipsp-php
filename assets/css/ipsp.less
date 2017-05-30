@@ -1,3 +1,4 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import 'source/variables';
 
 .pull-right{
@@ -40,25 +41,62 @@
       }
     }
   }
-  .cards {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    ul {
-      li {
-        margin-bottom: 1rem;
-        &:last-child{
-          margin-bottom:0;
+}
+
+.cards {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  ul {
+    li {
+      margin-bottom: 1rem;
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+  }
+}
+
+.cards.section {
+  ul {
+    li {
+      > a {
+        &:before {
+          display:none;
         }
       }
     }
   }
-  .cards.section {
-    ul {
-      li {
-        > a {
-          &:before {
-            display:none;
-          }
+}
+
+.cards.section.grid {
+  margin-top:-1rem;
+  ul {
+    margin:0 -0.5rem;
+    li {
+      padding:0 0.5rem;
+      margin-top:1rem;
+      margin-bottom:0;
+      float:left;
+      width:100%;
+      @media screen and (min-width: 64em) {
+        width:33.3333333%;
+      }
+      @media screen and (min-width: 42em) and (max-width: 64em) {
+        width:50%;
+      }
+      @media screen and (max-width: 42em) {
+        width:100%;
+      }
+
+      > a {
+        text-align:center;
+        font-size:18px;
+        .fa{
+          color:@brand-success;
+          display:block;
+        }
+        &:before {
+          display:none;
         }
       }
     }

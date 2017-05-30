@@ -1,3 +1,4 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 .pull-right {
   float: right;
 }
@@ -32,17 +33,56 @@
   cursor: text;
   text-decoration: none;
 }
-.page-content .cards {
+.cards {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-.page-content .cards ul li {
+.cards ul li {
   margin-bottom: 1rem;
 }
-.page-content .cards ul li:last-child {
+.cards ul li:last-child {
   margin-bottom: 0;
 }
-.page-content .cards.section ul li > a:before {
+.cards.section ul li > a:before {
+  display: none;
+}
+.cards.section.grid {
+  margin-top: -1rem;
+}
+.cards.section.grid ul {
+  margin: 0 -0.5rem;
+}
+.cards.section.grid ul li {
+  padding: 0 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  float: left;
+  width: 100%;
+}
+@media screen and (min-width: 64em) {
+  .cards.section.grid ul li {
+    width: 33.3333333%;
+  }
+}
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .cards.section.grid ul li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 42em) {
+  .cards.section.grid ul li {
+    width: 100%;
+  }
+}
+.cards.section.grid ul li > a {
+  text-align: center;
+  font-size: 18px;
+}
+.cards.section.grid ul li > a .fa {
+  color: #159957;
+  display: block;
+}
+.cards.section.grid ul li > a:before {
   display: none;
 }
 table.details {

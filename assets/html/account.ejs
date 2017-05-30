@@ -23,28 +23,45 @@
     </li>
 </ol>
 <% } else { %>
-<h2>Merchant portal sections</h2>
-<nav class="cards section">
+<h2>Merchant Portal</h2>
+<nav class="cards section grid">
 <ul>
-    <li><a href="<%=$.api.url('portal','/#/')%>">Dashboard</a></li>
-    <li><a href="<%=$.api.url('portal','/#/payments')%>">Payments</a></li>
-    <li><a href="<%=$.api.url('portal','/#/invoices')%>">Invoices</a></li>
-
-</ul>
-</nav>
-
-<h2>Merchants</h2>
-<nav class="cards section">
-<ul>
-    <% each('merchants',function(item){ %>
     <li>
-        <a href="<%=$.api.url('portal','/#/merchant/'.concat(item.id).concat('/payments'))%>">
-            <span class="pull-right"><%=item.id%></span>
-            <%=item.name%>
+        <a href="<%=$.api.url('portal','/#/')%>">
+            <i class="fa fa-dashboard fa-3x"></i>
+            Dashboard
         </a>
     </li>
-    <% }) %>
+    <li>
+        <a href="<%=$.api.url('portal','/#/payments')%>">
+            <i class="fa fa-credit-card fa-3x"></i>
+            Payments
+        </a>
+    </li>
+    <li>
+        <a href="<%=$.api.url('portal','/#/invoices')%>">
+            <i class="fa fa-file-text-o fa-3x"></i>
+            Invoices
+        </a>
+    </li>
+    <li>
+        <a href="<%=$.api.url('portal','/#/buttons')%>">
+            <i class="fa fa-qrcode fa-3x"></i>
+            Buttons
+        </a>
+    </li>
+    <li>
+        <a href="<%=$.api.url('portal','/#/payouts')%>">
+            <i class="fa fa-money fa-3x"></i>
+            Payouts
+        </a>
+    </li>
+    <li>
+        <a href="<%=$.api.url('portal','/#/settings')%>">
+            <i class="fa fa-cogs fa-3x"></i>
+            Settings
+        </a>
+    </li>
 </ul>
 </nav>
-
 <% } %>

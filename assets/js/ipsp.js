@@ -183,12 +183,10 @@
         };
         var success = function () {
             $.when(
-                this.request('api.account.milestone', 'get', {}),
-                this.request('api.merchant', 'list', {})
-            ).done(function (milestone, merchants) {
+                this.request('api.account.milestone', 'get', {})
+            ).done(function (milestone) {
                 render('/account', {
-                    milestone: milestone,
-                    merchants: merchants
+                    milestone: milestone
                 });
             });
         };

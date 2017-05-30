@@ -1,5 +1,7 @@
 <?php
 
+require('autoload.php');
+
 use PHPUnit\Framework\TestCase;
 
 final class ClientTest extends TestCase

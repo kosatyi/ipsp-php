@@ -1,4 +1,6 @@
-<h2><%=or(attr('login'),'Sign in','Create Account')%></h2>
+<h2>
+    <%=or(attr('login'),'Sign in','Create Account')%>
+</h2>
 <form class="form">
     <% if(attr('error')) { %>
     <div class="form-group">
@@ -6,11 +8,16 @@
     </div>
     <% } %>
     <div class="form-group">
-        <input type="text" name="email" value="<%=attr('email')%>" placeholder="E-mail" class="field">
+        <input type="text" name="email" value="<%=attr('form.email')%>" placeholder="E-mail" class="field">
     </div>
     <% if(attr('login')) { %>
     <div class="form-group">
-        <input type="password" name="password" placeholder="Password" class="field">
+        <input type="password" <%=or(attr('two_factor'),'','autofocus')%> name="password" value="<%=attr('form.password')%>" placeholder="Password" class="field">
+    </div>
+    <% } %>
+    <% if(attr('two_factor')) { %>
+    <div class="form-group">
+        <input type="text" name="otp" value="" tabindex="1" autofocus placeholder="OTP Password" class="field">
     </div>
     <% } %>
     <div class="form-group">

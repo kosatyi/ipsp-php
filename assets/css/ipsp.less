@@ -87,7 +87,6 @@
       @media screen and (max-width: 42em) {
         width:100%;
       }
-
       > a {
         text-align:center;
         font-size:18px;
@@ -97,6 +96,40 @@
         }
         &:before {
           display:none;
+        }
+      }
+    }
+  }
+}
+
+.milestone{
+  li{
+    &:before{
+      text-align:center;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      content:"\f10c";
+    }
+    a{
+      color:@base-color;
+    }
+    &.passed{
+      &:before{
+        content: "\f05d";
+        color:@brand-success;
+      }
+      a{
+        color:@brand-success;
+      }
+      + :not(.passed){
+        &:before{
+          content: "\f192";
+          color:#a61717;
+        }
+        a{
+          color:#a61717;
         }
       }
     }

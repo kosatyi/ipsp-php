@@ -85,6 +85,31 @@
 .cards.section.grid ul li > a:before {
   display: none;
 }
+.milestone li:before {
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f10c";
+}
+.milestone li a {
+  color: #606c71;
+}
+.milestone li.passed:before {
+  content: "\f05d";
+  color: #159957;
+}
+.milestone li.passed a {
+  color: #159957;
+}
+.milestone li.passed + :not(.passed):before {
+  content: "\f192";
+  color: #a61717;
+}
+.milestone li.passed + :not(.passed) a {
+  color: #a61717;
+}
 table.details {
   font-size: 1rem;
   line-height: 1.5;

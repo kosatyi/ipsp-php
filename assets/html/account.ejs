@@ -1,26 +1,26 @@
 <% if(attr('milestone.show')) { %>
 <h2>Account activation in 5 steps</h2>
-<ol>
-   <li>
+<ol class="milestone">
+   <li class="<%=alt(attr('milestone.data.registered'),'passed')%>">
        <a href="/activation/signup.html"><strong>Registration</strong></a>
        <p>Enter your e-mail or choose social network account.</p>
    </li>
-    <li>
+   <li class="<%=alt(attr('milestone.data.email_verified'),'passed')%>">
         <a href="/activation/email.html"><strong>Confirm your e-mail address</strong></a>
         <p>Check your mailbox, go by the link and set up password.</p>
-    </li>
-    <li>
+   </li>
+   <li class="<%=alt(attr('milestone.data.merchant_created'),'passed')%>">
         <a href="/activation/merchant.html"><strong>Create a merchant account</strong></a>
         <p>Add basic info about your merchant.</p>
-    </li>
-    <li>
+   </li>
+   <li class="<%=alt(attr('milestone.data.fin_settings'),'passed')%>">
         <a href="/activation/settings.html"><strong>Add financial details</strong></a>
         <p>Enter your e-mail or choose social network account.</p>
-    </li>
-    <li>
+   </li>
+   <li class="<%=alt(attr('milestone.data.docs_min_uploaded'),'passed')%>">
         <a href="/activation/documents.html"><strong>Upload your documents</strong></a>
-        <p>Send the required documents to the [support@fondy.eu](mailto:support@fondy.eu).</p>
-    </li>
+        <p>Send the required documents to the <a href="mailto:support@fondy.eu">support@fondy.eu</a>.</p>
+   </li>
 </ol>
 <% } else { %>
 <h2>Merchant Portal</h2>

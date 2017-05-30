@@ -1,3 +1,4 @@
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kosatyi/ipsp-php/master/LICENSE)
 [![Travis](https://img.shields.io/travis/kosatyi/ipsp-php.svg)]()
 [![Coveralls](https://img.shields.io/coveralls/kosatyi/ipsp-php.svg)]()
 [![Packagist](https://img.shields.io/packagist/v/kosatyi/ipsp-php.svg)]()

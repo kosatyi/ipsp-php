@@ -1,8 +1,9 @@
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kosatyi/ipsp-php/master/LICENSE)
 [![Travis](https://img.shields.io/travis/kosatyi/ipsp-php.svg)]()
-[![Coveralls](https://img.shields.io/coveralls/kosatyi/ipsp-php.svg)]()
-[![Packagist](https://img.shields.io/packagist/v/kosatyi/ipsp-php.svg)]()
-[![Github All Releases](https://img.shields.io/github/downloads/kosatyi/ipsp-php/total.svg)]()
+[![Latest Stable Version](https://poser.pugx.org/kosatyi/ipsp-php/v/stable)](https://packagist.org/packages/kosatyi/ipsp-php)
+[![Total Downloads](https://poser.pugx.org/kosatyi/ipsp-php/downloads)](https://packagist.org/packages/kosatyi/ipsp-php)
+[![Latest Unstable Version](https://poser.pugx.org/kosatyi/ipsp-php/v/unstable)](https://packagist.org/packages/kosatyi/ipsp-php)
+[![License](https://poser.pugx.org/kosatyi/ipsp-php/license)](https://packagist.org/packages/kosatyi/ipsp-php)
+[![composer.lock](https://poser.pugx.org/kosatyi/ipsp-php/composerlock)](https://packagist.org/packages/kosatyi/ipsp-php)
 
 ## Payment service provider
 A payment service provider (PSP) offers shops online services for accepting electronic payments by a variety of payment methods including credit card, bank-based payments such as direct debit, bank transfer, and real-time bank transfer based on online banking. Typically, they use a software as a service model and form a single payment gateway for their clients (merchants) to multiple payment methods.

@@ -53,13 +53,12 @@ class Ipsp_Request {
      */
     public function doPost( $url = '' , $params=array()){
         $this->curl->create($url);
-        $this->curl->ssl();
+        $this->curl->ssl(FALSE);
         $this->curl->post($params);
         $this->curl->http_header( $this->getContentType( $this->format ));
         $this->curl->http_header( $this->getContentLength( $params ));
         return $this->curl->execute();
     }
-
     /**
      * @param string $url
      * @param array $params
@@ -68,7 +67,7 @@ class Ipsp_Request {
      */
     public function doGet( $url='', $params=array()){
         $this->create($url.(empty($params) ? '' : '?'.http_build_query($params, NULL, '&')));
-        $this->curl->ssl();
+        $this->curl->ssl(FALSE);
         $this->curl->http_header($this->getContentType( $this->format ));
         $this->curl->http_header($this->getContentLength( $params ));
         return $this->curl->execute();

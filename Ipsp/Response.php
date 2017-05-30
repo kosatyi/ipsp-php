@@ -27,15 +27,27 @@ class Ipsp_Response {
     public function getData(){
         return $this->data;
     }
+    public function redirectTo($prop=''){
+        if( $this->$prop ){
+            header(sprintf('Location: %s',$this->$prop));
+        }
+    }
     public function isSuccess(){
         return $this->response_status=='success';
     }
     public function isFailure(){
         return $this->response_status=='failure';
     }
-    public function redirectTo($prop=''){
-        if($this->$prop){
-            header(sprintf('Location: %s',$this->$prop));
-        }
+    public function getErrorCode(){
+        return $this->error_code;
+    }
+    public function getErrorMessage(){
+        return $this->error_message;
+    }
+    public function getCheckoutUrl(){
+        return $this->checkout_url;
+    }
+    public function redirectToCheckout(){
+        return $this->redirectTo('checkout_url');
     }
 }

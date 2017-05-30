@@ -3,27 +3,63 @@
  * Class Ipsp_Resource
  */
 class Ipsp_Resource {
+    /**
+     * @var string
+     */
     protected $method = 'POST';
+    /**
+     * @var string
+     */
     protected $format = 'json';
+    /**
+     * @var
+     */
     protected $path;
+    /**
+     * @var array
+     */
     protected $fields = array();
+    /**
+     * @var array
+     */
     protected $defaultParams = array();
+    /**
+     * @var Ipsp_Request
+     */
     protected $request;
+    /**
+     * @var
+     */
     protected $response;
+    /**
+     * @var array
+     */
     protected $types    = array(
 
     );
+    /**
+     * @var array
+     */
     protected $formatter	= array(
         'json' => 'jsonParams',
         'xml'  => 'xmlParams',
         'form' => 'formParams'
     );
+    /**
+     * @var array
+     */
     protected $parser	= array(
         'json' => 'parseJson',
         'xml'  => 'parseXml',
         'form' => 'parseForm'
     );
+    /**
+     * @var
+     */
     private $client;
+    /**
+     * @var array
+     */
     private $params = array();
     /**
      * @param array $params
@@ -117,6 +153,10 @@ class Ipsp_Resource {
             throw new Exception(sprintf('format %s not supported',$this->format));
         }
     }
+
+    /**
+     *
+     */
     public function __construct(){
         $this->request  = new Ipsp_Request();
         if(!empty($this->defaultParams))
@@ -174,6 +214,11 @@ class Ipsp_Resource {
         $params['signature']   = $this->getSignature($params);
         return $params;
     }
+
+    /**
+     * @param $key
+     * @return null
+     */
     public function getParam($key){
         return isset($this->params[$key]) ? $this->params[$key] : NULL;
     }

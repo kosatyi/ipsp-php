@@ -1,4 +1,4 @@
-<?
+<?php
 
 /**
  * Class Ipsp_Resource_PaymentStatus

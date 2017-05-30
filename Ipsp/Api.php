@@ -51,6 +51,9 @@ class Ipsp_Api {
     public function setParam($key='',$value=''){
         $this->params[$key] = $value;
     }
+    /**
+     * @param string $key
+     */
     public function getParam($key=''){
         $this->params[$key];
     }
@@ -71,9 +74,16 @@ class Ipsp_Api {
         return isset($_POST['response_status']);
     }
 
+    /**
+     * @param $callback
+     */
     public function success($callback){
 
     }
+
+    /**
+     * @param $callback
+     */
     public function failure($callback){
 
     }

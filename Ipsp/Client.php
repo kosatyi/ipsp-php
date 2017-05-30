@@ -3,13 +3,21 @@
  * Class PaymentClient
  */
 class Ipsp_Client {
+
     private $id;
+
     private $password;
+
     private $url;
-    public function __construct($id,$password,$domain){
-        if(empty($id)) throw new \Exception('auth id not set');
-        if(empty($password)) throw new \Exception('auth password not set');
-        if(empty($domain)) throw new \Exception('ipsp gateway not set');
+    /**
+     * @param string $id
+     * @param string $password
+     * @param string $domain
+     */
+    public function __construct($id='',$password='',$domain=''){
+        if(empty($id)) throw new \InvalidArgumentException('auth id not set');
+        if(empty($password)) throw new \InvalidArgumentException('auth password not set');
+        if(empty($domain)) throw new \InvalidArgumentException('ipsp gateway not set');
         $this->id = $id;
         $this->password = $password;
         $this->url = sprintf('https://%s/api',$domain);

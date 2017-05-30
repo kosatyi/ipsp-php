@@ -4,8 +4,17 @@
  * Class Ipsp_Request
  */
 class Ipsp_Request {
+    /**
+     * @var Ipsp_Curl
+     */
     private $curl;
+    /**
+     * @var
+     */
     private $format;
+    /**
+     * @var array
+     */
     private $contentType = array(
         'json' => 'application/json',
         'xml'  => 'application/xml',

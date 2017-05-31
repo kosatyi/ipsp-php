@@ -8,7 +8,7 @@
     </testsuites>
     <filter>
         <whitelist>
-            <directory>Ipsp</directory>
+            <directory>src</directory>
         </whitelist>
     </filter>
     <logging>

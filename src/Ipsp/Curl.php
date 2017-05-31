@@ -2,6 +2,7 @@
 
 /**
  * Class Ipsp_Curl
+ * @codeCoverageIgnore
  */
 class Ipsp_Curl {
     /**

@@ -2,29 +2,22 @@
 
 /**
  * Class Ipsp_ApiTest
+ * @backupStaticAttributes enabled
  */
 class Ipsp_ApiTest extends PHPUnit_Framework_TestCase
 {
-
     protected static $params;
-
     public static function setUpBeforeClass()
     {
         self::$params = array(
             'params_key'   => 'order_desc',
-            'params_value' => 'Test Order Description'
-        );
-        $_POST = array(
-            'MD'=>'test_md',
-            'PaRes'=>'test_pa_res',
-            'response_status'=>'success'
+            'params_value' => 'Test Order Description',
         );
     }
 
     public static function tearDownAfterClass()
     {
         self::$params = null;
-        $_POST = array();
     }
 
     /**
@@ -104,17 +97,37 @@ class Ipsp_ApiTest extends PHPUnit_Framework_TestCase
 
     /**
      * @depends testApi
+     * @backupGlobals enabled
      * @param Ipsp_Api $api
      */
     public function testHasAcsData( $api ){
+        $_POST['MD'] = 'test_md';
+        $_POST['PaRes'] = 'test_pa_res';
         $this->assertTrue($api->hasAcsData());
     }
 
     /**
      * @depends testApi
+     * @backupGlobals enabled
      * @param Ipsp_Api $api
      */
     public function testHasResponseStatus( $api ){
+        $_POST['response_status'] = 'success';
         $this->assertTrue($api->hasResponseData());
     }
+
+    /**
+     * @depends testApi
+     * @backupGlobals enabled
+     * @param Ipsp_Api $api
+     */
+    public function testGetCurrentUrl( $api ){
+        $_SERVER['HTTP_HOST'] = 'example.com';
+        $_SERVER['SERVER_PORT'] = '';
+        $_SERVER['REQUEST_URI'] = '/';
+        $this->assertEquals('http://example.com/',$api->getCurrentUrl());
+        $_SERVER['HTTP_HOST'] = NULL;
+        $this->assertEquals('http://localhost/',$api->getCurrentUrl());
+    }
+
 }

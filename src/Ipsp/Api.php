@@ -98,6 +98,21 @@ class Ipsp_Api {
         return isset($_POST['MD']) AND isset($_POST['PaRes']);
     }
 
+    public function getCurrentUrl(){
+        if(isset($_SERVER['HTTP_HOST']))
+        {
+            $secure   = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS']!=='off'||$_SERVER['SERVER_PORT']==443);
+            $protocol = $secure ? "https://" : "http://";
+            $host     = $_SERVER['HTTP_HOST'];
+            $path     = $_SERVER['REQUEST_URI'];
+        } else{
+            $protocol = 'http://';
+            $host     = 'localhost';
+            $path     = '/';
+        }
+        return $protocol.$host.$path;
+    }
+
     /**
      * @return bool
      */

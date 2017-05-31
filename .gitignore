@@ -1,5 +1,6 @@
 .idea
 vendor
+tests/logs
 .sass-cache
 _site
 Gemfile.lock

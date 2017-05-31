@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1496222813">
+  <project timestamp="1496222813">
+    <file name="/home/stepan/www/ipsp-php/Ipsp/Client.php">
+      <class name="Ipsp_Client" namespace="global" fullPackage="Ipsp">
+        <metrics methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="7" elements="14" coveredelements="8"/>
+      </class>
+      <line num="17" type="method" name="__construct" crap="4" count="2"/>
+      <line num="18" type="stmt" count="2"/>
+      <line num="19" type="stmt" count="2"/>
+      <line num="20" type="stmt" count="2"/>
+      <line num="21" type="stmt" count="1"/>
+      <line num="22" type="stmt" count="1"/>
+      <line num="23" type="stmt" count="1"/>
+      <line num="24" type="stmt" count="1"/>
+      <line num="28" type="method" name="getId" crap="2" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <line num="34" type="method" name="getPassword" crap="2" count="0"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="40" type="method" name="getUrl" crap="2" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <metrics loc="43" ncloc="26" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="7" elements="14" coveredelements="8"/>
+    </file>
+    <file name="/home/stepan/www/ipsp-php/autoload.php">
+      <line num="4" type="stmt" count="1"/>
+      <line num="5" type="stmt" count="1"/>
+      <line num="6" type="stmt" count="1"/>
+      <line num="7" type="stmt" count="1"/>
+      <line num="8" type="stmt" count="1"/>
+      <line num="9" type="stmt" count="1"/>
+      <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="6" coveredelements="6"/>
+    </file>
+    <metrics files="2" loc="54" ncloc="37" classes="1" methods="4" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="13" elements="20" coveredelements="14"/>
+  </project>
+</coverage>

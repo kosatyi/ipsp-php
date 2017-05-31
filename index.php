@@ -1,6 +1,6 @@
 <?php
 
-require_once 'autoload.php';
+require_once 'vendor/autoload.php';
 
 define('MERCHANT_ID' , 1000);
 define('MERCHANT_PASSWORD' , 'test');

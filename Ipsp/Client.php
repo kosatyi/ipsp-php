@@ -5,22 +5,49 @@
 class Ipsp_Client {
 
     private $id;
-
     private $password;
-
     private $url;
+    private $urlFormat = 'https://%s/api';
+    /**
+     * @param null $id
+     * @param null $password
+     * @param null $domain
+     */
+    public function __construct( $id = NULL , $password = NULL , $domain = NULL ){
+        $this->setId( $id );
+        $this->setPassword( $password );
+        $this->setUrl( $domain );
+    }
     /**
      * @param string $id
+     */
+    public function setId($id='')
+    {
+        if( empty($id) )
+            throw new \InvalidArgumentException('Merchant id not set');
+        $this->id = $id;
+    }
+    /**
      * @param string $password
+     */
+    public function setPassword( $password = '')
+    {
+        if( empty($password) )
+            throw new \InvalidArgumentException('Merchant password not set');
+        $this->password = $password;
+    }
+
+    /**
      * @param string $domain
      */
-    public function __construct($id='',$password='',$domain=''){
-        if(empty($id)) throw new \InvalidArgumentException('auth id not set');
-        if(empty($password)) throw new \InvalidArgumentException('auth password not set');
-        if(empty($domain)) throw new \InvalidArgumentException('ipsp gateway not set');
-        $this->id = $id;
-        $this->password = $password;
-        $this->url = sprintf('https://%s/api',$domain);
+    public function setUrl( $domain = '')
+    {
+        if( empty($domain) )
+            throw new \InvalidArgumentException('IPSP Gateway domain not set');
+        $this->url = sprintf( $this->getUrlFormat() , $domain );
+    }
+    public function getUrlFormat(){
+        return $this->urlFormat;
     }
     /**
      * @return int

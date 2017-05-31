@@ -32,6 +32,6 @@ class Ipsp_Resource_Checkout extends Ipsp_Resource{
         )
     );
     public function redirectToCheckout(){
-        $this->getResponse()->redirectTo('checkout_url');
+        $this->getResponse()->redirectToCheckout();
     }
 }

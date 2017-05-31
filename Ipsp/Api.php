@@ -5,16 +5,34 @@
  */
 class Ipsp_Api {
 
+    /**
+     * @var Ipsp_Client
+     */
     private $client;
+    /**
+     * @var array
+     */
     private $params = array();
     /**
      * Supported currencies
      */
     const UAH = 'UAH';
+    /**
+     *
+     */
     const USD = 'USD';
+    /**
+     *
+     */
     const EUR = 'EUR';
+    /**
+     *
+     */
     const RUB = 'RUB';
-    const GBP = 'GBP';    
+    /**
+     *
+     */
+    const GBP = 'GBP';
     /**
      * @param Ipsp_Client $client
      */
@@ -23,39 +41,45 @@ class Ipsp_Api {
         set_error_handler(array($this, 'handleError'));
         set_exception_handler(array($this, 'handleException'));
     }
+
     /**
      * @param $name
-     * @return bool
+     * @return mixed
+     * @throws Ipsp_Error
      */
     public function initResource($name){
         $class    = implode('_',array('Ipsp','Resource',ucfirst($name)));
-        if(!class_exists($class)) new \Exception(sprintf('ipsp resource "%s" not found',$class));
+        if(!class_exists($class)) throw new Ipsp_Error(sprintf('Resource "%s" not found',$class));
         $resource = new $class;
         return $resource;
     }
+
     /**
      * @param null $name
      * @param array $params
      * @return mixed
-     * @throws Exception
+     * @throws Ipsp_Error
      */
     public function call($name=NULL,$params=array()) {
         $resource = $this->initResource($name);
         $resource->setClient($this->client);
         return $resource->call(array_merge($this->params,$params));
     }
+
     /**
      * @param string $key
      * @param string $value
+     * @return $this
      */
     public function setParam($key='',$value=''){
         $this->params[$key] = $value;
+        return $this;
     }
     /**
      * @param string $key
      */
     public function getParam($key=''){
-        $this->params[$key];
+        return $this->params[$key];
     }
     /**
      * @param $errno
@@ -67,34 +91,44 @@ class Ipsp_Api {
     public function handleError($errno, $errstr, $errfile, $errline) {
         throw new \ErrorException($errstr, $errno, 0, $errfile, $errline);
     }
+    /**
+     * @return bool
+     */
     public function hasAcsData(){
         return isset($_POST['MD']) AND isset($_POST['PaRes']);
     }
+
+    /**
+     * @return bool
+     */
     public function hasResponseData(){
         return isset($_POST['response_status']);
     }
-
     /**
      * @param $callback
+     * @codeCoverageIgnore
      */
     public function success($callback){
-
+        // TODO: implement success callback
     }
-
     /**
      * @param $callback
+     * @codeCoverageIgnore
      */
     public function failure($callback){
-
+        // TODO: implement failure callback
     }
     /**
      * @param Exception $e
+     * @codeCoverageIgnore
      */
     public function handleException(\Exception $e) {
        error_log($e->getMessage());
-       $msg = sprintf('<h1>Ipsp PHP Error</h1>'.
-           '<h3>%s (%s)</h3>'.
-           '<pre>%s</pre>',
+       $msg = sprintf('<div style="background:#efefef;font:12px/1 monospace;border:1px solid #ccc;padding:10px;">'.
+           '<h2 style="margin:0 0 10px 0">Ipsp Php Error</h2>'.
+           '<h4 style="margin:0 0 10px 0">%s (%s)</h3>'.
+           '<pre style="margin:0;">%s</pre>'.
+           '</div>',
            $e->getMessage(),
            $e->getCode(),
            $e->getTraceAsString()

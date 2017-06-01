@@ -1,4 +1,8 @@
-# Payment service provider
+---
+title: Home
+description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.   
+---
+# Payment Service Provider
 
 A payment service provider (PSP) offers shops online services for accepting electronic payments by 
 a variety of payment methods including credit card, bank-based payments such as direct debit, bank 
@@ -8,10 +12,10 @@ model and form a single payment gateway for their clients (merchants) to multipl
 
 <div control="signup"></div>
 
-## Project Index
+## Project Sections
 
 <nav class="cards section">
-{% include navigation.html base_url="/" max_depth=1 %}
+{% include navigation.html base_url="/" max_depth=2 %}
 </nav>
 
 

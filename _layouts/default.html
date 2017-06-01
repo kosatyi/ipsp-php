@@ -1,5 +1,5 @@
-{% capture output %}<!DOCTYPE html>
-<html lang="en-us" class="{{ page.template | default: 'docs' }}">
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
 {% include resources.html %}
 </head>
@@ -18,4 +18,3 @@
 {% include loader.html %}
 </body>
 </html>
-{% endcapture %}{{output | strip_newlines}}

@@ -10,7 +10,8 @@
 {% assign current_lvl_url_length = 1 %}
 {% endif %}
 {% capture links %}
-{% for node in site.html_pages %}
+{% assign sorted_pages = site.html_pages | sort:"url" %}
+{% for node in sorted_pages %}
 {% assign node_url_length = node.url | split: '/' | size | minus: 1 %}
 {% assign filename = node.url | split: '/' | last %}
 {% if node_url_length == current_lvl_url_length and node.url contains lvl_base_url %}
@@ -31,4 +32,4 @@
 {% if links.size > 0 %}
 <ul>{{ links }}</ul>
 {% endif %}
-{% endcapture %}{{menu | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' '}}
+{% endcapture %}{{menu}}

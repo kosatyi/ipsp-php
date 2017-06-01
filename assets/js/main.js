@@ -20,15 +20,17 @@
 
 
 (function(){
-    var wrapper = find('body');
-    var toolbar = find('.page-toolbar');
-    window.addEventListener('scroll',function(ev){
+    var wrapper  = find('body');
+    var toolbar  = find('.page-toolbar');
+    var onscroll = function(){
         if( wrapper.scrollTop>0) {
             toolbar.classList.add('scrolled');
         } else {
             toolbar.classList.remove('scrolled');
         }
-    });
+    };
+    window.addEventListener('scroll',onscroll);
+    onscroll();
 })();
 
 (function(){

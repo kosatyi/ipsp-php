@@ -1,7 +1,7 @@
 ---
-description:
+title: Documentation
+description: Download and installation, API methods description, frequently asked questions , organizing and releasing your source project.
 ---
-
 # Documentation
 
 <nav class="cards">

@@ -4,12 +4,14 @@ gems:
 #Others
 markdown: kramdown
 # Setup
-title:        IPSP PHP SDK
-description:  Accept epayments on your website online. Popular ecommerce solutions.
-baseurl    :
+title:   IPSP PHP SDK
+tagline: Accept epayments on your website online.
+baseurl:
 url:          https://ipsp-php.com
 
 styles:
+  - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
+  - //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
   - /assets/css/main.css
   - /assets/css/ipsp.css
 

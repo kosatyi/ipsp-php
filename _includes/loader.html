@@ -1,0 +1,54 @@
+<script>
+    (function(ns){
+        ns.resourceLoader = {
+            load:function(loader,list){
+                loader = this[loader];
+                (function(index) {
+                    var queue = arguments.callee;
+                    if (list.hasOwnProperty(index)){
+                        loader(list[index], function () {
+                            queue(++index);
+                        });
+                    }
+                })(0);
+            },
+            js:function(url, next){
+                var el = document.createElement('script');
+                el.src = url;
+                el.async = true;
+                el.onload = next;
+                document.getElementsByTagName('head')[0].appendChild(el);
+            },
+            css:function(url,next){
+                var el  = document.createElement('link');
+                el.href = url;
+                el.rel  = 'stylesheet';
+                el.type = 'text/css';
+                document.getElementsByTagName('head')[0].appendChild(el);
+                next();
+            }
+        };
+    })(window);
+    (function(ns){
+        ns.requestAnimationFrame = ns.requestAnimationFrame ||
+            ns.mozRequestAnimationFrame ||
+            ns.webkitRequestAnimationFrame ||
+            ns.msRequestAnimationFrame;
+    })(window);
+    (function(ns){
+        ns.pageReady = function(callback){
+            if (requestAnimationFrame) {
+                requestAnimationFrame(function () {
+                    ns.setTimeout(callback, 0);
+                });
+            }
+            else{
+                ns.addEventListener('load',callback);
+            }
+        }
+    })(window);
+    (function(ns){
+        ns.resourceLoader.load('js',JSON.parse('{{site.javascript | jsonify}}'));
+        ns.resourceLoader.load('css',JSON.parse('{{site.styles | jsonify}}') );
+    })(window);
+</script>

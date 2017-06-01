@@ -735,6 +735,10 @@ th {
   bottom: 0;
   transform: translateX(-8px) translateY(-4px) rotate(45deg);
 }
+html {
+  display: block;
+  opacity: 1;
+}
 body {
   padding: 0;
   margin: 0;

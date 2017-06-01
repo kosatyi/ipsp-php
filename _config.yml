@@ -10,15 +10,15 @@ baseurl    :
 url:          https://ipsp-php.com
 
 styles:
-  - main.css
-  - ipsp.css
+  - /assets/css/main.css
+  - /assets/css/ipsp.css
 
 javascript:
-  - jquery.js
-  - jquery.ejs.js
-  - jquery.connector.js
-  - main.js
-  - ipsp.js
+  - /assets/js/jquery.js
+  - /assets/js/jquery.ejs.js
+  - /assets/js/jquery.connector.js
+  - /assets/js/main.js
+  - /assets/js/ipsp.js
 
 analytics: UA-100124713-1
 
@@ -59,25 +59,25 @@ defaults:
         type: "pages"
     values:
         headline: "SDK Docs"
-        description: "Ipsp Developer Documentation"
+        tagline: "Ipsp Developer Documentation"
   -
     scope:
         path: "examples"
         type: "pages"
     values:
         headline: "Showcase"
-        description: "Browse the showcase to see some of our favorite implementations"
+        tagline: "Browse the showcase to see some of our favorite implementations"
   -
     scope:
         path: "modules"
         type: "pages"
     values:
         headline: "Components & Helpers"
-        description: "Useful components for checkout development"
+        tagline: "Useful components for checkout development"
   -
     scope:
         path: "activation"
         type: "pages"
     values:
         headline: "Accept payments"
-        description: "Accept VISA and MasterCard securely, quickly and easily on your website"
+        tagline: "Accept VISA and MasterCard securely, quickly and easily on your website"

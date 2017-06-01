@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% capture output %}<!DOCTYPE html>
 <html lang="en-us" class="{{ page.template | default: 'docs' }}">
 <head>
 {% include resources.html %}
@@ -15,8 +15,7 @@
 </section>
 {% include footer.html %}
 </main>
-{% for script in site.javascript %}
-<script src="{{site.baseurl}}/assets/js/{{script}}"></script>
-{% endfor %}
+{% include loader.html %}
 </body>
 </html>
+{% endcapture %}{{output | strip_newlines}}

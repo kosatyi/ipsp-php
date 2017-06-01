@@ -1,3 +1,7 @@
+---
+description:
+---
+
 # Modules
 
 **IPSP PHP SDK** is compatible with the most used ecommerce CMS.

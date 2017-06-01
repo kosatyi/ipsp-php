@@ -64,10 +64,22 @@
         }
       }
       ul{
+        &:before,&:after{
+          content:'';
+          display:table;
+          clear:both;
+        }
+        margin-bottom:-1rem;
         margin-top:1rem;
-        padding:0 1rem;
+        padding:0;
         list-style:none;
         li{
+          float:left;
+          width:50%;
+          @media screen and (max-width: 42em) {
+            width:100%;
+          }
+          padding:0 1rem;
           border:1px solid transparent;
           &:before{
             content:'-';

@@ -30,6 +30,7 @@ social:
   links:
     - https://github.com/kosatyi/ipsp-php
     - https://packagist.org/packages/kosatyi/ipsp-php
+    - https://travis-ci.org/kosatyi/ipsp-php
 
 webmaster_verifications:
   google: ytqWppv3WHbrMA_P7TOtYHvti5LbegWZnv4s5JOaLBE

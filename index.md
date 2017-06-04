@@ -1,5 +1,5 @@
 ---
-title: Home
+title: IPSP PHP SDK
 description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.   
 ---
 # Payment Service Provider
@@ -10,7 +10,16 @@ transfer, and real-time bank transfer based on online banking. Typically, they u
 model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
-<div control="signup"></div>
+<div class="widget user" control="signup">
+    <div class="panel">
+        <div class="loader">
+            {% include load.svg %}
+        </div>
+    </div>
+    <a href="javascript:void(0)" class="button user">
+        <i class="fa fa-user"></i>
+    </a>
+</div>
 
 ## Project Sections
 

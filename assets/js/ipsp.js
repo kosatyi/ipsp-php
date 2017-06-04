@@ -24,7 +24,7 @@
      * @constructor
      */
     $.PortalApi = function () {
-        this.init();
+
     };
     $.PortalApi.prototype = {
         origin: 'https://portal.fondy.eu',
@@ -35,6 +35,7 @@
             facebook: '/api/account/registration/facebook/',
             linkedin: '/api/account/registration/linkedin/'
         },
+        created: false,
         loaded: false,
         /**
          *
@@ -43,7 +44,7 @@
          */
         frame: function (url) {
             var defer = this.defer();
-            $('<iframe>').hide().attr('src', url).appendTo('body').on('load', function (ev) {
+            $('<iframe>').hide().attr('src', url).appendTo('body').on('load',function(){
                 defer.resolve(this);
             }).on('error', function () {
                 defer.reject(this);
@@ -63,8 +64,12 @@
          *
          */
         init: function () {
-            this.wrapper = $(this);
-            this.frame(this.url('gateway')).then($.proxy(this, 'load'));
+            if( this.created == false ) {
+                this.created = true;
+                this.wrapper = $(this);
+                this.frame(this.url('gateway')).then($.proxy(this,'load'));
+            }
+            return this;
         },
         /**
          *
@@ -89,7 +94,7 @@
          * @returns {*}
          */
         scope: function (callback) {
-            if (this.loaded) return callback.call(this);
+            if (this.init().loaded) return callback.call(this);
             else this.wrapper.on('portal.api', $.proxy(callback, this));
         },
         /**
@@ -178,9 +183,11 @@
     };
 
     $.addControl('signup', function (element) {
+
         var render = function (template, data) {
-            element.html($.ejs(template).render(data));
+            element.find('.panel').html($.ejs(template).render(data));
         };
+
         var success = function () {
             $.when(
                 this.request('api.account.milestone', 'get', {})
@@ -190,6 +197,7 @@
                 });
             });
         };
+
         var submit = function (ev, form) {
             ev.preventDefault();
             form = $(this).serializeObject();
@@ -211,12 +219,16 @@
                 }
             });
         };
+        var toggle = function(){
+            element.find('.panel').toggleClass('show').hasClass('show') &&
+            $.api.scope(function () {
+                this.session().fail(function () {
+                    render('/signup', {login: false});
+                }).done(success);
+            });
+        };
         element.on('submit', 'form', submit);
-        $.api.scope(function () {
-            this.session().fail(function () {
-                render('/signup', {login: false});
-            }).done(success);
-        });
+        element.on('click', '.button.user', toggle);
     });
 
 })(jQuery);

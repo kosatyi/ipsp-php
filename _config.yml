@@ -1,6 +1,7 @@
 gems:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 #Others
 markdown: kramdown
 # Setup

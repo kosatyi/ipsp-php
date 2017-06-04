@@ -60,7 +60,7 @@ class Ipsp_Api {
      * @return mixed
      * @throws Ipsp_Error
      */
-    public function call($name=NULL,$params=array()) {
+    public function call( $name = NULL , $params = array() ) {
         $resource = $this->initResource($name);
         $resource->setClient($this->client);
         return $resource->call(array_merge($this->params,$params));
@@ -71,26 +71,17 @@ class Ipsp_Api {
      * @param string $value
      * @return $this
      */
-    public function setParam($key='',$value=''){
+    public function setParam( $key = '' , $value = ''){
         $this->params[$key] = $value;
         return $this;
     }
     /**
      * @param string $key
      */
-    public function getParam($key=''){
+    public function getParam( $key = '' ){
         return $this->params[$key];
     }
-    /**
-     * @param $errno
-     * @param $errstr
-     * @param $errfile
-     * @param $errline
-     * @throws ErrorException
-     */
-    public function handleError($errno, $errstr, $errfile, $errline) {
-        throw new \ErrorException($errstr, $errno, 0, $errfile, $errline);
-    }
+
     /**
      * @return bool
      */
@@ -98,6 +89,9 @@ class Ipsp_Api {
         return isset($_POST['MD']) AND isset($_POST['PaRes']);
     }
 
+    /**
+     * @return string
+     */
     public function getCurrentUrl(){
         if(isset($_SERVER['HTTP_HOST']))
         {
@@ -123,8 +117,10 @@ class Ipsp_Api {
      * @param $callback
      * @codeCoverageIgnore
      */
-    public function success($callback){
+    public function success( $callback ){
+
         // TODO: implement success callback
+
     }
     /**
      * @param $callback
@@ -134,8 +130,27 @@ class Ipsp_Api {
         // TODO: implement failure callback
     }
     /**
+     * @param $errno
+     * @param $errstr
+     * @param $errfile
+     * @param $errline
+     */
+    public function handleError($errno, $errstr, $errfile, $errline) {
+        error_log($errstr);
+        $msg = sprintf('<div style="background:#efefef;font:12px/1 monospace;border:1px solid #ccc;padding:10px;">'.
+            '<h2 style="margin:0 0 10px 0">Ipsp Php Error</h2>'.
+            '<h4 style="margin:0 0 10px 0">%s (%s)</h3>'.
+            '<pre style="margin:0;">%s line: %s</pre>'.
+            '</div>',
+            $errstr,
+            $errno,
+            $errfile,
+            $errline
+        );
+        print($msg);
+    }
+    /**
      * @param Exception $e
-     * @codeCoverageIgnore
      */
     public function handleException(\Exception $e) {
        error_log($e->getMessage());
@@ -148,6 +163,6 @@ class Ipsp_Api {
            $e->getCode(),
            $e->getTraceAsString()
        );
-       exit($msg);
+       print($msg);
     }
 }

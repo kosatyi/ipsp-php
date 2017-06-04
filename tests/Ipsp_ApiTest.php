@@ -87,14 +87,20 @@ class Ipsp_ApiTest extends PHPUnit_Framework_TestCase
         $this->assertEquals( $value , $api->getParam($key) );
     }
     /**
-     * @expectedException ErrorException
      * @depends testApi
      * @param Ipsp_Api $api
      */
     public function testHandleError( $api ){
-        $api->handleError(1000,'error description','error.file',10);
+        $api->handleError(1000,'error description','file.tmp',1);
     }
 
+    /**
+     * @depends testApi
+     * @param Ipsp_Api $api
+     */
+    public function testHandleException( $api ){
+        $api->handleException(new Exception('error description',1000));
+    }
     /**
      * @depends testApi
      * @backupGlobals enabled

@@ -2,7 +2,7 @@
 
 /**
  * Class Ipsp_Curl
- * @codeCoverageIgnore
+ *
  */
 class Ipsp_Curl {
     /**
@@ -54,9 +54,7 @@ class Ipsp_Curl {
      */
     public function post($params=array(),$options=array())
     {
-        if (is_array($params)) {
-            $params = http_build_query($params, NULL, '&');
-        }
+        $params = $this->buildQuery($params);
         $this->options($options);
         $this->http_method('post');
         $this->option(CURLOPT_POST, TRUE);
@@ -69,8 +67,7 @@ class Ipsp_Curl {
      */
     public function put($params = array(), $options = array())
     {
-        if (is_array($params))
-            $params = http_build_query($params, NULL, '&');
+        $params = $this->buildQuery($params);
         $this->options($options);
         $this->http_method('put');
         $this->option(CURLOPT_POSTFIELDS, $params);
@@ -83,13 +80,17 @@ class Ipsp_Curl {
      */
     public function patch($params = array(), $options = array())
     {
-        if (is_array($params))
-            $params = http_build_query($params, NULL, '&');
-
+        $params = $this->buildQuery($params);
         $this->options($options);
         $this->http_method('patch');
         $this->option(CURLOPT_POSTFIELDS, $params);
         $this->option(CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PATCH'));
+    }
+
+    public function buildQuery( $params ){
+        if (is_array($params))
+            $params = http_build_query($params, NULL, '&');
+        return $params;
     }
 
     /**
@@ -98,8 +99,7 @@ class Ipsp_Curl {
      */
     public function delete($params, $options = array())
     {
-        if (is_array($params))
-            $params = http_build_query($params, NULL, '&');
+        $params = $this->buildQuery($params);
         $this->options($options);
         $this->http_method('delete');
         $this->option(CURLOPT_POSTFIELDS, $params);
@@ -111,10 +111,7 @@ class Ipsp_Curl {
      */
     public function set_cookies($params = array())
     {
-        if (is_array($params))
-        {
-            $params = http_build_query($params, NULL, '&');
-        }
+        $params = $this->buildQuery($params);
         $this->option(CURLOPT_COOKIE, $params);
         return $this;
     }

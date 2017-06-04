@@ -41,6 +41,11 @@ class Ipsp_Request {
         $type = $this->contentType[$format];
         return  sprintf('Content-Type: %s',$type);
     }
+    private function getParamsQuery($params=array()){
+        if( is_array( $params ) )
+            $params = http_build_query($params, NULL, '&');
+        return $params;
+    }
     /**
      * @return array
      */
@@ -61,9 +66,10 @@ class Ipsp_Request {
      * @return bool|mixed
      */
     public function doPost( $url = '' , $params=array()){
+        $params = $this->getParamsQuery($params);
         $this->curl->create($url);
         $this->curl->ssl(FALSE);
-        $this->curl->post($params);
+        $this->curl->post( $params );
         $this->curl->http_header( $this->getContentType( $this->format ));
         $this->curl->http_header( $this->getContentLength( $params ));
         return $this->curl->execute();
@@ -71,14 +77,14 @@ class Ipsp_Request {
     /**
      * @param string $url
      * @param array $params
-     * @param string $format
-     * @return bool|mixed
+     * @return bool|mixed|string
      */
-    public function doGet( $url='', $params=array()){
-        $this->create($url.(empty($params) ? '' : '?'.http_build_query($params, NULL, '&')));
+    public function doGet( $url='' , $params=array() ){
+        $params = $this->getParamsQuery($params);
+        $this->curl->create($url.( empty( $params ) ? '' : '?'.$params ));
         $this->curl->ssl(FALSE);
-        $this->curl->http_header($this->getContentType( $this->format ));
-        $this->curl->http_header($this->getContentLength( $params ));
+        $this->curl->http_header( $this->getContentType( $this->format ) );
+        $this->curl->http_header( $this->getContentLength( $params ) );
         return $this->curl->execute();
     }
 

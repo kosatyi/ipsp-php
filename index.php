@@ -11,20 +11,34 @@ define('IPSP_GATEWAY' ,  'api.dev.fondy.eu');
 
 
 $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD, IPSP_GATEWAY );
-
-$api   = new Ipsp_Api( $client );
+$api    = new Ipsp_Api( $client );
 
 
 $result = $api->call('result');
 
-//print_r($result->getResponse());
+if( $result->validResponse() ){
+   echo '<pre>';
+   print_r($result->getResponse());
+   echo '</pre>';
+   exit();
+}
 
-$api->setParam('order_id',sprintf('order_%s',time()));
-$api->setParam('order_desc','Test Order Description');
+$order_id = sprintf('order_%s',time());
+
+$api->setParam('order_id', $order_id );
+$api->setParam('order_desc','IPSP PHP Order Description');
 $api->setParam('currency', $api::UAH );
 $api->setParam('amount', 2000 );
 $api->setParam('response_url',$api->getCurrentUrl());
 
-$api->call('checkout')->redirectToCheckout();
+$checkout = $api->call('checkout');
 
-//print $api->getCurrentUrl();
+$response = $checkout->getResponse();
+
+if($response->isFailure()){
+    print $response->getErrorMessage();
+} else {
+    $checkout->redirectToCheckout();
+}
+
+

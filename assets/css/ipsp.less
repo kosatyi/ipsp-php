@@ -211,6 +211,7 @@ table.details {
 
 .widget.user {
   position: fixed;
+  z-index:99999;
   bottom: 2rem;
   right: 2rem;
   .panel {
@@ -277,6 +278,7 @@ table.details {
   @media screen and (max-width: 42em) {
     right: auto;
     left: 50%;
+    bottom: 1rem;
     margin-left: -2rem;
     .panel {
       right: auto;
@@ -297,6 +299,26 @@ table.details {
       }
     }
   }
+
+  @media screen and (max-width: 28em) {
+
+    .panel {
+      margin:0;
+      min-width: 0px;
+      width:auto;
+      position:fixed;
+      left:1rem;
+      right:1rem;
+      bottom:1rem;
+      &:after, &:before {
+        display:none;
+      }
+      &.show + .button.user{
+        display: none;
+      }
+    }
+  }
+
 }
 
 .page-footer {

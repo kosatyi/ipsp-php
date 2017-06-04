@@ -227,6 +227,11 @@
                 }).done(success);
             });
         };
+        $(document).on('click',function(ev){
+            if(!element.has(ev.target).get(0)){
+                element.find('.panel').removeClass('show');
+            }
+        });
         element.on('submit', 'form', submit);
         element.on('click', '.button.user', toggle);
     });

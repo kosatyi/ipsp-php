@@ -4,10 +4,13 @@
  * Class Ipsp_Resource_Refund
  */
 class Ipsp_Resource_P2pcredit extends Ipsp_Resource{
+
     protected $path   = '/p2pcredit';
+
     protected $defaultParams = array(
 
     );
+
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',
@@ -46,4 +49,5 @@ class Ipsp_Resource_P2pcredit extends Ipsp_Resource{
             'required'=>FALSE
         )
     );
+
 }

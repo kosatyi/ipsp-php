@@ -7,7 +7,7 @@ require_once 'vendor/autoload.php';
 
 define('MERCHANT_ID' , 900002 );
 define('MERCHANT_PASSWORD' , 'test');
-define('IPSP_GATEWAY' ,  'api.dev.fondy.eu');
+define('IPSP_GATEWAY' ,  'api.fondy.eu');
 
 
 $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD, IPSP_GATEWAY );

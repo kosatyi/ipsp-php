@@ -1,13 +1,10 @@
 <?php
 
 /**
- * Class Ipsp_Resource_Refund
+ * Class Ipsp_Resource_PaymentUrl
  */
-class Ipsp_Resource_P2pcredit extends Ipsp_Resource{
-    protected $path   = '/p2pcredit';
-    protected $defaultParams = array(
-
-    );
+class Ipsp_Resource_Checkout extends Ipsp_Resource{
+    protected $path   = '/checkout/url';
     protected $fields = array(
         'merchant_id'=>array(
             'type'    => 'string',
@@ -18,7 +15,7 @@ class Ipsp_Resource_P2pcredit extends Ipsp_Resource{
             'required'=>TRUE
         ),
         'order_desc'=>array(
-            'type'    => 'string',
+            'type' => 'string',
             'required'=>TRUE
         ),
         'currency' => array(
@@ -29,21 +26,12 @@ class Ipsp_Resource_P2pcredit extends Ipsp_Resource{
             'type' => 'integer',
             'required'=>TRUE
         ),
-        'receiver_card_number'=>array(
-            'type' => 'string',
-            'required'=>FALSE
-        ),
-        'receiver_rectoken'=>array(
-            'type' => 'string',
-            'required'=>FALSE
-        ),
         'signature' => array(
             'type' => 'string',
             'required'=>TRUE
-        ),
-        'version' => array(
-            'type' => 'string',
-            'required'=>FALSE
         )
     );
+    public function redirectToCheckout(){
+        $this->getResponse()->redirectToCheckout();
+    }
 }

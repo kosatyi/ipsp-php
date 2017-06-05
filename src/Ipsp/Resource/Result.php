@@ -25,4 +25,15 @@ class Ipsp_Resource_Result extends Ipsp_Resource{
            $this->setResponse($data);
        }
     }
+    public function validResponse(){
+        $valid    = FALSE;
+        $response = $this->getResponse();
+        if( $response AND $data = $response->getData() ){
+            $signature = $data['signature'];
+            unset($data['signature']);
+            unset($data['response_signature_string']);
+            $valid = $signature == $this->getSignature($data);
+        }
+        return $valid;
+    }
 }

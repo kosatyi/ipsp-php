@@ -65,7 +65,7 @@ class Ipsp_Resource {
      * @param array $params
      * @return string
      */
-    private function getSignature(Array $params){
+    protected function getSignature($params=array()){
         $params = array_filter($params,'strlen');
         ksort($params);
         $params = array_values($params);
@@ -77,7 +77,7 @@ class Ipsp_Resource {
      * @param string $json
      * @return mixed
      */
-    private function parseJson($json=''){
+    private function parseJson( $json = '' ){
         $data = json_decode($json,TRUE);
         return $data['response'];
     }
@@ -86,7 +86,7 @@ class Ipsp_Resource {
      * @param string $xml
      * @return array
      */
-    private function parseXml($xml=''){
+    private function parseXml( $xml = '' ){
         $xml = new Ipsp_XmlData($xml);
         $data = $xml->xmlToArray();
         return $data;
@@ -105,7 +105,7 @@ class Ipsp_Resource {
      * @return mixed
      * @throws Exception
      */
-    protected function parseRespose($data){
+    protected function parseRespose( $data ){
         $callback = $this->parser[$this->format];
         if( method_exists($this,$callback) ) {
             return call_user_func(array($this,$callback),$data);
@@ -214,7 +214,6 @@ class Ipsp_Resource {
         $params['signature']   = $this->getSignature($params);
         return $params;
     }
-
     /**
      * @param $key
      * @return null
@@ -232,7 +231,7 @@ class Ipsp_Resource {
      * @return $this
      * @throws Exception
      */
-    public function call( $params=array() ){
+    public function call( $params = array() ){
         $this->setParams( $params );
         $this->request->setFormat( $this->format );
         $data = $this->request->doPost($this->getUrl(),$this->buildParams($this->getParams()));

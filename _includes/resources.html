@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<title>{{ page.title }}</title>
+{% seo %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#157878">
 <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon/favicon.ico">
@@ -7,7 +7,6 @@
 <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png" sizes="16x16" />
 {% for style in site.styles %}<link rel="stylesheet" href="{{style}}" type="text/css">
 {% endfor %}
-{% seo %}
 {% if site.analytics %}
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

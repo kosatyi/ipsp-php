@@ -1,5 +1,6 @@
 ---
 title: Modules
+description: IPSP PHP SDK is compatible with the most used ecommerce CMS. Install in a few clicks our modules for Prestashop, Magento or wooCommerce.
 ---
 # Modules
 

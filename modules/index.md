@@ -1,6 +1,5 @@
 ---
 title: Modules
-description: CMS Modules
 ---
 # Modules
 

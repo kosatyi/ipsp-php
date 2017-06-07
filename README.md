@@ -1,7 +1,7 @@
 ## Payment service provider
 
-[![Travis](https://img.shields.io/travis/kosatyi/ipsp-php.svg)]()
-[![Latest Stable Version](https://poser.pugx.org/kosatyi/ipsp-php/v/stable)](https://packagist.org/packages/kosatyi/ipsp-php)
+[![Travis](https://img.shields.io/travis/kosatyi/ipsp-php.svg)](https://travis-ci.org/kosatyi/ipsp-php)
+[![Packagist](https://img.shields.io/packagist/v/kosatyi/ipsp-php.svg)](https://packagist.org/packages/kosatyi/ipsp-php)
 [![Total Downloads](https://poser.pugx.org/kosatyi/ipsp-php/downloads)](https://packagist.org/packages/kosatyi/ipsp-php)
 [![Latest Unstable Version](https://poser.pugx.org/kosatyi/ipsp-php/v/unstable)](https://packagist.org/packages/kosatyi/ipsp-php)
 [![License](https://poser.pugx.org/kosatyi/ipsp-php/license)](https://packagist.org/packages/kosatyi/ipsp-php)

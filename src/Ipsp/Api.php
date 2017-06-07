@@ -106,6 +106,7 @@ class Ipsp_Api {
         }
         return $protocol.$host.$path;
     }
+
     /**
      * @return bool
      */

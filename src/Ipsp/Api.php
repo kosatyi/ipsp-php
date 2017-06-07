@@ -106,7 +106,6 @@ class Ipsp_Api {
         }
         return $protocol.$host.$path;
     }
-
     /**
      * @return bool
      */
@@ -118,9 +117,7 @@ class Ipsp_Api {
      * @codeCoverageIgnore
      */
     public function success( $callback ){
-
         // TODO: implement success callback
-
     }
     /**
      * @param $callback

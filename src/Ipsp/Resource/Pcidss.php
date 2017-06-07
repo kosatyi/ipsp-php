@@ -37,6 +37,10 @@ class Ipsp_Resource_Pcidss extends Ipsp_Resource
         )
     );
 
+    /**
+     * @return bool
+     * @codeCoverageIgnore
+     */
     public function acsRedirect( ){
         $response = $this->response;
         if(!$response->acs_url) return FALSE;
@@ -46,11 +50,11 @@ class Ipsp_Resource_Pcidss extends Ipsp_Resource
             'TermUrl' => $this->getParam('response_url')
         );
         $html = "<html><body><form id='form' action='$response->acs_url' method='post'>";
-        foreach ($data as $key => $value)
+        foreach ($data as $key => $value )
             $html .= "<input type='hidden' name='$key' value='$value'>";
         $html .= "</form><script>document.getElementById('form').submit();</script>";
         $html .= "</body></html>";
-        exit($html);
+        echo($html);
     }
 
 }

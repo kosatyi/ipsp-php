@@ -41,6 +41,11 @@ class Ipsp_Request {
         $type = $this->contentType[$format];
         return  sprintf('Content-Type: %s',$type);
     }
+
+    /**
+     * @param array $params
+     * @return array|string
+     */
     private function getParamsQuery($params=array()){
         if( is_array( $params ) )
             $params = http_build_query($params, NULL, '&');
@@ -68,7 +73,8 @@ class Ipsp_Request {
     public function doPost( $url = '' , $params=array()){
         $params = $this->getParamsQuery($params);
         $this->curl->create($url);
-        $this->curl->ssl(FALSE);
+        $this->curl->option(CURLOPT_SSL_VERIFYPEER, TRUE );
+        $this->curl->option(CURLOPT_SSL_VERIFYHOST, 2 );
         $this->curl->post( $params );
         $this->curl->http_header( $this->getContentType( $this->format ));
         $this->curl->http_header( $this->getContentLength( $params ));
@@ -82,10 +88,10 @@ class Ipsp_Request {
     public function doGet( $url='' , $params=array() ){
         $params = $this->getParamsQuery($params);
         $this->curl->create($url.( empty( $params ) ? '' : '?'.$params ));
-        $this->curl->ssl(FALSE);
+        $this->curl->option(CURLOPT_SSL_VERIFYPEER, TRUE );
+        $this->curl->option(CURLOPT_SSL_VERIFYHOST, 2 );
         $this->curl->http_header( $this->getContentType( $this->format ) );
         $this->curl->http_header( $this->getContentLength( $params ) );
         return $this->curl->execute();
     }
-
 }

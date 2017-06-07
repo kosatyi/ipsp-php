@@ -10,7 +10,7 @@ class Ipsp_XmlData extends \SimpleXMLElement{
     public function arrayToXml($array=array()){
         foreach($array as $key=>$val) {
             if(is_numeric($key)) continue;
-            if( is_array($val) ) {
+            if(is_array($val)) {
                 $node = $this->addChild($key);
                 $node->arrayToXml($val);
             } else {

@@ -2,9 +2,7 @@
 
 class Ipsp_RequestTest extends PHPUnit_Framework_TestCase
 {
-
     protected static $formats;
-
     public static function setUpBeforeClass()
     {
         self::$formats = array(
@@ -12,17 +10,11 @@ class Ipsp_RequestTest extends PHPUnit_Framework_TestCase
             'xml'  => 'application/xml',
             'form' => 'application/x-www-form-urlencoded'
         );
-
-
-
     }
-
     public static function tearDownAfterClass()
     {
         self::$formats = NULL;
     }
-
-
     public function testRequest()
     {
         $request = new Ipsp_Request();

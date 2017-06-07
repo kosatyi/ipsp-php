@@ -24,6 +24,7 @@ class Ipsp_Response {
     }
     /**
      * @return string
+     * @codeCoverageIgnore
      */
     public function __toString(){
         return json_encode($this->data,JSON_PRETTY_PRINT);
@@ -37,6 +38,7 @@ class Ipsp_Response {
 
     /**
      * @param string $prop
+     * @codeCoverageIgnore
      */
     public function redirectTo($prop=''){
         if( $this->$prop ){
@@ -80,7 +82,7 @@ class Ipsp_Response {
     }
 
     /**
-     *
+     * @codeCoverageIgnore
      */
     public function redirectToCheckout(){
         return $this->redirectTo('checkout_url');

@@ -27,7 +27,7 @@ analytics: UA-100124713-1
 
 # Seo
 social:
-  name: Stepan Kosatyi
+  name: IPSP PHP SDK
   links:
     - https://github.com/kosatyi/ipsp-php
     - https://packagist.org/packages/kosatyi/ipsp-php

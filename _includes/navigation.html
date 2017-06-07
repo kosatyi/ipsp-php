@@ -32,4 +32,4 @@
 {% if links.size > 0 %}
 <ul>{{ links }}</ul>
 {% endif %}
-{% endcapture %}{{menu}}
+{% endcapture %}{{menu | strip_newlines | replace:'    ','' | replace:'    ','' | replace:'  ',' '}}

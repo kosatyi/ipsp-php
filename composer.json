@@ -3,6 +3,7 @@
   "description": "Payment Service Provider SDK",
   "homepage": "http://www.kosatyi.com/",
   "license": "MIT",
+  "version": "1.1.5",
   "authors": [
     {
       "name": "Stepan Kosatyi",

@@ -6,7 +6,9 @@
  */
 class Ipsp_ApiTest extends PHPUnit_Framework_TestCase
 {
+
     protected static $params;
+
     public static function setUpBeforeClass()
     {
         self::$params = array(

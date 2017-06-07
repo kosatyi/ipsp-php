@@ -23,15 +23,12 @@ class Ipsp_Resource_Checkout extends Ipsp_Resource{
             'required'=>TRUE
         ),
         'amount' => array(
-            'type' => 'integer',
-            'required'=>TRUE
+            'type'     => 'integer',
+            'required' => TRUE
         ),
         'signature' => array(
             'type' => 'string',
             'required'=>TRUE
         )
     );
-    public function redirectToCheckout(){
-        $this->getResponse()->redirectToCheckout();
-    }
 }

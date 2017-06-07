@@ -39,10 +39,9 @@ class Ipsp_Curl {
     public $info;                   // Returned after request (elapsed time, etc)
 
     /**
-     * @param string $url
      * @throws Exception
      */
-    function __construct($url = '')
+    function __construct()
     {
         if (!$this->is_enabled())
             throw new \Exception('curl module not found');
@@ -61,61 +60,11 @@ class Ipsp_Curl {
         $this->option(CURLOPT_POSTFIELDS, $params);
     }
 
-    /**
-     * @param array $params
-     * @param array $options
-     */
-    public function put($params = array(), $options = array())
-    {
-        $params = $this->buildQuery($params);
-        $this->options($options);
-        $this->http_method('put');
-        $this->option(CURLOPT_POSTFIELDS, $params);
-        $this->option(CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT'));
-    }
-
-    /**
-     * @param array $params
-     * @param array $options
-     */
-    public function patch($params = array(), $options = array())
-    {
-        $params = $this->buildQuery($params);
-        $this->options($options);
-        $this->http_method('patch');
-        $this->option(CURLOPT_POSTFIELDS, $params);
-        $this->option(CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PATCH'));
-    }
-
     public function buildQuery( $params ){
         if (is_array($params))
             $params = http_build_query($params, NULL, '&');
         return $params;
     }
-
-    /**
-     * @param $params
-     * @param array $options
-     */
-    public function delete($params, $options = array())
-    {
-        $params = $this->buildQuery($params);
-        $this->options($options);
-        $this->http_method('delete');
-        $this->option(CURLOPT_POSTFIELDS, $params);
-    }
-
-    /**
-     * @param array $params
-     * @return $this
-     */
-    public function set_cookies($params = array())
-    {
-        $params = $this->buildQuery($params);
-        $this->option(CURLOPT_COOKIE, $params);
-        return $this;
-    }
-
     /**
      * @param $header
      * @param null $content
@@ -126,7 +75,6 @@ class Ipsp_Curl {
         $this->headers[] = $content ? $header . ': ' . $content : $header;
         return $this;
     }
-
     /**
      * @param $method
      * @return $this
@@ -136,68 +84,6 @@ class Ipsp_Curl {
         $this->options[CURLOPT_CUSTOMREQUEST] = strtoupper($method);
         return $this;
     }
-
-    /**
-     * @param string $username
-     * @param string $password
-     * @param string $type
-     * @return $this
-     */
-    public function http_login($username = '', $password = '', $type = 'any')
-    {
-        $this->option(CURLOPT_HTTPAUTH, constant('CURLAUTH_' . strtoupper($type)));
-        $this->option(CURLOPT_USERPWD, $username . ':' . $password);
-        return $this;
-    }
-
-    /**
-     * @param string $url
-     * @param int $port
-     * @return $this
-     */
-    public function proxy($url = '', $port = 80)
-    {
-        $this->option(CURLOPT_HTTPPROXYTUNNEL, TRUE);
-        $this->option(CURLOPT_PROXY, $url . ':' . $port);
-        return $this;
-    }
-
-    /**
-     * @param string $username
-     * @param string $password
-     * @return $this
-     */
-    public function proxy_login($username = '', $password = '')
-    {
-        $this->option(CURLOPT_PROXYUSERPWD, $username . ':' . $password);
-        return $this;
-    }
-
-    /**
-     * @param bool|TRUE $verify_peer
-     * @param int $verify_host
-     * @param null $path_to_cert
-     * @return $this
-     */
-    public function ssl($verify_peer = TRUE, $verify_host = 2, $path_to_cert = NULL)
-    {
-        if ($verify_peer)
-        {
-            $this->option(CURLOPT_SSL_VERIFYPEER, TRUE);
-            $this->option(CURLOPT_SSL_VERIFYHOST, $verify_host);
-            if (isset($path_to_cert)) {
-                $path_to_cert = realpath($path_to_cert);
-                $this->option(CURLOPT_CAINFO, $path_to_cert);
-            }
-        }
-        else
-        {
-            $this->option(CURLOPT_SSL_VERIFYPEER, FALSE);
-            $this->option(CURLOPT_SSL_VERIFYHOST, $verify_host);
-        }
-        return $this;
-    }
-
     /**
      * @param array $options
      * @return $this
@@ -209,7 +95,6 @@ class Ipsp_Curl {
         curl_setopt_array($this->session, $this->options);
         return $this;
     }
-
     /**
      * @param $code
      * @param $value
@@ -292,7 +177,6 @@ class Ipsp_Curl {
     {
         return function_exists('curl_init');
     }
-
     /**
      *
      */

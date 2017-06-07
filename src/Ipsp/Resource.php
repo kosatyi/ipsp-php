@@ -10,6 +10,10 @@ class Ipsp_Resource {
     /**
      * @var string
      */
+    protected $defaultFormat = 'json';
+    /**
+     * @var string
+     */
     protected $format = 'json';
     /**
      * @var
@@ -61,6 +65,18 @@ class Ipsp_Resource {
      * @var array
      */
     private $params = array();
+
+    /**
+     *
+     */
+    public function __construct(){
+        $this->request  = new Ipsp_Request();
+        if(!empty($this->format))
+            $this->setFormat($this->format);
+        if(!empty($this->defaultParams))
+            $this->setParams($this->defaultParams);
+    }
+
     /**
      * @param array $params
      * @return string
@@ -107,12 +123,7 @@ class Ipsp_Resource {
      */
     protected function parseRespose( $data ){
         $callback = $this->parser[$this->format];
-        if( method_exists($this,$callback) ) {
-            return call_user_func(array($this,$callback),$data);
-        }
-        else {
-            throw new \Exception(sprintf('parser %s not supported',$this->format));
-        }
+        return call_user_func(array($this,$callback),$data);
     }
     /**
      * @param array $params
@@ -141,26 +152,10 @@ class Ipsp_Resource {
     }
     /**
      * @param $params
-     * @return mixed
-     * @throws Exception
+     * @return mixed|null
      */
     protected function buildParams($params){
-        $callback = $this->formatter[$this->format];
-        if( method_exists($this,$callback) ) {
-            return call_user_func(array($this,$callback),$params);
-        }
-        else {
-            throw new Exception(sprintf('format %s not supported',$this->format));
-        }
-    }
-
-    /**
-     *
-     */
-    public function __construct(){
-        $this->request  = new Ipsp_Request();
-        if(!empty($this->defaultParams))
-            $this->params = $this->defaultParams;
+        return call_user_func(array($this,$this->formatter[$this->format]),$params);
     }
     /**
      * @param Ipsp_Client $client
@@ -177,12 +172,40 @@ class Ipsp_Resource {
         return TRUE;
     }
     /**
+     * @param $path
+     * @return $this
+     */
+    public function setPath($path){
+        $this->path = $path;
+        return $this;
+    }
+    /**
+     * @param $format
+     * @return $this|bool
+     */
+    public function setFormat($format){
+        if( array_key_exists($format,$this->formatter) ){
+            $this->format = $format;
+            return TRUE;
+        } else {
+            $this->format = $this->defaultFormat;
+            return FALSE;
+        }
+    }
+    /**
+     * @return string
+     */
+    public function getFormat(){
+        return $this->format;
+    }
+
+    /**
      * @param $key
      * @param $value
      * @return bool
      */
     public function isValidParam($key,$value){
-        return true;
+        return TRUE;
     }
     /**
      * @param array $params
@@ -199,7 +222,7 @@ class Ipsp_Resource {
      * @param $value
      * @return $this
      */
-    public function setParam(String $key,$value){
+    public function setParam($key,$value){
         if( $this->isValidParam($key,$value) ){
             $this->params[$key] = $value;
         }

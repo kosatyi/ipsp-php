@@ -8,7 +8,7 @@ markdown: kramdown
 title:   IPSP PHP SDK
 tagline: Accept epayments on your website online.
 baseurl:
-url:          https://ipsp-php.com
+url:  https://ipsp-php.com
 
 styles:
   - //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
@@ -39,7 +39,9 @@ social:
 webmaster_verifications:
   google: ytqWppv3WHbrMA_P7TOtYHvti5LbegWZnv4s5JOaLBE
 
-author: kosatyi
+author:
+  name: Stepan Kosatyi
+  url: http://www.kosatyi.com/
 
 # Site variables
 buttons:

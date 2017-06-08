@@ -12,11 +12,17 @@
 {% endunless %}
 {% assign current = list | where: "url", match | first %}
 {% if current.title %}
+{% if forloop.rindex > 1 %}
 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
     <a href="{{ site.url }}{{site.baseurl}}{{current.url}}" itemprop="item">
         <span itemprop="name">{{ current.title }}</span>
     </a>
 </li>
+{% else %}
+<li>
+    <span>{{ current.title }}</span>
+</li>
+{% endif %}
 {% endif %}
 {% endfor %}
 </ol>

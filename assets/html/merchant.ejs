@@ -1,0 +1,114 @@
+<form class="form" control="ui.form">
+    <% if(attr('merchant.error')) { %>
+    <div class="alert alert-warning text-center">
+        <i class="fa fa-warning"></i>
+        <%= attr('merchant.error') %>
+    </div>
+    <% } %>
+    <div class="form-group form-group-step">
+        #1 <%= _('Select your country') %>
+    </div>
+    <div class="form-group">
+        <label class="control-label"><%= _('Country') %>:</label>
+        <select required name="country" control="select.value" value="<%= attr('params.country') %>"
+                class="form-control">
+            <option value="" disabled selected><%= _('Choose merchant country') %></option>
+            <option value="" disabled>----</option>
+            <option value="AD"><%= _('Andorra') %></option>
+            <option value="AT"><%= _('Austria') %></option>
+            <option value="BE"><%= _('Belgium') %></option>
+            <option value="BG"><%= _('Bulgaria') %></option>
+            <option value="HR"><%= _('Croatia') %></option>
+            <option value="CY"><%= _('Cyprus') %></option>
+            <option value="CZ"><%= _('Czech Republic') %></option>
+            <option value="DK"><%= _('Denmark') %></option>
+            <option value="EE"><%= _('Estonia') %></option>
+            <option value="FI"><%= _('Finland') %></option>
+            <option value="FR"><%= _('France') %></option>
+            <option value="DE"><%= _('Germany') %></option>
+            <option value="GR"><%= _('Greece') %></option>
+            <option value="VA"><%= _('Holy See (Vatican City State)') %></option>
+            <option value="HU"><%= _('Hungary') %></option>
+            <option value="IS"><%= _('Iceland') %></option>
+            <option value="IE"><%= _('Ireland') %></option>
+            <option value="IT"><%= _('Italy') %></option>
+            <option value="LV"><%= _('Latvia') %></option>
+            <option value="LI"><%= _('Liechtenstein') %></option>
+            <option value="LT"><%= _('Lithuania') %></option>
+            <option value="LU"><%= _('Luxembourg') %></option>
+            <option value="MT"><%= _('Malta') %></option>
+            <option value="MC"><%= _('Monaco') %></option>
+            <option value="NL"><%= _('Netherlands') %></option>
+            <option value="NO"><%= _('Norway') %></option>
+            <option value="PL"><%= _('Poland') %></option>
+            <option value="PT"><%= _('Portugal') %></option>
+            <option value="RO"><%= _('Romania') %></option>
+            <option value="RU"><%= _('Russian Federation') %></option>
+            <option value="SM"><%= _('San Marino') %></option>
+            <option value="SK"><%= _('Slovakia') %></option>
+            <option value="SI"><%= _('Slovenia') %></option>
+            <option value="ES"><%= _('Spain') %></option>
+            <option value="SE"><%= _('Sweden') %></option>
+            <option value="CH"><%= _('Switzerland') %></option>
+            <option value="UA"><%= _('Ukraine') %></option>
+            <option value="GB"><%= _('United Kingdom') %></option>
+        </select>
+    </div>
+    <% if(attr('merchant.jurtype')){ %>
+    <div class="form-group form-group-step">
+        #2 <%= _('What kind of business are you?') %>
+    </div>
+    <div class="form-group">
+        <label class="control-label"><%= _('Account type') %>:</label>
+        <select required name="type" control="select.value" value="<%= attr('params.type') %>" class="form-control">
+            <option value="" disabled selected><%= _('Choose merchant type') %></option>
+            <option value="" disabled>----</option>
+            <% each('merchant.jurtype',function(){ %>
+            <optgroup label="<%= attr('loop.value.0') %>">
+                <% each('loop.value.1',function(item, value){ %>
+                <option value="<%= attr('loop.value') %>"><%= attr('loop.value') %></option>
+                <% }) %>
+            </optgroup>
+            <% }) %>
+        </select>
+    </div>
+    <% } %>
+    <% if(attr('params.type')) { %>
+    <div class="form-group">
+        #3 <%= _('Fill detail information below...') %>
+    </div>
+    <% } %>
+    <% if(has('merchant.name', 'params.type')) { %>
+    <div class="form-group">
+        <label class="control-label"><%= _('Username') %>:</label>
+        <input type="text" required placeholder="" class="form-control" name="name">
+    </div>
+    <% } %>
+    <% if(has('merchant.url', 'params.type')) { %>
+    <div class="form-group">
+        <label class="control-label"><%= _('Web-site') %>:</label>
+        <input type="url" required placeholder="http://www.example.com/" control="ui.input.prefix"
+               data-pattern="^https?" data-prefix="http://" class="form-control" name="url">
+    </div>
+    <% } %>
+    <% if(has('merchant.phone', 'params.type')){ %>
+    <div class="form-group">
+        <label class="control-label"><%= _('Phone number') %>:</label>
+        <input type="tel" name="phone" required placeholder="<%= _('Phone number') %>" class="form-control">
+    </div>
+    <% } %>
+    <% if(concat('merchant.offerta', 'params.type')) { %>
+    <div class="form-group">
+        <input type="checkbox" required value="true" name="offerta" id="offerta">
+        <label for="offerta">
+            <%= _('I agree with') %>
+            <a href="<%= concat('merchant.offerta', 'params.type') %>" target="_blank"><%= _('Public offer') %></a>.
+        </label>
+    </div>
+    <% } %>
+    <div class="form-group text-center">
+        <button type="submit" <%= or('params.type', '', 'disabled') %> class="btn primary">
+            <%= _('Continue') %>
+        </button>
+    </div>
+</form>

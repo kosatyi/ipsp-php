@@ -44,7 +44,7 @@
          */
         frame: function (url) {
             var defer = this.defer();
-            $('<iframe>').hide().attr('src', url).appendTo('body').on('load',function(){
+            $('<iframe>').hide().attr('src', url).appendTo('body').on('load', function () {
                 defer.resolve(this);
             }).on('error', function () {
                 defer.reject(this);
@@ -64,10 +64,10 @@
          *
          */
         init: function () {
-            if( this.created == false ) {
+            if (this.created == false) {
                 this.created = true;
                 this.wrapper = $(this);
-                this.frame(this.url('gateway')).then($.proxy(this,'load'));
+                this.frame(this.url('gateway')).then($.proxy(this, 'load'));
             }
             return this;
         },
@@ -139,6 +139,27 @@
 })(jQuery);
 
 (function ($) {
+
+    $.ejs.addHelper('_', function (value) {
+        return value;
+    });
+
+    $.ejs.addHelper('has', function (prop, value) {
+        return this.def(this.attr(prop), '').indexOf(this.attr(value)) != -1;
+    });
+
+    $.ejs.addHelper('concat', function () {
+        var args = Array.prototype.slice.call(arguments);
+        args = args.map(function (name) {
+            return this.attr(name);
+        }.bind(this)).filter(function (item) {
+            return item;
+        });
+        return args.length ? args.join('.') : '';
+    });
+})(jQuery);
+
+(function ($) {
     var list = {};
     var toArray = function (obj) {
         return Array.prototype.slice.call(obj);
@@ -182,12 +203,65 @@
         return this.request('api.account', method, form);
     };
 
-    $.addControl('signup', function (element) {
 
+    $.addControl('select.value',function (element){
+        element.val(element.attr('value'));
+    });
+
+    $.addControl('merchant', function (element) {
+        var render = function (template, data) {
+            element.html($.ejs(template).render(data));
+            $.initControls();
+        };
+        var params = function () {
+            return element.find('form').serializeObject();
+        };
+        var success = function (params) {
+            $.api.request('api.merchant','country', params).done(function(merchant){
+                if( merchant.id ) {
+                    location.assign('/activation/settings.html');
+                } else {
+                    render('/merchant', {
+                        merchant: merchant,
+                        params: params
+                    });
+                }
+            });
+        };
+        element.on('change','select',function(){
+            success(params());
+        });
+        element.on('submit',function(ev){
+            ev.preventDefault();
+            var form = params();
+            form.jurtype = form.type;
+            success(form);
+        });
+        $(window).on('api.authorize',function(){
+            success(params());
+        });
+        $(window).on('api.logout',function(){
+            render('/blank');
+        });
+        $.api.scope(function(){
+            this.session().fail(function(){
+                $(window).trigger('api.login');
+            }).done(function(){
+                success(params());
+            });
+        });
+    });
+
+
+    $.addControl('signup', function (element) {
+        var loaded = false;
         var render = function (template, data) {
             element.find('.panel').html($.ejs(template).render(data));
+            $.initControls();
         };
-
+        var complete = function () {
+            loaded = true;
+        };
         var success = function () {
             $.when(
                 this.request('api.account.milestone', 'get', {})
@@ -195,9 +269,9 @@
                 render('/account', {
                     milestone: milestone
                 });
+                $(window).trigger('api.authorize');
             });
         };
-
         var submit = function (ev, form) {
             ev.preventDefault();
             form = $(this).serializeObject();
@@ -219,32 +293,51 @@
                 }
             });
         };
-        var toggle = function(){
-            element.find('.panel').toggleClass('show').hasClass('show') &&
-            $.api.scope(function () {
-                this.session().fail(function () {
-                    render('/signup', {login: false});
-                }).done(success);
+        var toggle = function () {
+            var state = element.find('.panel').toggleClass('show').hasClass('show');
+            if (state && loaded == false) {
+                $.api.scope(function () {
+                    this.session().fail(function () {
+                        render('/signup', {login: false});
+                    }).done(success).always(complete);
+                });
+            }
+        };
+        var logout = function () {
+            $.api.request('api.account', 'logout', {}).done(function (data) {
+                render('/signup', {login: false});
+                $(window).trigger('api.logout');
             });
         };
-        $(document).on('click',function(ev){
-            if(!element.has(ev.target).get(0)){
+        var recovery = function (ev) {
+            ev.preventDefault();
+            $.api.request('api.account', 'forgot_password', element.find('form').serializeObject()).done(function (data) {
+                render('/signup', {login: true, error: 'Check your e-mail.'});
+            }).fail(function (data) {
+                render('/signup', {login: true, error: data.error});
+            });
+        };
+        $(document).on('click', function (ev) {
+            if (!element.has(ev.target).get(0)) {
                 element.find('.panel').removeClass('show');
             }
         });
+        $(window).on('api.login',function(){
+            toggle();
+        });
         element.on('submit', 'form', submit);
         element.on('click', '.button.user', toggle);
+        element.on('click', '.btn.recovery', recovery);
+        element.on('click', '.btn.logout', logout);
     });
 
+})(jQuery);
+
+(function ($) {
+    $('.page-content').append($.ejs('/user').render({}));
 })(jQuery);
 
 
 (function ($) {
     $.initControls();
-})(jQuery);
-
-
-(function ($) {
-
-
 })(jQuery);

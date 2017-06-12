@@ -1,4 +1,4 @@
-@import 'source/variables';
+@import 'main';
 
 .pull-right {
   float: right;
@@ -21,6 +21,12 @@
     vertical-align: top;
     background-color: #639999;
     color: rgba(255, 255, 255, 0.9);
+  }
+  .last{
+    margin-top:0;
+    .btn{
+      margin-top:0;
+    }
   }
   form {
     margin: 1rem 0;
@@ -348,6 +354,17 @@ form.form {
     margin-top: 1rem;
     .btn {
       margin: 0;
+    }
+    .control-label{
+      font-size:0.85rem;
+      margin:0 0.3rem;
+    }
+    .form-control{
+      .field;
+    }
+    &-step{
+      font-size:21px;
+      font-style: italic;
     }
   }
 }

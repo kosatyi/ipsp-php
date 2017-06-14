@@ -277,6 +277,7 @@
             ev.preventDefault();
             form = $(this).serializeObject();
             $.api.account(form).fail(function (data) {
+                $.trackEvent('signup','error',data.error);
                 render('/signup', {
                     login: true,
                     form: form,
@@ -284,6 +285,7 @@
                 });
             }).done(function (data) {
                 if (data.two_factor) {
+                    $.trackEvent('signup','show','two factor dialog');
                     render('/signup', {
                         login: true,
                         two_factor: true,

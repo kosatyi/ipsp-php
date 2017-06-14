@@ -1,5 +1,5 @@
 ---
-title: IPSP PHP SDK - Start e-commerce on your website.
+title: IPSP PHP SDK
 description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.   
 ---
 # Payment Service Provider

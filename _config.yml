@@ -7,7 +7,7 @@ gems:
 markdown: kramdown
 # Setup
 title:   IPSP PHP SDK
-tagline: Accept epayments on your website online.
+tagline: Start e-commerce on your website.
 baseurl:
 url:  https://ipsp-php.com
 

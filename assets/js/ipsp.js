@@ -263,6 +263,7 @@
             loaded = true;
         };
         var success = function () {
+            $.trackEvent('signup','show','account modal');
             $.when(
                 this.request('api.account.milestone', 'get', {})
             ).done(function (milestone) {
@@ -295,9 +296,11 @@
         };
         var toggle = function () {
             var state = element.find('.panel').toggleClass('show').hasClass('show');
+            $.trackEvent('signup','click','user button');
             if (state && loaded == false) {
                 $.api.scope(function () {
-                    this.session().fail(function () {
+                    this.session().fail(function(){
+                        $.trackEvent('signup','show','signup modal');
                         render('/signup', {login: false});
                     }).done(success).always(complete);
                 });
@@ -305,15 +308,19 @@
         };
         var logout = function () {
             $.api.request('api.account', 'logout', {}).done(function (data) {
+                $.trackEvent('signup','click','logout button');
                 render('/signup', {login: false});
                 $(window).trigger('api.logout');
             });
         };
         var recovery = function (ev) {
             ev.preventDefault();
+            $.trackEvent('recovery','show','modal');
             $.api.request('api.account', 'forgot_password', element.find('form').serializeObject()).done(function (data) {
+                $.trackEvent('recovery','message','Check your e-mail.');
                 render('/signup', {login: true, error: 'Check your e-mail.'});
             }).fail(function (data) {
+                $.trackEvent('recovery','error',data.error);
                 render('/signup', {login: true, error: data.error});
             });
         };
@@ -337,6 +344,12 @@
     $('.page-content').append($.ejs('/user').render({}));
 })(jQuery);
 
+(function ($) {
+    $.trackEvent = function(category,action,label,fieldObject){
+        if(typeof(window['ga'])!=='function') return;
+        ga('send', 'event', category , action , label , fieldObject || {});
+    };
+})(jQuery);
 
 (function ($) {
     $.initControls();

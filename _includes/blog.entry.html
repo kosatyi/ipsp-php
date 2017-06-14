@@ -1,0 +1,7 @@
+<div class="blog blog-post">
+    <time class="blog-post-date">{{ post.date | date: "%d %b. <span>%Y</span>"}}</time>
+    <div class="blog-post-wrapper">
+        <h3 class="blog-post-title"><a href="{{ post.url }}" class="blog-post-link">{{ post.title }}</a></h3>
+        <p class="blog-post-summary">{{ post.description }}</p>
+    </div>
+</div>

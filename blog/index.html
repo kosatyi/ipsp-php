@@ -1,0 +1,10 @@
+---
+layout: default
+title: Blog
+---
+<div class="blog-list">
+{% for post in paginator.posts %}
+{% include blog.entry.html %}
+{% endfor %}
+</div>
+{% include paginator.html %}            

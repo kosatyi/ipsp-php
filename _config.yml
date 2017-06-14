@@ -2,6 +2,7 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-paginate
 #Others
 markdown: kramdown
 # Setup
@@ -9,6 +10,10 @@ title:   IPSP PHP SDK
 tagline: Accept epayments on your website online.
 baseurl:
 url:  https://ipsp-php.com
+
+paginate: 12
+paginate_path: "/blog/page-:num/"
+permalink: /blog/:categories/:title.html
 
 styles:
   - //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
@@ -69,6 +74,21 @@ defaults:
     values:
         headline: "SDK Docs"
         tagline: "Ipsp Developer Documentation"
+  -
+    scope:
+        path: "blog"
+        type: "pages"
+    values:
+        headline: "Blog"
+        tagline: "Ipsp Developer Articles"
+  -
+    scope:
+        path: ""
+        type: "posts"
+    values:
+        headline: "Blog"
+        tagline: "Ipsp Developer Articles"
+        layout : "default"
   -
     scope:
         path: "examples"

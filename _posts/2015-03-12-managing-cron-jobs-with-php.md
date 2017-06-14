@@ -3,15 +3,15 @@ title: Managing Cron Jobs With PHP
 description: In this tutorial, we'll create a dynamic PHP class that, using a secure connection, provides us with a means to manipulate the cronTab!
 headline: Managing Cron Jobs With PHP
 tagline: In this tutorial, we'll create a dynamic PHP class that, using a secure connection, provides us with a means to manipulate the cronTab!
-categories: php cron
+categories: php
+image: http://www.javiernunez.com/uploads/2015/06/crontab_explanation.png
 ---
 
 <figure class="post-image post-image-center">
-    <img src="http://salvadorydesamparados.org/wp-content/uploads/2016/10/1476920497_resolutions-04.png" alt="alt">
+    <img src="{{ page.image }}" alt="alt">
 </figure>
 
 ## An Overview of the Crontab
-
 
 Let's face it, having the ability to schedule tasks to run in the background is just great! From backing up an SQL 
 database, fetching / sending emails to running clean up tasks, analyzing performance, or even grabbing RSS feeds, 

@@ -387,6 +387,7 @@ form.form {
       background-color:#f5f5f5;
       color:@brand-success;
       font-size:1.2rem;
+      min-width:100px;
       padding:5px;
       float:left;
       text-align:center;
@@ -411,9 +412,22 @@ form.form {
 
 
 .post-image{
-  background-color:#fafafa;
   margin:1rem 0;
-  text-align:center;
-  border-top:1px solid #efefef;
-  border-bottom:1px solid #efefef;
+  img{
+    display:block;
+    margin:0 auto;
+  }
+  &-center{
+    text-align:center;
+  }
+  &-left{
+    float:left;
+    margin:0 1rem 0 0;
+    max-width:250px;
+  }
+  &-right{
+    float:right;
+    margin:0 0 0 1rem;
+    max-width:250px;
+  }
 }

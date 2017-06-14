@@ -1,5 +1,5 @@
 ---
-title: IPSP PHP SDK
+title: IPSP PHP SDK - Accept epayments on your website online.
 description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.   
 ---
 # Payment Service Provider

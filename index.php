@@ -6,8 +6,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 define('MERCHANT_ID' , 1396424 );
-define('MERCHANT_PASSWORD' , 'test');
-define('IPSP_GATEWAY' ,  'api.fondy.eu');
+define('MERCHANT_PASSWORD' , 'test' );
+define('IPSP_GATEWAY' ,  'api.fondy.eu' );
 
 $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD, IPSP_GATEWAY );
 $api    = new Ipsp_Api( $client );

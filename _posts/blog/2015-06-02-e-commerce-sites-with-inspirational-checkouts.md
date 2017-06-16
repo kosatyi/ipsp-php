@@ -3,7 +3,7 @@ title: 12 e-Commerce Sites with the Most Inspirational Checkouts
 description: The list of e-Commerce sites offering the most inspirational checkouts
 headline: 12 e-Commerce Sites with the Most Inspirational Checkouts
 tagline: The list of e-Commerce sites offering the most inspirational checkouts
-categories: e-commerce
+categories: blog e-commerce
 image: http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Bellroy.png
 ---
 

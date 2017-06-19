@@ -11,6 +11,8 @@ tagline: Start e-commerce on your website.
 baseurl:
 url:  https://ipsp-php.com
 
+
+
 paginate: 12
 paginate_path: "/blog/page-:num/"
 
@@ -68,11 +70,13 @@ defaults:
         width: 105
   -
     scope:
-        path: "docs"
-        type: "pages"
+        path: ""
+        type: "posts"
     values:
-        headline: "SDK Docs"
-        tagline: "Ipsp Developer Documentation"
+        headline: "Blog"
+        tagline: "Ipsp Developer Articles"
+        layout : "default"
+        permalink: /:categories/:title.html
   -
     scope:
         path: "blog"
@@ -82,12 +86,11 @@ defaults:
         tagline: "Ipsp Developer Articles"
   -
     scope:
-        path: ""
-        type: "posts"
+        path: "docs"
+        type: "pages"
     values:
-        headline: "Blog"
-        tagline: "Ipsp Developer Articles"
-        layout : "default"
+        headline: "SDK Docs"
+        tagline: "Ipsp Developer Documentation"
   -
     scope:
         path: "examples"

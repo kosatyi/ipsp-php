@@ -4,7 +4,7 @@ description: The best things about online shopping is not having to wait in line
 headline: Top 5 Principles for an Improved Checkout Design
 tagline: The best things about online shopping is not having to wait in line behind a long line of equally frustrated shoppers at the cash register.
 categories: blog e-commerce
-image: http://www.convinceandconvert.com/wp-content/uploads/2014/11/nordstrom1.png
+image: /assets/blog/nordstrom1.png
 ---
 
 One of the best things about online shopping is not having to wait in line behind a long line of equally frustrated shoppers at the cash register. You have your very own cashier every single time you decide to log on to your favorite ecommerce site and indulge in some retail therapy.
@@ -14,7 +14,7 @@ The problems begin when this so called ‘personal cashier’ behaves like a nit
 Now, a typical checkout process has six stages, which may be compressed or expanded based on the brand in question.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/Screen-Shot-2014-11-11-at-12.00.45-PM.png" alt="alt">
+    <img src="/assets/blog/Screen-Shot-2014-11-11-at-12.00.45-PM.png" alt="alt">
 </figure>
 
 So, what does a great checkout process make? Minimal steps? Short forms to fill up? Zero distractions? Smart upsells and cross-sells? Let’s find out by examining what makes the checkout processes of some of the best in the business click.
@@ -28,13 +28,13 @@ Have mercy on your users and keep your checkout flow as tight and short as possi
 According to research by the Baymard Institute, the average checkout flow has 5.08 steps. Shoot for a checkout flow that hits well below 5 steps to stand out from competition.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/nordstrom1.png" alt="alt">
+    <img src="/assets/blog/nordstrom1.png" alt="alt">
 </figure>
 
 Brick and mortar retail giant Nordstrom hits the nail on the head with their brand new checkout design. Not only do they follow the first rule of great check out design – self-contained checkouts – they also have a beautiful accordion design that fits the entire checkout process into one single page. Open source ecommerce platforms like PrestaShop have these clean and aesthetic one-page checkouts as plug and play modules, making a switchover to such layouts super simple.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/nordstrom2-712x1024.png" alt="alt">
+    <img src="/assets/blog/nordstrom2-712x1024.png" alt="alt">
 </figure>
 
 Only three sections in Nordstrom’s checkout flow need any actual data entry on part of the user. By copying over the shipping address to the payments page, redundant questions are avoided. The page seeks only as much personal information as is absolutely necessary, with explanations on how the information is going to be used.
@@ -48,7 +48,7 @@ I stress on this as my number one change to any checkout process for a very simp
 Adidas gets this concept perfectly and its checkout process is simple, short, and self-contained. There is no navigation bar to take the user away to some other section, no pop-ups requesting their opinions on some obscure topic, no ads (internal or third-party) that takes the user’s eye off the main prize – the purchase.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/adidas1.png" alt="alt">
+    <img src="/assets/blog/adidas1.png" alt="alt">
 </figure>
 
 ## 3. Death to Compulsory Registration
@@ -60,7 +60,7 @@ Guest checkouts are an increasingly standard feature of most ecommerce sites tod
 Take Crate & Barrel for instance.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/cratebarrel1.png" alt="alt">
+    <img src="/assets/blog/cratebarrel1.png" alt="alt">
 </figure>
 
 Not only do they have a clean and non-confusing layout for the sign in / guest checkout page, they also allow guest users to create an account AFTER the purchase is complete. This satisfies the data hungry digital marketer’s needs while still being unobtrusive in the shopping process.
@@ -74,7 +74,7 @@ The trick lies in offering these items in such a way that the customer does not 
 CafePress turns cross sell into a fine art, by offering a complementary product right alongside the item selected by the customer, with a pithy pitch for the cross-promoted item to ensure purchase right away.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/cafepress.png" alt="alt">
+    <img src="/assets/blog/cafepress.png" alt="alt">
 </figure>
 
 They continue the cross-sell, up-sell process on nearly one-third of the product page, without ever seeming too pushy or over the top.
@@ -82,7 +82,7 @@ They continue the cross-sell, up-sell process on nearly one-third of the product
 Another interesting cross sell attempt is what Crate & Barrel does with its checkout process. Instead of putting the cross-sell items on the product page, they actually include it inside the cart itself, thus making the cross-sell unmissable by the user.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/cratebarrel2.png" alt="alt">
+    <img src="/assets/blog/cratebarrel2.png" alt="alt">
 </figure>
 
 ## 5. No Surprise Charges, Multiple Payment Options
@@ -90,7 +90,7 @@ Another interesting cross sell attempt is what Crate & Barrel does with its chec
 Another key reason for users to drop out of a purchase process is when they are faced with an unexpected charge or fee that increases the cost of the item significantly. Avoid springing a surprise on your users by disclosing the exact overhead costs that they would be bearing to complete the transaction. It could range from shipping costs to sales tax to convenience fees to gift wrapping charges – whatever be the extras, declare them upfront the way Disney does in its clean checkout process.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/disney1.png" alt="alt">
+    <img src="/assets/blog/disney1.png" alt="alt">
 </figure>
 
 Disney clarifies the various ship times and associated costs, allowing users to pick their own shipping time and adjusting the total price of the purchase on a real time basis.
@@ -100,7 +100,7 @@ Disney clarifies the various ship times and associated costs, allowing users to 
 Another big plus in favor of Disney’s checkout page is the variety of payment options that t offers. By allowing payments via regular debit and credit cards to Disney Rewards Cards, Disney Gift Cards and of course PayPal, Disney ensures that no customer goes back empty handed from its site.
 
 <figure class="post-image post-image-center">
-    <img src="http://www.convinceandconvert.com/wp-content/uploads/2014/11/disney2.png" alt="alt">
+    <img src="/assets/blog/disney2.png" alt="alt">
 </figure>
 
 ## Parting Thoughts

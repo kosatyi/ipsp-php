@@ -4,7 +4,7 @@ description: In this tutorial, we'll create a dynamic PHP class that, using a se
 headline: Managing Cron Jobs With PHP
 tagline: In this tutorial, we'll create a dynamic PHP class that, using a secure connection, provides us with a means to manipulate the cronTab!
 categories: blog php
-image: http://www.javiernunez.com/uploads/2015/06/crontab_explanation.png
+image: /assets/blog/crontab_explanation.png
 ---
 
 <figure class="post-image post-image-center">

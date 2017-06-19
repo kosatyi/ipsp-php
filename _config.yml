@@ -11,9 +11,7 @@ tagline: Start e-commerce on your website.
 baseurl:
 url:  https://ipsp-php.com
 
-
-
-paginate: 12
+paginate: 10
 paginate_path: "/blog/page-:num/"
 
 styles:
@@ -46,7 +44,7 @@ webmaster_verifications:
 
 author:
   name: Stepan Kosatyi
-  url: http://www.kosatyi.com/
+  url: https://kosatyi.com/
 
 # Site variables
 buttons:

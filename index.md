@@ -35,6 +35,3 @@ fraud protection and the ability to process different currencies and translate d
 <nav class="cards section">
 {% include navigation.html base_url="/" max_depth=2 %}
 </nav>
-
-
-

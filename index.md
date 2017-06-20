@@ -15,6 +15,13 @@ transfer, and real-time bank transfer based on online banking. Typically, they u
 model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
+## How Does a Payment Service Provider Work?
+
+Payment Service Providers partner with Acquiring Banks to offer Merchants the capability to accept payments. 
+Payment Service Providers often offer services in addition to processing transactions. 
+These services include Payment Card Industry Data Security Standard (PCI) compliance, 
+fraud protection and the ability to process different currencies and translate different languages.
+
 ## [Blog](/blog/)
 
 <div class="blog-list">

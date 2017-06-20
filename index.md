@@ -2,6 +2,9 @@
 title: IPSP PHP SDK
 description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.   
 ---
+
+{% include github.buttons.html %}
+
 # Payment Service Provider
 
 <img src="/assets/images/brand.png" alt="Logo" class="image-left">

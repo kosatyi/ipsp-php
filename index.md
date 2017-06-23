@@ -51,3 +51,17 @@ fraud protection and the ability to process different currencies and translate d
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context":"http://schema.org",
+  "@type":"ItemList",
+  "itemListElement":[{% for post in site.posts limit: 3 %}
+    {
+      "@type":"ListItem",
+      "position":{{forloop.index}},
+      "url":"{{ post.url | prepend: site.url }}"
+    }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+  ]
+}
+</script>

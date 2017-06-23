@@ -35,3 +35,19 @@ fraud protection and the ability to process different currencies and translate d
 <nav class="cards section">
 {% include navigation.html base_url="/" max_depth=2 %}
 </nav>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "url": "https://ipsp-php.com/",
+  "logo": "https://ipsp-php.com/assets/images/brand.png",
+  "contactPoint": [
+    { 
+      "@type": "ContactPoint",
+      "telephone": "+38-093-925-7212",
+      "contactType": "technical support"
+    }
+  ]
+}
+</script>

@@ -34,6 +34,7 @@ analytics: UA-100124713-1
 social:
   name: IPSP PHP SDK
   links:
+    - https://en.wikipedia.org/wiki/IPSP_PHP_(SDK)
     - https://github.com/kosatyi/ipsp-php
     - https://packagist.org/packages/kosatyi/ipsp-php
     - https://travis-ci.org/kosatyi/ipsp-php

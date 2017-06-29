@@ -35,9 +35,9 @@ social:
   name: IPSP PHP SDK
   links:
     - https://en.wikipedia.org/wiki/IPSP_PHP_(SDK)
+    - https://www.facebook.com/ipsp.sdk/
     - https://github.com/kosatyi/ipsp-php
     - https://packagist.org/packages/kosatyi/ipsp-php
-    - https://travis-ci.org/kosatyi/ipsp-php
     - https://libraries.io/packagist/kosatyi%2Fipsp-php
 
 webmaster_verifications:

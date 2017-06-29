@@ -7,7 +7,7 @@ description: Flexible SDK that covers e-commerce for businesses of all types and
 
 # Payment Service Provider
 
-<img src="/assets/images/brand.png" alt="Logo" class="image-left">
+<img src="/assets/images/brand.png" width="201" height="193" alt="Logo" class="image-left">
 
 A payment service provider (PSP) offers shops online services for accepting electronic payments by 
 a variety of payment methods including credit card, bank-based payments such as direct debit, bank 

@@ -65,8 +65,8 @@ defaults:
     values:
       image:
         path:  /assets/images/brand.png
-        height: 101
-        width: 105
+        height: 193
+        width: 201
   -
     scope:
         path: ""

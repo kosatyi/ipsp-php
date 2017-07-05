@@ -138,11 +138,8 @@ Create page `result.php` with code below:
 
 ```php
 <?php
-
 require_once('path/to/init.php');
-
 $result = $api->call('result');
-
 if( $result->validResponse() ){
     exit(sprintf('<pre>%s</pre>',$result->getResponse()));
 }

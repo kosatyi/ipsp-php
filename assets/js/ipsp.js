@@ -27,8 +27,7 @@
 
     };
     $.PortalApi.prototype = {
-        //origin: 'https://portal.fondy.eu',
-        origin: 'https://mpapi.dev.fondy.eu',
+        origin: 'https://portal.fondy.eu',
         endpoint: {
             portal: '/mportal',
             gateway: '/mportal/#/connector/52',

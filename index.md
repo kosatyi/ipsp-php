@@ -5,9 +5,24 @@ description: Flexible SDK that covers e-commerce for businesses of all types and
 
 {% include github.buttons.html %}
 
-# Payment Service Provider
-
 <img src="/assets/images/brand.png" width="201" height="193" alt="Logo" class="image-left">
+
+# IPSP PHP SDK
+
+Is a free and open-source software development kit written in PHP and distributed under the MIT License. 
+This SDK is a wrapper of Fondy payment protocol REST API, uses object-oriented programming (OOP) techniques and 
+several design pattern: Command, Chain of Responsibility, Proxy. SDK covers e-commerce for businesses of all types and 
+support popular CMS modules for fast integration in existing software architecture.
+
+## How Does it Work?
+
+Payment Service Providers partner with Acquiring Banks to offer Merchants the capability to accept payments. 
+Payment Service Providers often offer services in addition to processing transactions. 
+
+These services include Payment Card Industry and Data Security Standard (PCI) compliance, fraud protection and the 
+ability to process different currencies and translate different languages.
+
+### Payment Service Provider
 
 A payment service provider (PSP) offers shops online services for accepting electronic payments by 
 a variety of payment methods including credit card, bank-based payments such as direct debit, bank 
@@ -15,12 +30,16 @@ transfer, and real-time bank transfer based on online banking. Typically, they u
 model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
-## How Does a Payment Service Provider Work?
+## Key features
 
-Payment Service Providers partner with Acquiring Banks to offer Merchants the capability to accept payments. 
-Payment Service Providers often offer services in addition to processing transactions. 
-These services include Payment Card Industry Data Security Standard (PCI) compliance, 
-fraud protection and the ability to process different currencies and translate different languages.
+* Quick installation
+* Client side instruction and best practicies
+* Host-to-host and vendor side checkout page
+* Multiple payment methods credit card, internet banking.
+* Multiple data formats (JSON, XML, form-urlencoded)
+* Payment details for testing scope
+* Hidden server callback for sign responses
+* Integration with CMS modules.
 
 ## [Blog](/blog/)
 

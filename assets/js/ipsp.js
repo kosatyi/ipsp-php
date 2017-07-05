@@ -27,7 +27,8 @@
 
     };
     $.PortalApi.prototype = {
-        origin: 'https://portal.fondy.eu',
+        //origin: 'https://portal.fondy.eu',
+        origin: 'https://mpapi.dev.fondy.eu',
         endpoint: {
             portal: '/mportal',
             gateway: '/mportal/#/connector/52',
@@ -338,6 +339,38 @@
         element.on('click', '.button.user', toggle);
         element.on('click', '.btn.recovery', recovery);
         element.on('click', '.btn.logout', logout);
+    });
+
+
+    $.addControl('signup.form', function (element) {
+        var template = function(data){
+            return $.ejs('/email').render(data)
+        };
+
+        var error = function(data){
+            element.find('.form').addClass('hide');
+            element.find('.message').removeClass('hide').html(data.error);
+        };
+
+        var success = function(){
+            element.find('.form').addClass('hide');
+            element.find('.message').removeClass('hide');
+            $(window).trigger('api.login');
+        };
+
+        var submit = function(ev,params){
+            ev.preventDefault();
+            params = element.find('.form').serializeObject();
+            $.api.scope(function(){
+                this.account(params).done(function(){
+                    this.request('api.account','feedback',{
+                        contacts : params.email ,
+                        message  : template(params)
+                    }).done(success).fail(error);
+                }).fail(error);
+            });
+        };
+        element.on('submit', 'form', submit);
     });
 
 })(jQuery);

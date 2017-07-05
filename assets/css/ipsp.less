@@ -1,5 +1,24 @@
 @import 'main';
 
+
+input {
+  line-height: 1.5;
+}
+
+textarea{
+  resize: vertical;
+}
+
+
+.hide{
+  display:none !important;
+}
+
+
+.small{
+  font-size:0.8rem;
+}
+
 .pull-right {
   float: right;
 }
@@ -10,6 +29,12 @@
 .image-left{
   margin-right:1rem;
   float:left;
+  @media screen and (max-width: 36em) {
+    float:none;
+    margin:0 auto;
+    display:block;
+    text-align:center;
+  }
 }
 
 .page-content {
@@ -314,7 +339,6 @@ table.details {
   }
 
   @media screen and (max-width: 28em) {
-
     .panel {
       margin:0;
       min-width: 0px;
@@ -348,6 +372,18 @@ table.details {
   }
 }
 
+.btn.success {
+  color: rgba(255,255,255,1);
+  background-color: rgba(21,153,87,1);
+  border-color: rgba(12,108,62,1);
+  &:hover {
+    color: rgba(255,255,255, 1);
+    text-decoration: none;
+    background-color: rgba(21,153,87,0.9);
+    border-color: rgba(12,108,62,0.9);
+  }
+}
+
 form.form {
   margin: 1rem 0;
   .form-group {
@@ -361,11 +397,29 @@ form.form {
     }
     .form-control{
       .field;
+      &:invalid{
+        border-color: #d59a49;
+      }
+      &:valid{
+        border-color: #56ac56;
+      }
+      background-color:#fff;
     }
     &-step{
       font-size:21px;
       font-style: italic;
     }
+  }
+}
+
+.form-wrapper{
+  border:1px solid rgba(0,0,0,.2);
+  border-radius:.3rem;
+  background-color:#fafafa;
+  padding:1rem 2rem;
+  margin:1rem 0;
+  @media screen and (max-width: 42em) {
+    padding:0 1rem;
   }
 }
 
@@ -437,9 +491,12 @@ form.form {
   -webkit-border-radius:.3rem;
   -moz-border-radius:.3rem;
   border-radius:.3rem;
-  padding:0.5rem;
+  padding:0.5rem 0.5rem 0 0.5rem;
   font-size:0;
   text-align:center;
+  @media screen and (max-width: 42em) {
+    margin-top:1rem;
+  }
   &:after,&:before{
     content:'';
     display:table;
@@ -450,9 +507,40 @@ form.form {
   }
   div{
     height:28px;
-
     display:inline-block;
     margin-right:1rem;
+    margin-bottom:0.5rem;
     overflow:hidden;
+  }
+}
+
+.page-menu{
+  ul{
+    border-left:none;
+  }
+  li.btn-signup {
+    a {
+      font-size:0.85rem;
+      line-height:round(1.5 / 0.85,1);
+      font-weight:normal;
+      text-transform: uppercase;
+      padding:0.5rem 1rem;
+      margin:0.5rem;
+      border-radius:0.5rem;
+      background-color:lighten(@brand-success,10%);
+      text-shadow:0px 1px rgba(0,0,0,0.2);
+      box-shadow:inset 0px 0px 1px 1px rgba(255,255,255,0.4),0px 0px 2px rgba(0,0,0,0.2);
+      &:hover{
+        background-color:#fff;
+        color:@brand-success;
+        text-shadow:none;
+      }
+      &:active{
+        text-shadow:none;
+        box-shadow:inset 0px 0px 5px rgba(0,0,0,0.4);
+        position:relative;
+        top:1px;
+      }
+    }
   }
 }

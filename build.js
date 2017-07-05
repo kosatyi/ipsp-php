@@ -18,8 +18,6 @@ function logArgs(){
 
 execCommand('git submodule update --recursive --force --remote',function( message ){
     console.log(message);
-    fse.copy('_jekyll/_data','_data',logArgs);
-    fse.copy('_jekyll/_plugins','_plugins',logArgs);
     fse.copy('_jekyll/_layouts','_layouts',logArgs);
     fse.copy('_jekyll/_includes','_includes',logArgs);
     fse.copy('_jekyll/assets','assets',logArgs);

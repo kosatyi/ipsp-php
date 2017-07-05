@@ -19,7 +19,17 @@ styles:
   - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
   - /assets/css/ipsp.css
 
-additional_styles:
+toolbar:
+-
+  name: Signup now
+  link: /activation/signup.html
+  class: btn-signup
+-
+  name: Documentation
+  link: /docs/
+-
+  name: Blog
+  link: /blog/
 
 javascript:
   - /assets/js/jquery.js
@@ -34,7 +44,6 @@ analytics: UA-100124713-1
 social:
   name: IPSP PHP SDK
   links:
-    - https://en.wikipedia.org/wiki/IPSP_PHP_(SDK)
     - https://www.facebook.com/ipsp.sdk/
     - https://github.com/kosatyi/ipsp-php
     - https://packagist.org/packages/kosatyi/ipsp-php
@@ -104,10 +113,3 @@ defaults:
     values:
         headline: "Components & Helpers"
         tagline: "Useful components for checkout development"
-  -
-    scope:
-        path: "activation"
-        type: "pages"
-    values:
-        headline: "Accept payments"
-        tagline: "Accept VISA and MasterCard securely, quickly and easily on your website"

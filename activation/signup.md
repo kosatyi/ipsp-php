@@ -20,7 +20,7 @@ description:
         <input type="email" required name="email" placeholder="Email address" class="form-control">
     </div>
     <div class="form-group">
-        <label class="control-label">Country: (required)</label>
+        <label class="control-label">Country:</label>
         <select required name="country" control="select.value" class="form-control">
             <option value="" disabled selected>Choose project country...</option>
             <option>Andorra</option>
@@ -82,7 +82,7 @@ description:
         <input type="url" required name="url" placeholder="Project website url" class="form-control">
     </div>    
     <div class="form-group">
-            <label class="control-label">Phone:</label>
+            <label class="control-label">Phone: (optional)</label>
             <input type="tel" name="phone" placeholder="Phone number" class="form-control">
     </div>
     <div class="form-group">

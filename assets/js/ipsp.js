@@ -182,6 +182,7 @@
                 if (list.hasOwnProperty(name))
                     list[name](item);
             });
+            el.setAttribute('control-init','true');
             el.removeAttribute('control');
         });
     };

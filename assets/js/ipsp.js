@@ -342,7 +342,7 @@
 
 
     $.addControl('signup.form', function(element){
-        console.log('signup.form')
+        console.log('signup.form');
         var template = function(data){
             return $.ejs('/email').render(data)
         };

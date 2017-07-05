@@ -6,10 +6,10 @@
 [![Total Downloads](https://poser.pugx.org/kosatyi/ipsp-php/downloads)](https://packagist.org/packages/kosatyi/ipsp-php)
 [![License](https://poser.pugx.org/kosatyi/ipsp-php/license)](https://packagist.org/packages/kosatyi/ipsp-php)
 
+**IPSP PHP (SDK)** is flexible software development kit that covers e-commerce for businesses of all types and support
+popular CMS modules for fast integration in existing infrastructure.
 
-IPSP PHP (SDK) is flexible software development kit that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.
-[read more](https://en.wikipedia.org/wiki/IPSP_PHP_(SDK))
 
-- [IPSP PHP Web-site](https://ipsp-php.com/)
+[![Official Website](https://img.shields.io/badge/official-website-green.svg)](https://ipsp-php.com/)
+[![Documentation](https://img.shields.io/badge/sdk-documentation-blue.svg)](https://ipsp-php.com/docs/)
 
-- [Documentation](https://ipsp-php.com/docs/)

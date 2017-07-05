@@ -372,7 +372,7 @@
 
 })(jQuery);
 
-(function ($) {
+(function($){
     $('.page-content').append($.ejs('/user').render({}));
 })(jQuery);
 
@@ -383,6 +383,6 @@
     };
 })(jQuery);
 
-(function ($) {
+(function($){
     $.initControls();
 })(jQuery);

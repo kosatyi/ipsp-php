@@ -340,7 +340,6 @@
         element.on('click', '.btn.logout', logout);
     });
 
-
     $.addControl('signup.form', function(element){
         console.log('signup.form');
         var template = function(data){

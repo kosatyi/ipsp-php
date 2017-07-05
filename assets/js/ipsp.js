@@ -341,22 +341,20 @@
     });
 
 
-    $.addControl('signup.form', function (element) {
+    $.addControl('signup.form', function(element){
+        console.log('signup.form')
         var template = function(data){
             return $.ejs('/email').render(data)
         };
-
         var error = function(data){
             element.find('.form').addClass('hide');
             element.find('.message').removeClass('hide').html(data.error);
         };
-
         var success = function(){
             element.find('.form').addClass('hide');
             element.find('.message').removeClass('hide');
             $(window).trigger('api.login');
         };
-
         var submit = function(ev,params){
             ev.preventDefault();
             params = element.find('.form').serializeObject();

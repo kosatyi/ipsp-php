@@ -12,7 +12,7 @@ popular CMS modules for fast integration in existing infrastructure.
 
 [![Official Website](https://img.shields.io/badge/official-website-green.svg)](https://ipsp-php.com/)
 [![Documentation](https://img.shields.io/badge/sdk-documentation-orange.svg)](https://ipsp-php.com/docs/)
-
+[![Api Methods](https://img.shields.io/badge/api-methods-blue.svg)](https://ipsp-php.com/docs/api-methods/)
 
 ## Installation
 
@@ -147,7 +147,5 @@ if( $result->validResponse() ){
     exit(sprintf('<pre>%s</pre>',$result->getResponse()));
 }
 ```
-See more:
 
-[![Api Methods](https://img.shields.io/badge/api-methods-blue.svg)](https://ipsp-php.com/docs/api-methods/)
-
+[![Stepan Kosatyi](https://img.shields.io/badge/stepan-kosatyi-purple.svg)](https://kosatyi.com/)

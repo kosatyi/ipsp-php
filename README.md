@@ -116,5 +116,38 @@ $client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD, IPSP_GATEWAY );
 $ipsp   = new Ipsp_Api( $client );
 ```
 
-Now you can use [![Api Methods](https://img.shields.io/badge/api-methods-blue.svg)](https://ipsp-php.com/docs/api-methods/)
+## Basic Usage Example
+
+```php
+<?php
+require_once('path/to/init.php');
+$data = $ipsp->call('checkout',array(
+  'order_id'    => 'orderid-111222333',
+  'order_desc'  => 'Simple checkout page',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/result.php')
+))->getResponse();
+// redirect to checkout page
+$data->redirectToCheckout();
+```
+
+## Handling response
+
+Create page `result.php` with code below:
+
+```php
+<?php
+
+require_once('path/to/init.php');
+
+$result = $api->call('result');
+
+if( $result->validResponse() ){
+    exit(sprintf('<pre>%s</pre>',$result->getResponse()));
+}
+```
+See more:
+
+[![Api Methods](https://img.shields.io/badge/api-methods-blue.svg)](https://ipsp-php.com/docs/api-methods/)
 

@@ -81,6 +81,8 @@ defaults:
         path: ""
         type: "posts"
     values:
+        categories:
+        description:
         headline: "Blog"
         tagline: "Ipsp Developer Articles"
         layout : "default"

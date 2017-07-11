@@ -386,3 +386,20 @@
 (function($){
     $.initControls();
 })(jQuery);
+
+
+(function($){
+    return;
+    $.ajax({
+        type:'post',
+        dataType:'json',
+        url:'https://api.ipsp-php.com/checkout',
+        data:{
+            amount:'200',
+            currency:'EUR',
+            order_desc:' '
+        }
+    }).then(function(data){
+        console.log(data);
+    });
+})(jQuery);

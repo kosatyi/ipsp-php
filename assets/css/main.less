@@ -487,10 +487,16 @@ ol.page-breadcrumbs{
     &:before{
       margin:0 0.4rem;
       content:'/';
-      color:#949494;
+      color:rgba(255,255,255,0.5);
     }
     &:first-child:before{
       display:none;
+    }
+    > a{
+      color:rgba(255,255,255,0.9);
+    }
+    > span{
+      color:rgba(255,255,255,0.5);
     }
   }
 }

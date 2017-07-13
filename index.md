@@ -30,6 +30,27 @@ transfer, and real-time bank transfer based on online banking. Typically, they u
 model and form a single payment gateway for their clients (merchants) to multiple payment methods.
 [read more](https://en.wikipedia.org/wiki/Payment_service_provider)
 
+## How make a quick checkout URL for a specific product?
+
+```php
+<?php
+require_once 'vendor/autoload.php';
+define('MERCHANT_ID' , 1396424 );
+define('MERCHANT_PASSWORD' , 'test' );
+define('IPSP_GATEWAY' ,  'api.fondy.eu' );
+$client = new Ipsp_Client( MERCHANT_ID , MERCHANT_PASSWORD, IPSP_GATEWAY );
+$ipsp   = new Ipsp_Api( $client );
+$data = $ipsp->call('checkout',array(
+  'order_id'    => sprintf('ipsp-php-order-%s',rand(1,9999999)),
+  'order_desc'  => 'Product description',
+  'currency'    => $ipsp::USD ,
+  'amount'      => 2000, // 20 USD
+  'response_url'=> sprintf('http://shop.example.com/checkout/result')
+));
+$data->redirectToCheckout();
+```
+
+
 ## Key features
 
 * Quick installation

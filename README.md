@@ -9,6 +9,7 @@
 **IPSP PHP (SDK)** is flexible software development kit that covers e-commerce for businesses of all types and support
 popular CMS modules for fast integration in existing infrastructure.
 
+![Checkout](https://i.imgur.com/7pZYzfV.png)
 
 [![Official Website](https://img.shields.io/badge/official-website-green.svg)](https://ipsp-php.com/)
 [![Documentation](https://img.shields.io/badge/sdk-documentation-orange.svg)](https://ipsp-php.com/docs/)

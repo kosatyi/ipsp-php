@@ -13,7 +13,7 @@ popular CMS modules for fast integration in existing infrastructure.
 [![Documentation](https://img.shields.io/badge/sdk-documentation-orange.svg)](https://ipsp-php.com/docs/)
 [![Api Methods](https://img.shields.io/badge/api-methods-blue.svg)](https://ipsp-php.com/docs/api-methods/)
 
-![Checkout](https://i.imgur.com/7pZYzfV.png)
+![Checkout](https://i.imgur.com/6NfW9pSg.png)
 
 ## Installation
 

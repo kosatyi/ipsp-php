@@ -73,7 +73,7 @@ defaults:
   - scope:
       path: ""
     values:
-      sharethis: property=59673d0357e5f5001295d00c&product=inline-share-buttons
+      sharethis: property=59673d0357e5f5001295d00c&product=sticky-share-buttons
       image:
         path:  /assets/images/cover.jpg
         height: 1200

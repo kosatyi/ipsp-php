@@ -75,9 +75,9 @@ defaults:
     values:
       sharethis: property=59673d0357e5f5001295d00c&product=inline-share-buttons
       image:
-        path:  /assets/images/brand.png
-        height: 193
-        width: 201
+        path:  /assets/images/cover.png
+        height: 1200
+        width: 444
   -
     scope:
         path: ""

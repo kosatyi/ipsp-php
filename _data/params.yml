@@ -59,7 +59,7 @@ amount:
 
 currency:
   type: string(3)
-  descr: Order currency. Supported values ( UAH, RUB, USD, EUR, GBP)
+  descr: Order currency. Supported values (UAH, RUB, USD, EUR, GBP)
   sample: EUR
   mandatory: true
 

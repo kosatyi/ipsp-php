@@ -38,6 +38,7 @@ javascript:
   - /assets/js/main.js
   - /assets/js/ipsp.js
 
+
 analytics: UA-100124713-1
 
 # Seo
@@ -72,6 +73,7 @@ defaults:
   - scope:
       path: ""
     values:
+      sharethis: property=59673d0357e5f5001295d00c&product=inline-share-buttons
       image:
         path:  /assets/images/brand.png
         height: 193

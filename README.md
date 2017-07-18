@@ -161,8 +161,8 @@ if( $result->validResponse() ){
 
 ## Follow project on:
 
-> Facebook [/ipsp.sdk](https://facebook.com/ipsp.sdk/)
-> Twitter [@ipspsdk](https://twitter.com/ipspsdk)
+- Facebook [/ipsp.sdk](https://facebook.com/ipsp.sdk/)
+- Twitter [@ipspsdk](https://twitter.com/ipspsdk)
 
 ## Author
 

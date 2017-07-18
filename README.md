@@ -25,7 +25,7 @@ popular CMS modules for fast integration in existing infrastructure.
 <a href="https://ipsp-php.com/docs/api-methods/"><img src="https://img.shields.io/badge/api-methods-blue.svg" /></a>
 </p>
 <p align="center">
-<a href="https://ipsp-php.com"><img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
+<a href="https://ipsp-php.com"><img style="border:1px solid #ccc;" src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
 </p>
 
 ## Installation

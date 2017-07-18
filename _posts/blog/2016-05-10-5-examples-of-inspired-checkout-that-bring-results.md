@@ -1,7 +1,7 @@
 ---
 title: 5 Examples of Inspired Checkout Processes That Bring Results
 description: The best things about online shopping is not having to wait in line behind a long line of equally frustrated shoppers at the cash register
-headline: Top 5 Principles for an Improved Checkout Design
+headline: 5 Examples of Inspired Checkout Processes That Bring Results
 tagline: The best things about online shopping is not having to wait in line behind a long line of equally frustrated shoppers at the cash register.
 categories: blog e-commerce
 image: /assets/blog/nordstrom1.png

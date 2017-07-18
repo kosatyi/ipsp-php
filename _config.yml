@@ -50,6 +50,12 @@ social:
     - https://packagist.org/packages/kosatyi/ipsp-php
     - https://libraries.io/packagist/kosatyi%2Fipsp-php
 
+twitter:
+  username: ipspsdk
+
+facebook:
+  publisher: https://www.facebook.com/ipsp.sdk/
+
 webmaster_verifications:
   google: ytqWppv3WHbrMA_P7TOtYHvti5LbegWZnv4s5JOaLBE
 

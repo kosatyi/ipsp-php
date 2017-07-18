@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://ipsp-php.com">
-    <img src="https://raw.githubusercontent.com/kosatyi/ipsp-php/gh-pages/assets/images/brand.png" alt="IPSP PHP (SDK)" width="201" height="193">
-  </a>
+  <a href="https://ipsp-php.com"><img src="https://raw.githubusercontent.com/kosatyi/ipsp-php/gh-pages/assets/images/brand.png" alt="IPSP PHP (SDK)" width="201" height="193"></a>
   <br>
   IPSP PHP SDK
   <br>

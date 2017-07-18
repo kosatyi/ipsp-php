@@ -12,6 +12,24 @@ Flexible software development kit that covers e-commerce for businesses of all t
 popular CMS modules for fast integration in existing infrastructure.
 </h4>
 
+<p align="center">
+  <a href="https://packagist.org/packages/kosatyi/ipsp-php">
+    <img src="https://poser.pugx.org/kosatyi/ipsp-php/version" />
+  </a>
+  <a href="https://travis-ci.org/kosatyi/ipsp-php">
+    <img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" />
+  </a>
+  <a href="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg">
+    <img src="https://coveralls.io/github/kosatyi/ipsp-php" />
+  </a>
+  <a href="https://poser.pugx.org/kosatyi/ipsp-php/downloads">
+    <img src="https://packagist.org/packages/kosatyi/ipsp-php" />
+  </a>
+   <a href="https://packagist.org/packages/kosatyi/ipsp-php">
+    <img src="https://poser.pugx.org/kosatyi/ipsp-php/license" />
+  </a>
+</p>
+
 [![Latest Stable Version](https://poser.pugx.org/kosatyi/ipsp-php/version)](https://packagist.org/packages/kosatyi/ipsp-php)
 [![Travis](https://img.shields.io/travis/kosatyi/ipsp-php.svg)](https://travis-ci.org/kosatyi/ipsp-php)
 [![Coverage Status](https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg)](https://coveralls.io/github/kosatyi/ipsp-php)

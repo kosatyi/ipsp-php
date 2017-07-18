@@ -19,8 +19,8 @@ popular CMS modules for fast integration in existing infrastructure.
   <a href="https://travis-ci.org/kosatyi/ipsp-php">
     <img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" />
   </a>
-  <a href="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg">
-    <img src="https://coveralls.io/github/kosatyi/ipsp-php" />
+  <a href="https://coveralls.io/github/kosatyi/ipsp-php">
+    <img src="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg" />
   </a>
   <a href="https://poser.pugx.org/kosatyi/ipsp-php/downloads">
     <img src="https://packagist.org/packages/kosatyi/ipsp-php" />

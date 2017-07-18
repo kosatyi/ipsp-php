@@ -13,37 +13,19 @@ popular CMS modules for fast integration in existing infrastructure.
 </h4>
 
 <p align="center">
-  <a href="https://packagist.org/packages/kosatyi/ipsp-php">
-    <img src="https://poser.pugx.org/kosatyi/ipsp-php/version" />
-  </a>
-  <a href="https://travis-ci.org/kosatyi/ipsp-php">
-    <img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" />
-  </a>
-  <a href="https://coveralls.io/github/kosatyi/ipsp-php">
-    <img src="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg" />
-  </a>
-  <a href="https://packagist.org/packages/kosatyi/ipsp-php">
-    <img src="https://poser.pugx.org/kosatyi/ipsp-php/downloads" />
-  </a>
-   <a href="https://packagist.org/packages/kosatyi/ipsp-php">
-    <img src="https://poser.pugx.org/kosatyi/ipsp-php/license" />
-  </a>
+<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://poser.pugx.org/kosatyi/ipsp-php/version" /></a>
+<a href="https://travis-ci.org/kosatyi/ipsp-php"><img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" /></a>
+<a href="https://coveralls.io/github/kosatyi/ipsp-php"><img src="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg" /></a>
+<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://poser.pugx.org/kosatyi/ipsp-php/downloads"/></a>
+<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://poser.pugx.org/kosatyi/ipsp-php/license" /></a>
 </p>
 <p align="center">
-  <a href="https://ipsp-php.com/">
-    <img src="https://img.shields.io/badge/official-website-green.svg" />
-  </a>
-  <a href="https://ipsp-php.com/docs/">
-    <img src="https://img.shields.io/badge/sdk-documentation-orange.svg" />
-  </a>
-    <a href="https://ipsp-php.com/docs/api-methods/">
-    <img src="https://img.shields.io/badge/api-methods-blue.svg" />
-  </a>
+<a href="https://ipsp-php.com/"><img src="https://img.shields.io/badge/official-website-green.svg" /></a>
+<a href="https://ipsp-php.com/docs/"><img src="https://img.shields.io/badge/sdk-documentation-orange.svg" /></a>
+<a href="https://ipsp-php.com/docs/api-methods/"><img src="https://img.shields.io/badge/api-methods-blue.svg" /></a>
 </p>
 <p align="center">
- <a href="https://ipsp-php.com">
-    <img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)">
- </a>
+<a href="https://ipsp-php.com"><img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
 </p>
 
 ## Installation

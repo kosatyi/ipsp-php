@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1500385681">
-  <project timestamp="1500385681">
+<coverage generated="1500547490">
+  <project timestamp="1500547490">
     <file name="/home/stepan/www/ipsp-php/src/Ipsp/Api.php">
       <class name="Ipsp_Api" namespace="global" fullPackage="Ipsp">
         <metrics methods="10" coveredmethods="10" conditionals="0" coveredconditionals="0" statements="42" coveredstatements="42" elements="52" coveredelements="52"/>

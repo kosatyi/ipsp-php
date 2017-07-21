@@ -3,7 +3,7 @@
   "description": "Payment Service Provider SDK",
   "homepage": "https://ipsp-php.com/",
   "license": "MIT",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "authors": [
     {
       "name": "Stepan Kosatyi",

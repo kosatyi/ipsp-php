@@ -31,7 +31,8 @@ class Ipsp_Resource_Result extends Ipsp_Resource{
         if( $response AND $data = $response->getData() ){
             $signature = $data['signature'];
             unset($data['signature']);
-            unset($data['response_signature_string']);
+            if( array_key_exists('response_signature_string',$data))
+                unset($data['response_signature_string']);
             $valid = $signature == $this->getSignature($data);
         }
         return $valid;

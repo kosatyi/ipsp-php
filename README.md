@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://ipsp-php.com">
-    <img src="https://raw.githubusercontent.com/kosatyi/ipsp-php/gh-pages/assets/images/brand.png" alt="IPSP PHP (SDK)" width="201" height="193">
-  </a>
+  <a href="https://ipsp-php.com"><img src="https://raw.githubusercontent.com/kosatyi/ipsp-php/gh-pages/assets/images/brand.png" alt="IPSP PHP (SDK)" width="201" height="193"></a>
   <br>
   IPSP PHP SDK
   <br>
@@ -158,6 +156,11 @@ if( $result->validResponse() ){
     exit(sprintf('<pre>%s</pre>',$result->getResponse()));
 }
 ```
+
+## Follow project on:
+
+- Facebook [/ipsp.sdk](https://facebook.com/ipsp.sdk/)
+- Twitter [@ipspsdk](https://twitter.com/ipspsdk)
 
 ## Author
 

@@ -42,7 +42,7 @@ class Ipsp_ResourceTest extends PHPUnit_Framework_TestCase
         self::$resource->setClient(new Ipsp_Client(900002,'test','api.fondy.eu'));
     }
     /**
-     * @expectedException TypeError
+     * @expectedException PHPUnit_Framework_Error
      */
     public function testSetClientException()
     {
@@ -74,7 +74,7 @@ class Ipsp_ResourceTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException TypeError
+     * @expectedException PHPUnit_Framework_Error
      */
     public function testSetParamsException(){
         self::$resource->setParams(new stdClass());

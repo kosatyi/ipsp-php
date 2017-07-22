@@ -22,7 +22,6 @@ Payment Service Providers often offer services in addition to processing transac
 These services include Payment Card Industry and Data Security Standard (PCI) compliance, fraud protection and the 
 ability to process different currencies and translate different languages.
 
-
 > ### Payment Service Provider
 A payment service provider (PSP) offers shops online services for accepting electronic payments by 
 a variety of payment methods including credit card, bank-based payments such as direct debit, bank 

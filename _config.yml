@@ -96,6 +96,7 @@ defaults:
         headline: "Blog"
         tagline: "Ipsp Developer Articles"
         layout : "default"
+        comments: true
         permalink: /:categories/:title.html
   -
     scope:

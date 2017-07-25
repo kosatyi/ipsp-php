@@ -44,11 +44,9 @@
          */
         frame: function (url) {
             var defer = this.defer();
-            $('<iframe>').hide().attr('src', url).appendTo('body').on('load', function () {
-                defer.resolve(this);
-            }).on('error', function () {
-                defer.reject(this);
-            });
+            var frame = $('<iframe>').hide().attr('src', url).appendTo('body');
+            this.connector = new $.Connector(frame.get(0).contentWindow);
+            this.connector.action('load', $.proxy(this, 'ready'));
             return defer;
         },
         /**
@@ -70,14 +68,6 @@
                 this.frame(this.url('gateway')).then($.proxy(this, 'load'));
             }
             return this;
-        },
-        /**
-         *
-         * @param frame
-         */
-        load: function (frame) {
-            this.connector = new $.Connector(frame.contentWindow);
-            this.connector.action('load', $.proxy(this, 'ready'));
         },
         /**
          *
@@ -369,6 +359,7 @@
         };
         element.on('submit', 'form', submit);
     });
+
 
 })(jQuery);
 

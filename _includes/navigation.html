@@ -12,6 +12,7 @@
 {% capture links %}
 {% assign sorted_pages = site.html_pages | sort:"url" %}
 {% for node in sorted_pages %}
+{% if node.navigation != false %}
 {% assign node_url_length = node.url | split: '/' | size | minus: 1 %}
 {% assign filename = node.url | split: '/' | last %}
 {% if node_url_length == current_lvl_url_length and node.url contains lvl_base_url %}
@@ -25,6 +26,7 @@
         {% assign lvl_base_url = lvl_base_url | replace: directory_to_remove | replace: '//', '/'  %}
     {% endif %}
 </li>
+{% endif %}
 {% endif %}
 {% endfor %}
 {% endcapture %}

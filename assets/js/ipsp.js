@@ -290,7 +290,7 @@
         var toggle = function () {
             var state = element.find('.panel').toggleClass('show').hasClass('show');
             $.trackEvent('signup','click','user button');
-            if (state && loaded == false) {
+            if (state){
                 $.api.scope(function () {
                     this.session().fail(function(){
                         $.trackEvent('signup','show','signup modal');
@@ -359,8 +359,6 @@
         };
         element.on('submit', 'form', submit);
     });
-
-
 })(jQuery);
 
 (function($){

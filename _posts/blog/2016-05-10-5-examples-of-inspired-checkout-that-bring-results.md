@@ -4,7 +4,10 @@ description: The best things about online shopping is not having to wait in line
 headline: 5 Examples of Inspired Checkout Processes That Bring Results
 tagline: The best things about online shopping is not having to wait in line behind a long line of equally frustrated shoppers at the cash register.
 categories: blog e-commerce
-image: /assets/blog/nordstrom1.png
+image:
+  path: /assets/blog/cafepress.png
+  height: 492
+  width: 940
 ---
 
 One of the best things about online shopping is not having to wait in line behind a long line of equally frustrated shoppers at the cash register. You have your very own cashier every single time you decide to log on to your favorite ecommerce site and indulge in some retail therapy.

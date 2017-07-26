@@ -4,7 +4,8 @@ description: We have all probably been victims of an impractical or just plain u
 headline: Top 5 Principles for an Improved Checkout Design
 tagline: We have all probably been victims of an impractical or just plain unusable checkout system while trying to perform a purchase online
 categories: blog e-commerce
-image: http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2015/03/feature.jpg
+image: 
+    path: http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2015/03/feature.jpg
 ---
 
 <figure class="post-image post-image-center">

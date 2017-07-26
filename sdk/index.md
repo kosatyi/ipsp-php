@@ -5,8 +5,9 @@ description: IPSP PHP SDK is a free and open-source software development kit wri
 
 # About
 
-IPSP PHP SDK is a free and open-source software development kit written in PHP and distributed under the MIT License. 
-IPSP PHP SDK is a wrapper of Fondy payment protocol REST API, uses object-oriented programming (OOP) 
+**IPSP PHP SDK** is a free and open-source software development kit written in PHP and distributed under the MIT License. 
+
+**IPSP PHP SDK** is a wrapper of Fondy payment protocol REST API, uses object-oriented programming (OOP) 
 techniques and several design pattern: Command , Chain of Responsibility, Proxy. SDK covers e-commerce 
 for businesses of all types and support popular CMS modules for fast integration in existing software architecture.
 
@@ -17,7 +18,6 @@ Payment Service Providers partner with Acquiring Banks to offer Merchants the ca
 accept payments. Payment Service Providers often offer services in addition to processing 
 transactions. These services include Payment Card Industry and Data Security Standard (PCI) 
 compliance, fraud protection and the ability to process different currencies and translate different languages.
-
 
 ## Brief history
 
@@ -160,4 +160,6 @@ Donate $10
 </button>
 ```
 
+## See also
 
+- [Fondy Documentation](https://docs.fondy.eu/)

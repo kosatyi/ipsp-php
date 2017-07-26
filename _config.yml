@@ -25,6 +25,9 @@ toolbar:
   link: /activation/signup.html
   class: btn-signup
 -
+  name: About
+  link: /sdk/
+-
   name: Documentation
   link: /docs/
 -

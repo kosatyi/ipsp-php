@@ -4,7 +4,8 @@ description: The list of e-Commerce sites offering the most inspirational checko
 headline: 12 e-Commerce Sites with the Most Inspirational Checkouts
 tagline: The list of e-Commerce sites offering the most inspirational checkouts
 categories: blog e-commerce
-image: http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Bellroy.png
+image:
+    path: https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Bellroy.png
 ---
 
 So you have an e-Commerce site or are building one, and you're wondering “What can I do to increase my conversion 
@@ -19,7 +20,7 @@ increase conversions by turning visitors into customers:
 ## 1. Apple
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Apple.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Apple.png" alt="alt">
 </figure>
 
 Apple has an attractive website that does full justice to the Apple brand. The checkout page is also very well-designed 
@@ -36,7 +37,7 @@ helpful feature.
 ## 2. Bellroy
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Bellroy.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Bellroy.png" alt="alt">
 </figure>
 
 Bellroy has handled the problem of shopping cart abandonment due to a lengthy checkout process differently as compared 
@@ -52,7 +53,7 @@ E-Commerce stores can design their checkout pages this way to avoid confusing sh
 ## 3. Nixon
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Nixon.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Nixon.png" alt="alt">
 </figure>
 
 There are e-Commerce stores that are not in favor of providing a guest checkout option or one-page checkout. Such 
@@ -71,7 +72,7 @@ trust with the customers.
 ## 4. Amazon
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Amazon.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Amazon.png" alt="alt">
 </figure>
 
 The common perception of web designers and e-Commerce store owners is to provide a bunch of options like 
@@ -84,7 +85,7 @@ shopping cart or to simply close the window. This has been done to ensure that o
 ## 5. Made
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Made.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Made.png" alt="alt">
 </figure>
 
 
@@ -99,7 +100,7 @@ about their purchase decision and to entice them to click on the checkout button
 ##  6. Toys”R”Us
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Toys%E2%80%9DR%E2%80%9DUs.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Toys%E2%80%9DR%E2%80%9DUs.png" alt="alt">
 </figure>
 
 There are times online shoppers are buying gifts for their loved ones. When purchasing from an online store, the item 
@@ -110,7 +111,7 @@ Toys”R”Us can get a gold star for designing the novel feature which allows c
 ## 7. Fab
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Fab.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Fab.png" alt="alt">
 </figure>
 
 Fab on its checkout page provides an option to login with Facebook to complete the purchase, thereby saving precious 
@@ -126,7 +127,7 @@ their budget, this is the option that should be considered to lure in customers.
 ## 8. eBags
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/eBags.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/eBags.png" alt="alt">
 </figure>
 
 The checkout page of eBags is neatly laid out with informational content to provide all relevant information to 
@@ -139,7 +140,7 @@ These points can then be redeemed in future by them.
 ## 9. Zappos
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Zappos.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Zappos.png" alt="alt">
 </figure>
 
 The biggest concern of most online buyers is whether the site they are giving their personal information along with 
@@ -153,7 +154,7 @@ Moreover, it even lets users update quantity or remove from cart while they're s
 ## 10. Dune London
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Dune-London.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Dune-London.png" alt="alt">
 </figure>
 
 Another essential for any e-Commerce checkout page is to make sure customers can always see exactly how much and what 
@@ -165,7 +166,7 @@ The checkout page of Duke London delivers a clean and simple shopping experience
 ## 11. Simply Hike
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Simply-Hike.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Simply-Hike.png" alt="alt">
 </figure>
 
 This e-Commerce store's website is a great example of how an online retail store should keep customer needs at the back 
@@ -180,7 +181,7 @@ e-Commerce store decrease shopping cart abandonment and increase conversions.
 ## 12. Crocs
 
 <figure class="post-image post-image-center">
-    <img src="http://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Crocs.png" alt="alt">
+    <img src="https://d3j91itysyqfr3.cloudfront.net/wp-content/uploads/2014/10/Crocs.png" alt="alt">
 </figure>
 
 Croc's checkout pages are an exercise in design. Its ‘Move to Wishlist' feature lets shopper save the products for later.

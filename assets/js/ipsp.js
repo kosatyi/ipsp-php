@@ -247,7 +247,7 @@
     $.addControl('signup', function (element) {
         var loaded = false;
         var render = function (template, data) {
-            element.find('.panel').html($.ejs(template).render(data));
+            element.find('.content').html($.ejs(template).render(data));
             $.initControls();
         };
         var complete = function () {
@@ -290,6 +290,7 @@
         var toggle = function () {
             var state = element.find('.panel').toggleClass('show').hasClass('show');
             $.trackEvent('signup','click','user button');
+            console.log(state);
             if (state){
                 $.api.scope(function () {
                     this.session().fail(function(){
@@ -317,22 +318,17 @@
                 render('/signup', {login: true, error: data.error});
             });
         };
-        $(document).on('click', function (ev) {
-            if (!element.has(ev.target).get(0)) {
-                element.find('.panel').removeClass('show');
-            }
-        });
         $(window).on('api.login',function(){
             toggle();
         });
         element.on('submit', 'form', submit);
+        element.on('click', '.close', toggle);
         element.on('click', '.button.user', toggle);
         element.on('click', '.btn.recovery', recovery);
         element.on('click', '.btn.logout', logout);
     });
 
     $.addControl('signup.form', function(element){
-        console.log('signup.form');
         var template = function(data){
             return $.ejs('/email').render(data)
         };

@@ -255,6 +255,23 @@ table.details {
   z-index: 99999;
   bottom: 2rem;
   right: 2rem;
+  .close{
+    line-height:3.5rem;
+    height:3.5rem;
+    display:block;
+    position:fixed;
+    text-align:center;
+    left:0;
+    right:0;
+    font-size:3.5rem;
+    text-align:center;
+    color:#fff;
+    cursor: pointer;
+    &:hover{
+      background-color:rgba(255,255,255,0.5);
+      color:#0c6c3e;
+    }
+  }
   .panel {
     .loader {
       padding: 1rem 0;
@@ -263,43 +280,41 @@ table.details {
   }
   .panel {
     display: none;
-    position: absolute;
-    bottom: 100%;
-    right: 0;
-    width: 100%;
-    min-width: 26rem;
-    border-radius: .3rem;
-    box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 0 1rem;
+    position: fixed;
+    bottom:0;
+    right:0;
+    left:0;
+    top:0;
+    right:0;
     &.show {
       display: block;
+      background-color:rgba(0,0,0,0.2);
+      + .button.user{
+        display:none;
+      }
     }
-    &:after, &:before {
-      top: 100%;
-      right: 2rem;
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-    }
-    &:after {
-      border-color: rgba(255, 255, 255, 0);
-      border-top-color: #fff;
-      border-width: 10px;
-      margin-right: -10px;
-    }
-    &:before {
-      border-color: rgba(204, 204, 204, 0);
-      border-top-color: #ccc;
-      border-width: 11px;
-      margin-right: -11px;
+    .content{
+      overflow:hidden;
+      border-radius: .3rem;
+      box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      padding: 0 1rem;
+      margin:4.5rem auto;
+      max-width:42rem;
     }
   }
+
+  .form{
+    .form-group{
+      @media screen and (max-width: 42em) {
+        .btn {
+          text-align:center;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
 
   .button.user {
     -webkit-border-radius: 4rem;
@@ -317,44 +332,10 @@ table.details {
   }
 
   @media screen and (max-width: 42em) {
-    right: auto;
-    left: 50%;
-    bottom: 1rem;
-    margin-left: -2rem;
-    .panel {
-      right: auto;
-      bottom: 100%;
-      width: 100%;
-      left: 0;
-      margin-left: -( 22rem / 2);
-      &:after, &:before {
-        right: auto;
-        margin-right: 0;
-        left: 50%;
-      }
-      &:after {
-        margin-left: -10px;
-      }
-      &:before {
-        margin-left: -11px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 28em) {
-    .panel {
-      margin: 0;
-      min-width: 0px;
-      width: auto;
-      position: fixed;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      &:after, &:before {
-        display: none;
-      }
-      &.show + .button.user {
-        display: none;
+    bottom:4rem;
+    .panel{
+      .content {
+        margin:4.5rem 1rem 0 1rem;
       }
     }
   }

@@ -2,13 +2,15 @@
     <%=or(attr('login'),'Sign in','Create Account')%>
 </h2>
 <form class="form">
+    <div class="form-group">Create your free account and get access to Control Panel.</div>
     <% if(attr('error')) { %>
     <div class="form-group">
          <%=attr('error')%>
     </div>
     <% } %>
     <div class="form-group">
-        <input type="text" name="email" tabindex="1" value="<%=attr('form.email')%>" placeholder="E-mail" class="field">
+        <label><small>Your Email Address</small></label>
+        <input type="text" name="email" tabindex="1" value="<%=attr('form.email')%>" placeholder="john.doe@provider.com" class="field">
     </div>
     <% if(attr('login')) { %>
     <div class="form-group">
@@ -23,6 +25,8 @@
     <div class="form-group">
         <% if(attr('login')) { %>
            <a class="btn primary pull-right recovery">Password recovery</a>
+        <% } else { %>
+            <a class="btn primary pull-right" href="/activation/signup.html">Request merchant registration</a>
         <% } %>
         <button class="btn success"><%=or(attr('login'),'Login','Signup')%></button>
     </div>

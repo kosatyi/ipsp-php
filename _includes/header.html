@@ -1,10 +1,14 @@
 <header class="page-header">
-    {% if page.headline %}
+    {% if page.headline  %}
     <div class="page-overview container">
         <h2 class="project-name">{{ page.headline }}</h2>
         {% if page.tagline %}
         <h3 class="project-tagline">{{ page.tagline }}</h3>
         {% endif %}
+        {% include breadcrumbs.html %}
+    </div>
+    {% elsif page.header == 'breadcrumbs' %}
+    <div class="page-overview container">
         {% include breadcrumbs.html %}
     </div>
     {% else %}

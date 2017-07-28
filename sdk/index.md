@@ -1,6 +1,7 @@
 ---
 title: About
 description: IPSP PHP SDK is a free and open-source software development kit written in PHP and distributed under the MIT License
+header: breadcrumbs
 ---
 
 # About

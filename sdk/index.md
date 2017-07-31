@@ -22,7 +22,7 @@ compliance, fraud protection and the ability to process different currencies and
 
 ## Brief history
 
-Project started on 5 August 2015; 23 months ago as GitHub project. After almost 2 years, the project has its own website. 
+Project started on 5 August 2015 as GitHub project. After almost 2 years, the project has its own website. 
 The development of new releases and bug fixes started after code coverage with unit tests. In the future, 
 support will be added for new versions of PHP and PSR-2 coding style guide and PSR-4 autoloader specification.
 

@@ -1,5 +1,6 @@
 ---
-description:
+redirect_from:
+  - /activation/merchant
 ---
 
 # Create a merchant account

@@ -3,6 +3,7 @@ gems:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-redirect-from
 #Others
 markdown: kramdown
 # Setup

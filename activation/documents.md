@@ -1,5 +1,6 @@
 ---
-description:
+redirect_from:
+  - /activation/documents
 ---
 
 # Upload your documents

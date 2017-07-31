@@ -1,5 +1,6 @@
 ---
-description:
+redirect_from:
+  - /activation/email
 ---
 
 # Confirm your e-mail address

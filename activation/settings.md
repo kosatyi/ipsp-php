@@ -1,6 +1,5 @@
 ---
-redirect_from:
-  - /activation/settings
+
 ---
 
 # Add financial details

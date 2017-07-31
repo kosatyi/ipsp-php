@@ -1,6 +1,5 @@
 ---
-redirect_from:
-  - /activation/signup
+
 ---
 
 # Create Free Account 

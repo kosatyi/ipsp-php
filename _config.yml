@@ -21,7 +21,7 @@ styles:
 
 toolbar:
 -
-  name: Signup now
+  name: Join Now
   link: /activation/signup.html
   class: btn-signup
 -

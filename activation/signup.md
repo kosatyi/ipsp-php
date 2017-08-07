@@ -1,17 +1,19 @@
 ---
-
+title: Create Free Account
+description:
+header: false
 ---
 
-# Create Free Account 
-
-
-<div class="form-wrapper" control="signup.form">
+<div class="form-wrapper form-signup" control="signup.form">
 <div class="message text-center hide">
        <h3>Confirm your e-mail address</h3>
        <p>Check your mailbox, go by the link and set up password.</p>
        <p><a class="btn success" href="https://portal.fondy.eu/mportal/">Merchant Portal</a></p>
 </div>
 <form class="form">
+    <div class="form-group">
+        <h1 class="text-center">Create Free Account</h1> 
+    </div>
     <div class="form-group">
         <label class="control-label">Full Name:</label>
         <input type="text" required name="name" placeholder="Your Full Name" class="form-control">

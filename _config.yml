@@ -11,13 +11,16 @@ tagline: Start e-commerce on your website.
 baseurl:
 url:  https://ipsp-php.com
 
-paginate: 10
+paginate: 8
 paginate_path: "/blog/page-:num/"
 
 styles:
   - //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
   - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
+  - //fonts.googleapis.com/css?family=Pacifico
   - /assets/css/ipsp.css
+
+
 
 toolbar:
 -
@@ -96,18 +99,11 @@ defaults:
     values:
         categories:
         description:
-        headline: "Blog"
-        tagline: "Ipsp Developer Articles"
+        headline: ""
+        tagline: ""
         layout : "default"
         comments: true
         permalink: /:categories/:title.html
-  -
-    scope:
-        path: "blog"
-        type: "pages"
-    values:
-        headline: "Blog"
-        tagline: "Ipsp Developer Articles"
   -
     scope:
         path: "docs"

@@ -164,14 +164,26 @@ a {
   float:left;
   padding:0;
   margin:0;
-
-
   a{
-    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    transition: all 0.2s ease-out;
     text-decoration:none;
     color:#fff;
     display:block;
     float:left;
+    height: 2rem + 1.5rem;
+    width: 2rem + 1.5rem;
+    position:relative;
+    img{
+        display:block;
+        width:2.05rem;
+        height:2rem;
+        margin:0.75rem auto;
+    }
+  }
+}
+
+.page-brand{
+  a:hover{
     height: 2rem + 1.5rem + 0.625rem;
     width: 2rem + 1.5rem;
     position:relative;
@@ -186,9 +198,6 @@ a {
     border-bottom-left-radius:11px;
     border-bottom-right-radius:11px;
     background-color:@brand-success;
-    &:hover {
-      background-color:@brand-primary;
-    }
     &:after{
       content:"IPSP PHP";
       font-size:0.5rem;
@@ -198,12 +207,6 @@ a {
       text-align:center;
       width:100%;
       bottom:3px;
-    }
-    img{
-        display:block;
-        width:2.05rem;
-        height:2rem;
-        margin:0.75rem auto;
     }
   }
 }

@@ -164,20 +164,40 @@ a {
   float:left;
   padding:0;
   margin:0;
-  overflow:hidden;
-  @media screen and (max-width: 50em) {
 
-  }
+
   a{
     transition: color 0.2s, background-color 0.2s, border-color 0.2s;
     text-decoration:none;
     color:#fff;
     display:block;
     float:left;
-    height: 2rem + 1.5rem;
+    height: 2rem + 1.5rem + 0.625rem;
     width: 2rem + 1.5rem;
+    position:relative;
+    margin-bottom:-11px;
+    z-index:10;
+    border-color:@light-border;
+    border-width:0 1px 1px 1px;
+    border-style:solid;
+    box-shadow:inset 0 0 1px 0px 1px rgba(255,255,255,.4),0 0 8px rgba(0,0,0,.2);
+    padding-bottom:10px;
+    margin-bottom:-11px;
+    border-bottom-left-radius:11px;
+    border-bottom-right-radius:11px;
+    background-color:@brand-success;
     &:hover {
-      background-color: rgba(255,255,255,0.1);
+      background-color:@brand-primary;
+    }
+    &:after{
+      content:"IPSP PHP";
+      font-size:0.5rem;
+      font-weight:bold;
+      text-transform:uppercase;
+      position:absolute;
+      text-align:center;
+      width:100%;
+      bottom:3px;
     }
     img{
         display:block;

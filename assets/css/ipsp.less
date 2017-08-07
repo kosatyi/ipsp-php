@@ -311,6 +311,7 @@ table.details {
   bottom: 2rem;
   right: 2rem;
   .close{
+    top:3.5rem;
     line-height:3.5rem;
     height:3.5rem;
     display:block;
@@ -342,6 +343,7 @@ table.details {
     top:0;
     right:0;
     &.show {
+      z-index: 999999;
       display: block;
       background-color:rgba(0,0,0,0.2);
       + .button.user{
@@ -354,7 +356,7 @@ table.details {
       box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.2);
       background-color: #fff;
       padding: 0 1rem;
-      margin:4.5rem auto;
+      margin:8rem auto;
       max-width:42rem;
     }
   }

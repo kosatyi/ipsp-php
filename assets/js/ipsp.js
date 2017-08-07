@@ -338,11 +338,13 @@
         var error = function(data){
             element.find('.form').addClass('hide');
             element.find('.message').removeClass('hide').html(data.error);
+            $.trackEvent('registration','error',location.href);
         };
         var success = function(){
             element.find('.form').addClass('hide');
             element.find('.message').removeClass('hide');
             $(window).trigger('api.login');
+            $.trackEvent('registration','success',location.href);
         };
         var submit = function(ev,params){
             ev.preventDefault();

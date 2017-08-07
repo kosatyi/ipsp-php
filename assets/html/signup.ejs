@@ -10,7 +10,7 @@
     <% } %>
     <div class="form-group">
         <label><small>Your Email Address</small></label>
-        <input type="text" name="email" tabindex="1" value="<%=attr('form.email')%>" placeholder="john.doe@provider.com" class="field">
+        <input type="text" name="email" required="required" tabindex="1" value="<%=attr('form.email')%>" placeholder="john.doe@provider.com" class="field">
     </div>
     <% if(attr('login')) { %>
     <div class="form-group">

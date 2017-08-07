@@ -27,3 +27,10 @@
     </div>
     {% endif %}
 </header>
+
+
+{% if page.overlay  %}
+<div class="page-content-overlay" style="background-image:url({{page.overlay}})">
+    <img src="{{page.overlay}}" alt="overlay">
+</div>
+{% endif %}

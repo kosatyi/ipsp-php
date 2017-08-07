@@ -2,7 +2,11 @@
 title: Create Free Account
 description:
 header: false
+overlay: /assets/images/wall.jpg
 ---
+
+
+
 
 <div class="form-wrapper form-signup" control="signup.form">
 <div class="message text-center hide">

@@ -264,6 +264,8 @@ a {
   background-color: #159957;
   background-image:@header-gradient;
   padding-top: 2rem + 1.5rem;
+  position:relative;
+  z-index:10;
   :last-child{
     margin-bottom:0;
   }
@@ -272,7 +274,9 @@ a {
 .page-footer{
   box-shadow: inset 0 7px 9px -10px rgba(0, 0, 0, 0.2);
   border-top: 1px solid #dfdfdf;
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color:#efefef;
+  position:relative;
+  z-index:10;
   a{
     color:@base-color;
   }
@@ -313,6 +317,22 @@ a {
   }
   @media screen and (max-width: 42em) {
     padding: 1rem;
+  }
+}
+
+
+.page-content-overlay{
+  position:fixed;
+  z-index:2;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat:no-repeat;
+  img{
+    visibility: hidden;
   }
 }
 
@@ -357,6 +377,8 @@ a {
 .page-content {
   word-wrap: break-word;
   flex:1;
+  position: relative;
+  z-index:15;
   .container{
     overflow:hidden;
     padding: 1rem 2rem;
@@ -577,5 +599,28 @@ ol.page-breadcrumbs{
   color:#949494;
   &.col{
     padding-bottom:0;
+  }
+}
+
+
+.pagination{
+  list-style:none;
+  margin:0;
+  padding:0 0 0 1px;
+  .page-item{
+    float:left;
+    position:relative;
+    border:1px solid #efefef;
+    margin-left:-1px;
+    z-index:1;
+    &:hover{
+      z-index:2;
+      border:1px solid @brand-primary;
+    }
+    a{
+      display:block;
+      padding:1rem;
+      text-decoration:none;
+    }
   }
 }

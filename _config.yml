@@ -40,7 +40,7 @@ javascript:
   - /assets/js/jquery.ejs.js
   - /assets/js/jquery.connector.js
   - /assets/js/main.js
-  - /assets/js/ipsp.js
+  - /assets/js/ipsp.js?v1.0.8
 
 
 analytics: UA-100124713-1

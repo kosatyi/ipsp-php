@@ -476,10 +476,15 @@ form.form {
       padding: 5px;
       float: left;
       text-align: center;
+      display:block;
       span {
         color: #949494;
         font-size: 0.85rem;
         display: block;
+      }
+      @media screen and (max-width: 42em) {
+        float:none;
+        margin-bottom:0.5rem;
       }
     }
     &-title {

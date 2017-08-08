@@ -26,6 +26,7 @@ popular CMS modules for fast integration in existing infrastructure.
 <a href="https://ipsp-php.com"><img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
 </p>
 
+
 ## Installation
 
 ### System Requirements

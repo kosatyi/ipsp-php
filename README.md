@@ -11,11 +11,11 @@ popular CMS modules for fast integration in existing infrastructure.
 </h4>
 
 <p align="center">
-<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://poser.pugx.org/kosatyi/ipsp-php/version" /></a>
+<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/v/kosatyi/ipsp-php.svg" /></a>
 <a href="https://travis-ci.org/kosatyi/ipsp-php"><img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" /></a>
 <a href="https://coveralls.io/github/kosatyi/ipsp-php"><img src="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg" /></a>
-<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://poser.pugx.org/kosatyi/ipsp-php/downloads"/></a>
-<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://poser.pugx.org/kosatyi/ipsp-php/license" /></a>
+<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/dt/kosatyi/ipsp-php.svg"/></a>
+<a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/github/license/kosatyi/ipsp-php.svg" /></a>
 </p>
 <p align="center">
 <a href="https://ipsp-php.com/"><img src="https://img.shields.io/badge/official-website-green.svg" /></a>

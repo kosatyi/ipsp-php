@@ -230,10 +230,12 @@
         function complete(){
             $.api.scope(function(){
                 this.request('api.account', 'check_auth',{}).done(function(response){
-                    if(response.registration){
-                        location.assign('/activation/merchant.html');
-                    } else {
-                        location.assign('https://portal.fondy.eu/mportal/');
+                    if('registration' in response){
+                        if(response.registration){
+                            location.assign('/activation/merchant.html');
+                        } else {
+                            location.assign('https://portal.fondy.eu/mportal/');
+                        }
                     }
                 });
             });

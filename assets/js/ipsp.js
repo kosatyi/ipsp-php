@@ -240,6 +240,7 @@
         };
         element.on('click',function(ev){
             ev.preventDefault();
+            $.trackEvent('social', 'auth', element.data('type'));
             open(url);
         });
     });

@@ -199,16 +199,20 @@
         element.val(element.attr('value'));
     });
 
+    $.addControl('facebook.login', function (element) {
+        location.replace($.api.url('facebook'));
+    });
+
     $.addControl('social.login', function (element) {
 
-        var width  = 1100;
+        var width = 1100;
         var height = 690;
         var format = "scrollbars=0,resizable=0,menubar=0,toolbar=0,status=0,left={0},top={1},width={2},height={3}";
         var config = parse(format, (screen.width / 2) - (width / 2), (screen.height / 2) - (height / 2), width, height);
-        var idle   = null;
-        var popup  = null;
-        var type   = element.data('type');
-        var url    = $.api.url(type);
+        var idle = null;
+        var popup = null;
+        var type = element.data('type');
+        var url = $.api.url(type);
 
         function parse(string) {
             var args = Array.prototype.slice.call(arguments, 1);
@@ -216,22 +220,25 @@
                 return typeof args[number] != "undefined" ? args[number] : match
             });
         };
+
         function open(url) {
             popup = window.open(url, '', config);
             popup.focus();
             idle = setInterval(poll, 1000);
         };
+
         function poll() {
             if (popup.closed == true) {
                 clearInterval(idle);
                 complete();
             }
         };
-        function complete(){
-            $.api.scope(function(){
-                this.request('api.account', 'check_auth',{}).done(function(response){
-                    if('registration' in response){
-                        if(response.registration){
+
+        function complete() {
+            $.api.scope(function () {
+                this.request('api.account', 'check_auth', {}).done(function (response) {
+                    if ('registration' in response) {
+                        if (response.registration) {
                             location.assign('/activation/merchant.html');
                         } else {
                             location.assign('https://portal.fondy.eu/mportal/');
@@ -240,11 +247,13 @@
                 });
             });
         };
-        element.on('click',function(ev){
+
+        element.on('click', function (ev) {
             ev.preventDefault();
             $.trackEvent('social', 'auth', element.data('type'));
             open(url);
         });
+
     });
 
     $.addControl('merchant', function (element) {

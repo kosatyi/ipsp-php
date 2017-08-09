@@ -1,0 +1,13 @@
+{% capture main %}
+{{ content }}
+{% include disqus.html %}
+{% endcapture %}
+<section class="page-content">
+{% if page.fluid %}
+{{main}}
+{% else %}
+<div class="container">
+{{main}}
+</div>
+{% endif %}
+</section>

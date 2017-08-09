@@ -1,37 +1,55 @@
 ---
 title: IPSP PHP SDK
-description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.   
+description: Flexible SDK that covers e-commerce for businesses of all types and support popular CMS modules for fast integration in existing infrastructure.
+fluid: true   
 ---
 
 {% include github.buttons.html %}
 
-<img src="/assets/images/brand.png" width="201" height="193" alt="Logo" class="image-left">
+<div class="section content">
+<div class="container">
 
-# IPSP PHP SDK
+<h1>IPSP PHP SDK</h1>
 
-Is a free and open-source software development kit written in PHP and distributed under the MIT License. 
-This SDK is a wrapper of Fondy payment protocol REST API, uses object-oriented programming (OOP) techniques and 
-several design pattern: Command, Chain of Responsibility, Proxy. SDK covers e-commerce for businesses of all types and 
-support popular CMS modules for fast integration in existing software architecture.
+<p class="lead">Free and open-source software development kit written in PHP and distributed under the MIT License.</p>
 
-## How Does it Work?
+<p class="lead">IPSP PHP SDK is a wrapper of <a rel="nofollow" target="_blank" href="https://fondy.eu/?rel=ipsp-php.com">Fondy</a> payment protocol REST API and covers e-commerce for businesses of all types and 
+support popular CMS modules for fast integration in existing software architecture.</p>
 
-Payment Service Providers partner with Acquiring Banks to offer Merchants the capability to accept payments. 
-Payment Service Providers often offer services in addition to processing transactions. 
+</div>
+</div>
 
-These services include Payment Card Industry and Data Security Standard (PCI) compliance, fraud protection and the 
-ability to process different currencies and translate different languages.
+<div class="section content">
+<div class="container">
 
-> ### Payment Service Provider
+<h2 class="text-center h1">How Does it Work?</h2>
+
+<p>Payment Service Providers partner with Acquiring Banks to offer Merchants the capability to accept payments. 
+Payment Service Providers often offer services in addition to processing transactions.</p> 
+
+<p>These services include Payment Card Industry and Data Security Standard (PCI) compliance, fraud protection and the 
+ability to process different currencies and translate different languages.</p>
+
+<blockquote>
+<h3>Payment Service Provider</h3>
 A payment service provider (PSP) offers shops online services for accepting electronic payments by 
 a variety of payment methods including credit card, bank-based payments such as direct debit, bank 
 transfer, and real-time bank transfer based on online banking. Typically, they use a software as a service 
 model and form a single payment gateway for their clients (merchants) to multiple payment methods.
-[read more](https://en.wikipedia.org/wiki/Payment_service_provider){:target="_blank"}
+<a href="https://en.wikipedia.org/wiki/Payment_service_provider" rel="nofollow" target="_blank">
+read more
+</a>
+</blockquote>
 
-## How make a quick checkout URL for a specific product?
+</div>
+</div>
 
-```php
+<div class="section content">
+<div class="container">
+
+<h2 class="text-center h1">How make a quick checkout URL for a specific product?</h2>
+
+{% highlight php %}
 <?php
 require_once 'vendor/autoload.php';
 define('MERCHANT_ID' , 1396424 );
@@ -47,37 +65,34 @@ $data = $ipsp->call('checkout',array(
   'response_url'=> sprintf('http://shop.example.com/checkout/result')
 ));
 $data->redirectToCheckout();
-```
+{% endhighlight %}
 
+</div>
+</div>
 
-## Key features
+<div class="section content">
+<div class="container">
 
-* Quick installation
-* Client side instruction and best practicies
-* Host-to-host and vendor side checkout page
-* Multiple payment methods credit card, internet banking.
-* Multiple data formats (JSON, XML, form-urlencoded)
-* Payment details for testing scope
-* Hidden server callback for sign responses
-* Integration with CMS modules.
-
----
-
-## [Blog](/blog/)
+<h2 class="text-center h1"><a href="/blog/">Blog Articles</a></h2>
 
 <div class="blog-list">
-{% for post in site.posts limit: 3 %}
+{% for post in site.posts limit: 5 %}
 {% include blog.entry.html %}
 {% endfor %}
 </div>
 
----
+</div>
+</div>
 
-## Project Sections
+<div class="section content">
+<div class="container">
+
+<h2 class="text-center h1">Project Sections</h2>
 
 <nav class="cards section">
 {% include navigation.html base_url="/" max_depth=2 %}
 </nav>
+
 
 <script type="application/ld+json">
 {
@@ -99,7 +114,7 @@ $data->redirectToCheckout();
 {
   "@context":"http://schema.org",
   "@type":"ItemList",
-  "itemListElement":[{% for post in site.posts limit: 3 %}
+  "itemListElement":[{% for post in site.posts limit: 5 %}
     {
       "@type":"ListItem",
       "position":{{forloop.index}},
@@ -108,3 +123,42 @@ $data->redirectToCheckout();
   ]
 }
 </script>
+
+</div>
+</div>
+
+<div class="section content">
+<div class="container">
+
+<h2 class="text-center h1">Send Feedback</h2>
+
+<form method="POST" class="form" action="https://formspree.io/stepan@kosatyi.com">
+<input type="hidden" name="_next" value="{{site.url}}">
+<div class="form-group">
+<input type="email" class="form-control input-lg" name="email" placeholder="Your email">
+</div>
+<div class="form-group">
+<input type="text" class="form-control input-lg" name="_subject" placeholder="Subject">
+</div>
+<div class="form-group">
+<textarea name="message" class="form-control input-lg ui-textarea-resize" placeholder="Your message" style="min-height: 80px;"></textarea>
+</div>
+<div class="form-group">
+<button type="submit" class="btn success">Send Feedback</button>
+</div>
+</form>
+
+</div>
+</div>
+
+<div class="section content secure">
+<div class="container">
+<img src="https://fondy.ua/wp-content/themes/Fondy_UA/img/pages/marketing-info/2015x1000_color.png">
+<img src="https://fondy.ua/wp-content/themes/Fondy_UA/img/pages/marketing-info/visa-logo-new.png">
+<img src="https://fondy.ua/wp-content/themes/Fondy_UA/img/pages/marketing-info/verified-by-visa.png">
+<img src="https://fondy.ua/wp-content/themes/Fondy_UA/img/pages/marketing-info/mastercard_logo1.svg">
+<img src="https://fondy.ua/wp-content/themes/Fondy_UA/img/pages/marketing-info/mastercard-securecode.png">
+<img src="https://fondy.ua/wp-content/themes/Fondy_UA/img/pages/marketing-info/pcidss_logo.svg">
+</div>
+</div>
+

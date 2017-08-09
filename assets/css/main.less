@@ -66,6 +66,11 @@ a {
   + .btn {
     margin-left: 1rem;
   }
+  &.block{
+    display:block;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
   @media screen and (max-width: 42em) {
     + .btn{
       margin-top: 1rem;
@@ -85,6 +90,19 @@ a {
     border-color: rgba(0, 0, 0, 0.3);
   }
 }
+
+.btn.social {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
+  &:hover {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 
 .field {
   color: rgba(0, 0, 0, 0.7);

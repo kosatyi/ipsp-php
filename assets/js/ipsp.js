@@ -172,7 +172,7 @@
                 if (list.hasOwnProperty(name))
                     list[name](item);
             });
-            el.setAttribute('control-init','true');
+            el.setAttribute('control-init', 'true');
             el.removeAttribute('control');
         });
     };
@@ -195,8 +195,53 @@
     };
 
 
-    $.addControl('select.value',function (element){
+    $.addControl('select.value', function (element) {
         element.val(element.attr('value'));
+    });
+
+    $.addControl('social.login', function (element) {
+
+        var width  = 1100;
+        var height = 690;
+        var format = "scrollbars=0,resizable=0,menubar=0,toolbar=0,status=0,left={0},top={1},width={2},height={3}";
+        var config = parse(format, (screen.width / 2) - (width / 2), (screen.height / 2) - (height / 2), width, height);
+        var idle   = null;
+        var popup  = null;
+        var type   = element.data('type');
+        var url    = $.api.url(type);
+
+        function parse(string) {
+            var args = Array.prototype.slice.call(arguments, 1);
+            return string.replace(/{(\d+)}/g, function (match, number) {
+                return typeof args[number] != "undefined" ? args[number] : match
+            });
+        };
+        function open(url) {
+            popup = window.open(url, '', config);
+            popup.focus();
+            idle = setInterval(poll, 1000);
+        };
+        function poll() {
+            if (popup.closed == true) {
+                clearInterval(idle);
+                complete();
+            }
+        };
+        function complete(){
+            $.api.scope(function(){
+                this.request('api.account', 'check_auth',{}).done(function(response){
+                    if(response.registration){
+                        location.assign('/activation/merchant.html');
+                    } else {
+                        location.assign('https://portal.fondy.eu/mportal/');
+                    }
+                });
+            });
+        };
+        element.on('click',function(ev){
+            ev.preventDefault();
+            open(url);
+        });
     });
 
     $.addControl('merchant', function (element) {
@@ -208,8 +253,8 @@
             return element.find('form').serializeObject();
         };
         var success = function (params) {
-            $.api.request('api.merchant','country', params).done(function(merchant){
-                if( merchant.id ) {
+            $.api.request('api.merchant', 'country', params).done(function (merchant) {
+                if (merchant.id) {
                     location.assign('/activation/settings.html');
                 } else {
                     render('/merchant', {
@@ -219,25 +264,25 @@
                 }
             });
         };
-        element.on('change','select',function(){
+        element.on('change', 'select', function () {
             success(params());
         });
-        element.on('submit',function(ev){
+        element.on('submit', function (ev) {
             ev.preventDefault();
             var form = params();
             form.jurtype = form.type;
             success(form);
         });
-        $(window).on('api.authorize',function(){
+        $(window).on('api.authorize', function () {
             success(params());
         });
-        $(window).on('api.logout',function(){
+        $(window).on('api.logout', function () {
             render('/blank');
         });
-        $.api.scope(function(){
-            this.session().fail(function(){
+        $.api.scope(function () {
+            this.session().fail(function () {
                 $(window).trigger('api.login');
-            }).done(function(){
+            }).done(function () {
                 success(params());
             });
         });
@@ -254,7 +299,7 @@
             loaded = true;
         };
         var success = function () {
-            $.trackEvent('signup','show','account modal');
+            $.trackEvent('signup', 'show', 'account modal');
             $.when(
                 this.request('api.account.milestone', 'get', {})
             ).done(function (milestone) {
@@ -268,7 +313,7 @@
             ev.preventDefault();
             form = $(this).serializeObject();
             $.api.account(form).fail(function (data) {
-                $.trackEvent('signup','error',data.error);
+                $.trackEvent('signup', 'error', data.error);
                 render('/signup', {
                     login: true,
                     form: form,
@@ -276,7 +321,7 @@
                 });
             }).done(function (data) {
                 if (data.two_factor) {
-                    $.trackEvent('signup','show','two factor dialog');
+                    $.trackEvent('signup', 'show', 'two factor dialog');
                     render('/signup', {
                         login: true,
                         two_factor: true,
@@ -289,12 +334,12 @@
         };
         var toggle = function () {
             var state = element.find('.panel').toggleClass('show').hasClass('show');
-            $.trackEvent('signup','click','user button');
+            $.trackEvent('signup', 'click', 'user button');
             console.log(state);
-            if (state){
+            if (state) {
                 $.api.scope(function () {
-                    this.session().fail(function(){
-                        $.trackEvent('signup','show','signup modal');
+                    this.session().fail(function () {
+                        $.trackEvent('signup', 'show', 'signup modal');
                         render('/signup', {login: false});
                     }).done(success).always(complete);
                 });
@@ -302,23 +347,23 @@
         };
         var logout = function () {
             $.api.request('api.account', 'logout', {}).done(function (data) {
-                $.trackEvent('signup','click','logout button');
+                $.trackEvent('signup', 'click', 'logout button');
                 render('/signup', {login: false});
                 $(window).trigger('api.logout');
             });
         };
         var recovery = function (ev) {
             ev.preventDefault();
-            $.trackEvent('recovery','show','modal');
+            $.trackEvent('recovery', 'show', 'modal');
             $.api.request('api.account', 'forgot_password', element.find('form').serializeObject()).done(function (data) {
-                $.trackEvent('recovery','message','Check your e-mail.');
+                $.trackEvent('recovery', 'message', 'Check your e-mail.');
                 render('/signup', {login: true, error: 'Check your e-mail.'});
             }).fail(function (data) {
-                $.trackEvent('recovery','error',data.error);
+                $.trackEvent('recovery', 'error', data.error);
                 render('/signup', {login: true, error: data.error});
             });
         };
-        $(window).on('api.login',function(){
+        $(window).on('api.login', function () {
             toggle();
         });
         element.on('submit', 'form', submit);
@@ -326,34 +371,34 @@
         element.on('click', '.button.user', toggle);
         element.on('click', '.btn.recovery', recovery);
         element.on('click', '.btn.logout', logout);
-        if(document.referrer.match('lnk.direct')){
+        if (document.referrer.match('lnk.direct')) {
             toggle();
         }
     });
 
-    $.addControl('signup.form', function(element){
-        var template = function(data){
+    $.addControl('signup.form', function (element) {
+        var template = function (data) {
             return $.ejs('/email').render(data)
         };
-        var error = function(data){
+        var error = function (data) {
             element.find('.form').addClass('hide');
             element.find('.message').removeClass('hide').html(data.error);
-            $.trackEvent('registration','error',location.href);
+            $.trackEvent('registration', 'error', location.href);
         };
-        var success = function(){
+        var success = function () {
             element.find('.form').addClass('hide');
             element.find('.message').removeClass('hide');
             $(window).trigger('api.login');
-            $.trackEvent('registration','success',location.href);
+            $.trackEvent('registration', 'success', location.href);
         };
-        var submit = function(ev,params){
+        var submit = function (ev, params) {
             ev.preventDefault();
             params = element.find('.form').serializeObject();
-            $.api.scope(function(){
-                this.account(params).done(function(){
-                    this.request('api.account','feedback',{
-                        contacts : params.email ,
-                        message  : template(params)
+            $.api.scope(function () {
+                this.account(params).done(function () {
+                    this.request('api.account', 'feedback', {
+                        contacts: params.email,
+                        message: template(params)
                     }).done(success).fail(error);
                 }).fail(error);
             });
@@ -362,34 +407,34 @@
     });
 })(jQuery);
 
-(function($){
+(function ($) {
     $('.page-content').append($.ejs('/user').render({}));
 })(jQuery);
 
 (function ($) {
-    $.trackEvent = function(category,action,label,fieldObject){
-        if(typeof(window['ga'])!=='function') return;
-        ga('send', 'event', category , action , label , fieldObject || {});
+    $.trackEvent = function (category, action, label, fieldObject) {
+        if (typeof(window['ga']) !== 'function') return;
+        ga('send', 'event', category, action, label, fieldObject || {});
     };
 })(jQuery);
 
-(function($){
+(function ($) {
     $.initControls();
 })(jQuery);
 
 
-(function($){
+(function ($) {
     return;
     $.ajax({
-        type:'post',
-        dataType:'json',
-        url:'https://api.ipsp-php.com/checkout',
-        data:{
-            amount:'200',
-            currency:'EUR',
-            order_desc:' '
+        type: 'post',
+        dataType: 'json',
+        url: 'https://api.ipsp-php.com/checkout',
+        data: {
+            amount: '200',
+            currency: 'EUR',
+            order_desc: ' '
         }
-    }).then(function(data){
+    }).then(function (data) {
         console.log(data);
     });
 })(jQuery);

@@ -16,6 +16,27 @@ fluid: true
 <p class="lead">IPSP PHP SDK is a wrapper of <a rel="nofollow" target="_blank" href="https://fondy.eu/?rel=ipsp-php.com">Fondy</a> payment protocol REST API and covers e-commerce for businesses of all types and 
 support popular CMS modules for fast integration in existing software architecture.</p>
 
+
+<h2>Create Free Fondy Account</h2>
+
+
+<p class="text-center">
+<a href="javascript:void(0)" class="btn block social facebook" control="social.login" data-type="facebook">
+Continue with <strong>Facebook</strong>
+</a>
+</p>
+<p class="text-center">
+<a href="javascript:void(0)" class="btn block social google" control="social.login" data-type="google">
+Continue with <strong>Google</strong>
+</a>
+</p>
+<p class="text-center">
+<a href="javascript:void(0)" class="btn block social linkedin" control="social.login" data-type="linkedin">
+Continue with <strong>LinkedIn</strong>
+</a>
+</p>
+
+
 </div>
 </div>
 
@@ -40,6 +61,10 @@ model and form a single payment gateway for their clients (merchants) to multipl
 read more
 </a>
 </blockquote>
+
+<div class="text-center">
+    <img src="https://portal.fondy.eu/static/v1/img/docs/api-v1.0/schema_redirect_en.png">
+</div>
 
 </div>
 </div>

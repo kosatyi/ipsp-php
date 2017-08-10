@@ -379,9 +379,6 @@
         element.on('click', '.button.user', toggle);
         element.on('click', '.btn.recovery', recovery);
         element.on('click', '.btn.logout', logout);
-        if (document.referrer.match('lnk.direct')) {
-            toggle();
-        }
     });
 
     $.addControl('signup.form', function (element) {

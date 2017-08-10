@@ -4,6 +4,7 @@
 @brand-google-plus:#d65041;
 @brand-twitter:#5ec0e8;
 @brand-linkedin:#1683bb;
+@brand-warning: #e77a04;
 
 input {
   line-height: 1.5;
@@ -63,7 +64,7 @@ textarea {
   }
 }
 
-.btn-social(@color:@brand-primary){
+.btn-outline(@color:@brand-primary){
   color: @color;
   background-color:#fff;
   border-color: @color;
@@ -77,13 +78,16 @@ textarea {
 }
 
 .btn.social.facebook {
-  .btn-social(@brand-facebook);
+  .btn-outline(@brand-facebook);
 }
 .btn.social.google {
-  .btn-social(@brand-google-plus);
+  .btn-outline(@brand-google-plus);
 }
 .btn.social.linkedin {
-  .btn-social(@brand-linkedin);
+  .btn-outline(@brand-linkedin);
+}
+.btn.warning {
+  .btn-social(@brand-warning);
 }
 
 
@@ -715,4 +719,7 @@ form.form {
   border-radius: 0.3rem;
   display:block;
   box-shadow:0 1px 8px rgba(0,0,0,0.1);
+  &.center{
+    margin:1rem auto;
+  }
 }

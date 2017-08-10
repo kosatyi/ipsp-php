@@ -93,6 +93,19 @@ read more
 
 <h2 class="text-center h1">How make a quick checkout URL for a specific product?</h2>
 
+<p>
+1. Install <a href="https://github.com/kosatyi/ipsp-php"><code>kosatyi/ipsp-php</code></a>
+    module throw <a href="https://packagist.org/packages/kosatyi/ipsp-php"><code>composer</code></a> package manager.
+</p>
+
+{% highlight cmd %}
+composer require kosatyi/ipsp-php
+{% endhighlight %}
+
+<p>
+    2. And create file <code>checkout.php</code> with content below:
+</p>
+
 {% highlight php %}
 <?php
 require_once 'vendor/autoload.php';

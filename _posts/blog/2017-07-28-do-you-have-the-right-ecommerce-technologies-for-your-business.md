@@ -69,7 +69,7 @@ issues is <a href="https://www.business.com/articles/online-fraud-prevention-101
 In today’s digital age, cyber-crimes are an issue haunting many. As a result, you need to do your best to be sure that 
 each consumer transaction is as secure as possible as can be.
 To achieve such security, make sure you have a secure system in place. One option would be an Ecommerce fraud prevention 
-provider such as <a href="https://fondy.eu/"><ins>Fondy</ins></a>. With such technology, you can end chargebacks before they ever put a serious dent in your sales. 
+provider such as <a href="http://bit.ly/fondy-payments"><ins>Fondy</ins></a>. With such technology, you can end chargebacks before they ever put a serious dent in your sales. 
 Given the financial ramifications of chargebacks, you want to avoid them. While some chargebacks are a genuine change 
 of mind by the consumer, others are to commit fraud. Either way, you and your business bear the brunt of the costs when 
 chargebacks occur.

@@ -100,5 +100,5 @@ technologies correctly and combines them to create an effective financial model.
 
 Author: [Maxim Kozenko](https://ua.linkedin.com/in/maximkozenko)
 
-Source: [How Uber keeps ahead of its competitors or, the ins and outs of payments and finances within the company](https://fondy.eu/en/blog/e-commerce/how-payments-and-finance-work-in-uber/)
+Source: [Fondy](http://bit.ly/fondy-payments)
 

@@ -4,7 +4,7 @@
 @brand-google-plus:#d65041;
 @brand-twitter:#5ec0e8;
 @brand-linkedin:#1683bb;
-@brand-warning: #e77a04;
+@brand-warning:#e77a04;
 
 input {
   line-height: 1.5;
@@ -87,7 +87,13 @@ textarea {
   .btn-outline(@brand-linkedin);
 }
 .btn.warning {
-  .btn-social(@brand-warning);
+  .btn-outline(@brand-warning);
+}
+
+
+.btn.wide{
+  max-width:640px;
+  margin:0 auto;
 }
 
 
@@ -720,6 +726,6 @@ form.form {
   display:block;
   box-shadow:0 1px 8px rgba(0,0,0,0.1);
   &.center{
-    margin:1rem auto;
+    margin:0px auto;
   }
 }

@@ -17,7 +17,7 @@ fluid: true
 support popular CMS modules for fast integration in existing software architecture.</p>
 
 
-<h2>Create Free Fondy Account</h2>
+<h2>Create Free Merchant Account</h2>
 
 
 <p class="text-center">

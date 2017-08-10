@@ -184,11 +184,7 @@
 })(jQuery);
 
 (function ($) {
-    /**
-     *
-     * @param form
-     * @returns {*}
-     */
+
     $.PortalApi.prototype.account = function (form) {
         var method = form.password ? 'login' : 'registration';
         return this.request('api.account', method, form);

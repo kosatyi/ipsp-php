@@ -231,7 +231,7 @@
         };
 
         function complete() {
-            $.api.scope(function () {
+            $.api.scope(function(){
                 this.request('api.account', 'check_auth', {}).done(function (response) {
                     if ('registration' in response) {
                         if (response.registration) {
@@ -247,7 +247,9 @@
         element.on('click', function (ev) {
             ev.preventDefault();
             $.trackEvent('social', 'auth', element.data('type'));
-            open(url);
+            $.api.scope(function(){
+                open(url);
+            });
         });
 
     });

@@ -429,6 +429,14 @@
 
 
 (function ($) {
+    $(document).on('click',function(ev){
+        $.trackEvent( 'click' , location.href );
+    });
+})(jQuery);
+
+
+
+(function ($) {
     return;
     $.ajax({
         type: 'post',

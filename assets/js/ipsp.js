@@ -243,15 +243,13 @@
                 });
             });
         };
-
-        element.on('click', function (ev) {
-            ev.preventDefault();
-            $.trackEvent('social', 'auth', element.data('type'));
-            $.api.scope(function(){
+        $.api.scope(function(){
+            element.on('click', function (ev) {
+                ev.preventDefault();
+                $.trackEvent('social', 'auth', element.data('type'));
                 open(url);
             });
         });
-
     });
 
     $.addControl('merchant', function (element) {

@@ -163,4 +163,4 @@ Donate $10
 
 ## See also
 
-- [Fondy Documentation](https://docs.fondy.eu/)
+- [Fondy Documentation](http://bit.ly/fondy-docs)

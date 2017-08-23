@@ -114,7 +114,7 @@ Source: [GetApp](https://lab.getapp.com/)
 
 Original Post: [https://lab.getapp.com/3-steps-to-build-a-business-website/]()
 
-Author: [Suzie Blaszkiewicz ](https://lab.getapp.com/author/suzie-blaszkiewicz/)
+Author: [Suzie Blaszkiewicz](https://lab.getapp.com/author/suzie-blaszkiewicz/)
 
   
 

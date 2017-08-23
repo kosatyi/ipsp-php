@@ -112,6 +112,8 @@ While it may seem like a daunting task, building a business website has become a
 
 Source: [GetApp](https://lab.getapp.com/)
 
+Original Post: [https://lab.getapp.com/3-steps-to-build-a-business-website/]()
+
 Author: [Suzie Blaszkiewicz ](https://lab.getapp.com/author/suzie-blaszkiewicz/)
 
   

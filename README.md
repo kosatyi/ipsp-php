@@ -1,4 +1,4 @@
-<h1 align="center" style="color:red">
+<h1 align="center">
     This project is no longer maintained
 </h1>
 

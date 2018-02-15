@@ -1,22 +1,15 @@
-# IPSP PHP SDK
-
 ### This project is no longer maintained
+
+# IPSP PHP SDK
 
 Flexible software development kit that covers e-commerce for businesses of all types and support
 popular CMS modules for fast integration in existing infrastructure.
 
-<p align="center">
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/v/kosatyi/ipsp-php.svg" /></a>
 <a href="https://travis-ci.org/kosatyi/ipsp-php"><img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" /></a>
 <a href="https://coveralls.io/github/kosatyi/ipsp-php"><img src="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg" /></a>
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/dt/kosatyi/ipsp-php.svg"/></a>
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/github/license/kosatyi/ipsp-php.svg" /></a>
-</p>
-
-<p align="center">
-<a href="https://ipsp-php.com"><img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
-</p>
-
 
 ## Installation
 

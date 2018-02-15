@@ -1,4 +1,4 @@
-<h2 align="center">
+<h3 align="center">
     This project is no longer maintained
 </h1>
 

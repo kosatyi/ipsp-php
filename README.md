@@ -53,9 +53,7 @@ Or add dependency manually in `composer.json`
 ```json
 {
   "require": {
-    ...
     "kosatyi/ipsp-php":"^1.1"
-    ...
   }
 }
 

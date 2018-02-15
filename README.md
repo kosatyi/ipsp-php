@@ -17,11 +17,7 @@ popular CMS modules for fast integration in existing infrastructure.
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/dt/kosatyi/ipsp-php.svg"/></a>
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/github/license/kosatyi/ipsp-php.svg" /></a>
 </p>
-<p align="center">
-<a href="https://ipsp-php.com/"><img src="https://img.shields.io/badge/official-website-green.svg" /></a>
-<a href="https://ipsp-php.com/docs/"><img src="https://img.shields.io/badge/sdk-documentation-orange.svg" /></a>
-<a href="https://ipsp-php.com/docs/api-methods/"><img src="https://img.shields.io/badge/api-methods-blue.svg" /></a>
-</p>
+
 <p align="center">
 <a href="https://ipsp-php.com"><img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
 </p>

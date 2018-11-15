@@ -20,7 +20,7 @@ Mobile and contactless payments are only possible if merchants have the infrastr
 
 Merchants can often be more willing to upgrade to new payment hardware when there are added incentives. For example, newer solutions tend to be more secure, along with other benefits, such as the ability to integrate business applications at the point of sale, such as customer surveys and loyalty programs. Additionally, some newer POS solutions are built leveraging Android or iOS operating systems, providing a familiar user interface for both employees and consumers so there’s little to no learning curve in with adoption. Building experiences around these user interfaces that people already know helps streamline adoption, leading to a faster return on investment and more positive experience for customers.
 
-##Increasing Consumer Adoption
+## Increasing Consumer Adoption
 
 While contactless payments can promote a faster, seamless and cleaner checkout experience, consumer adoption, at least in the U.S., remains low. At the end of 2017, just 0.2 percent of all Visa transactions were contactless, compared to 92 percent in Australia, the highest in the world. One of the reasons, simply put, is there are less contactless cards in the market. Contactless cards are embedded with NFC technology, making them more expensive to produce than traditional cards. Therefore, card issuers are more reluctant to ship contactless cards to consumers. It’s a natural conclusion that more contactless cards in the U.S. market may help this form of payment become the norm.
 

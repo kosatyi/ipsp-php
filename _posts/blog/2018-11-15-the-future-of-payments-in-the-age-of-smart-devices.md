@@ -1,9 +1,13 @@
 ---
 title: The Future of Payments in the Age of Smart Devices
+description: The payments industry is undergoing a revolution in which mobility and other innovations in technology are constantly driving change.
 image:
   path: https://i.imgur.com/lm15Rts.jpg
   height: 853
   width: 1280
+categories: blog payments
+headline: The Future of Payments in the Age of Smart Devices
+tagline: The payments industry is undergoing a revolution in which mobility and other innovations in technology are constantly driving change.
 ---
 
 {% include image.html src='https://i.imgur.com/lm15Rts.jpg' %}

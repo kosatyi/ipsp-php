@@ -1,27 +1,13 @@
-<h1 align="center">
-  <a href="https://ipsp-php.com"><img src="https://raw.githubusercontent.com/kosatyi/ipsp-php/gh-pages/assets/images/brand.png" alt="IPSP PHP (SDK)" width="201" height="193"></a>
-  <br>
-  IPSP PHP SDK
-  <br>
-</h1>
+# IPSP PHP SDK
 
-<h4 align="center">
 Flexible software development kit that covers e-commerce for businesses of all types and support
 popular CMS modules for fast integration in existing infrastructure.
-</h4>
 
-<p align="center">
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/v/kosatyi/ipsp-php.svg" /></a>
 <a href="https://travis-ci.org/kosatyi/ipsp-php"><img src="https://img.shields.io/travis/kosatyi/ipsp-php.svg" /></a>
 <a href="https://coveralls.io/github/kosatyi/ipsp-php"><img src="https://img.shields.io/coveralls/kosatyi/ipsp-php/master.svg" /></a>
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/packagist/dt/kosatyi/ipsp-php.svg"/></a>
 <a href="https://packagist.org/packages/kosatyi/ipsp-php"><img src="https://img.shields.io/github/license/kosatyi/ipsp-php.svg" /></a>
-</p>
-
-<p align="center">
-<a href="https://ipsp-php.com"><img src="https://i.imgur.com/7pZYzfV.png" alt="Checkout Page Example PHP (SDK)"></a>
-</p>
-
 
 ## Installation
 
@@ -65,9 +51,7 @@ Or add dependency manually in `composer.json`
 ```json
 {
   "require": {
-    ...
     "kosatyi/ipsp-php":"^1.1"
-    ...
   }
 }
 

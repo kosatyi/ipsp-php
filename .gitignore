@@ -4,3 +4,4 @@ tests/report
 .sass-cache
 _site
 Gemfile.lock
+composer.lock

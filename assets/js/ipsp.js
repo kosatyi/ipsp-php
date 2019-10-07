@@ -413,10 +413,6 @@
 })(jQuery);
 
 (function ($) {
-    $('.page-content').append($.ejs('/user').render({}));
-})(jQuery);
-
-(function ($) {
     $.trackEvent = function (category, action, label, fieldObject) {
         if (typeof(window['ga']) !== 'function') return;
         ga('send', 'event', category, action, label, fieldObject || {});
@@ -429,25 +425,7 @@
 
 
 (function ($) {
-    $(document).on('click',function(ev){
+    $(document).on('click',function( ev ){
         $.trackEvent( 'click' , location.href );
-    });
-})(jQuery);
-
-
-
-(function ($) {
-    return;
-    $.ajax({
-        type: 'post',
-        dataType: 'json',
-        url: 'https://api.ipsp-php.com/checkout',
-        data: {
-            amount: '200',
-            currency: 'EUR',
-            order_desc: ' '
-        }
-    }).then(function (data) {
-        console.log(data);
     });
 })(jQuery);

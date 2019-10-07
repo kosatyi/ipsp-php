@@ -5,7 +5,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon/favicon.ico">
 <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png" sizes="16x16" />
-{% for style in site.styles %}<link rel="stylesheet" href="{{style | absolute_url | append: '?' | append: site.github.build_revision }}" type="text/css">
+{% for style in site.styles %}<link rel="stylesheet" href="{{style}}" type="text/css">
 {% endfor %}
 {% if site.analytics %}
 <script>

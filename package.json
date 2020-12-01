@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "fs-extra": "^3.0.1"
+    "clean-css": "^4.2.3",
+    "fs-extra": "^3.0.1",
+    "lessc": "^1.0.2"
   }
 }

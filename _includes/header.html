@@ -17,16 +17,16 @@
     <div class="page-banner container">
         {% if site.banner %}
         <a href="{{site.banner.url}}" rel="nofollow" class="project-banner-link">
-            <img src="{{site.banner.image}}" class="project-banner" />
+            <img src="{{site.banner.image | absolute_url }}" class="project-banner" />
         </a>
         {% endif %}
-        <h2 class="project-name"><a href="{{site.baseurl}}/">{{ site.title }}</a></h2>
+        <h2 class="project-name"><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></h2>
         {% if site.tagline %}
         <h3 class="project-tagline">{{ site.tagline }}</h3>
         {% endif %}
         <div class="project-buttons">
             {% for button in site.buttons %}
-            <a href="{{ button.link }}" class="btn">{{ button.name }}</a>
+            <a href="{{ button.link | absolute_url }}" class="btn">{{ button.name }}</a>
             {% endfor %}
         </div>
     </div>
@@ -35,7 +35,7 @@
 
 
 {% if page.overlay  %}
-<div class="page-content-overlay" style="background-image:url({{page.overlay}})">
+<div class="page-content-overlay" style="background-image:url({{ page.overlay | absolute_url }})">
     <img src="{{page.overlay}}" alt="overlay">
 </div>
 {% endif %}

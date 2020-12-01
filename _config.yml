@@ -8,8 +8,8 @@ markdown: kramdown
 # Setup
 title:   IPSP PHP SDK
 tagline: Start e-commerce on your website.
-baseurl:
-url:  https://ipsp-php.com
+baseurl: /ipsp-php
+url:  https://kosatyi.com/ipsp-php
 
 paginate: 8
 paginate_path: "/blog/page-:num/"
@@ -19,9 +19,9 @@ banner:
   image: /assets/images/brand.svg
 
 styles:
-  - //maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
-  - //fonts.googleapis.com/css?family=Open+Sans:300,400,700
-  - //fonts.googleapis.com/css?family=Pacifico
+  - https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+  - https://fonts.googleapis.com/css?family=Open+Sans:300,400,700
+  - https://fonts.googleapis.com/css?family=Pacifico
   - /assets/css/ipsp.css?v1.0.28
 
 javascript:

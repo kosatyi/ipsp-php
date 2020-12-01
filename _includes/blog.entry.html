@@ -4,7 +4,7 @@
         <img src="{{post.image.path}}">
     </div>
     <div class="blog-post-wrapper">
-        <h3 class="blog-post-title"><a href="{{ post.url }}" class="blog-post-link">{{ post.title }}</a></h3>
+        <h3 class="blog-post-title"><a href="{{ post.url | absolute_url }}" class="blog-post-link">{{ post.title }}</a></h3>
         <p class="blog-post-summary">{{ post.description }}</p>
     </div>
 </div>

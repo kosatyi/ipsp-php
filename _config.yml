@@ -9,7 +9,7 @@ markdown: kramdown
 title:   IPSP PHP SDK
 tagline: Start e-commerce on your website.
 baseurl: /ipsp-php
-url:  https://kosatyi.com/ipsp-php
+url:  https://kosatyi.com
 
 paginate: 8
 paginate_path: "/blog/page-:num/"
